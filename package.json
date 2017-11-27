@@ -1,0 +1,30 @@
+{
+  "name": "create-react-microservice",
+  "version": "0.0.0-development",
+  "private": false,
+  "author": "Immonet dev team <aegaeon@immonet.de> (https://immonet.de)",
+  "license": "MIT",
+  "description": "Mono-repository for the create-react-microservice packages.",
+  "scripts": {
+    "pretest": "rimraf dist",
+    "test": "exit 0",
+    "precommit": "lint-staged && npm test"
+  },
+  "lint-staged": {
+    "src/**/*.{js,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@immowelt/styleguide-javascript": "^1.0.6",
+    "rimraf": "^2.6.1",
+    "prettier": "^1.6.1",
+    "lint-staged": "^5.0.0",
+    "husky": "^0.14.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ImmoweltGroup/create-react-microservice.git"
+  }
+}
