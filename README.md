@@ -9,7 +9,7 @@
 
 Creating scalable, universal and well tested JavaScript application for enterprise companies with many teams and products is a hard task. We at Immowelt Group took gathered all of our knowledge and aimed to fill this void. `create-react-microservice` is a scaffold that will provide you with an mono-repository structure so it is easy as pie to share code with co-workers, best practices in regards to testing as well as server side rendering support. All of it while providing you the whole flexibility of changing stuff under the hood. :rocket:
 
-**What's in the box?**:
+**What's in the box?**
 
 - Universal by default since we use [AirBnB's hypernova](https://github.com/airbnb/hypernova) render microservice under the hood.
 - Built with React, Redux, Reselect and Plow-JS.
@@ -20,6 +20,9 @@ Creating scalable, universal and well tested JavaScript application for enterpri
 - Containerized via Docker.
 - Highly flexible and performing architecture under the hood.
 
+**Why not Next.js?**
+
+This scaffold is not aimed at "competing" against Next.js, quite the contrary we see Next.js as a valid addition to the scaffold if you are okay with not being able to adjust the webpack setup to the fullest, e.g. adding file-loaders. If that is the case, we provide you with a guide on how to integrate Next.js into our scaffold structure within minutes! :-)
 
 ## Quick Start
 
