@@ -1,1 +1,9 @@
-{}
+{
+	"name": "create-react-microservice-scaffold",
+	"version": "0.0.0-development",
+	"private": false,
+	"author": "Immonet dev team <aegaeon@immonet.de> (https://immonet.de)",
+	"license": "MIT",
+	"description": "The scaffold files for the create-react-microservice CLI.",
+	"main": "./src/"
+}

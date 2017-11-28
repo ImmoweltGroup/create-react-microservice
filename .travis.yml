@@ -5,3 +5,8 @@ cache:
     - node_modules
 notifications:
   email: false
+install:
+  - yarn install
+script:
+  - yarn test
+  - yarn integration-test

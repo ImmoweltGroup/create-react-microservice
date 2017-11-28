@@ -3,15 +3,8 @@
 # dependencies
 node_modules
 
-# third party typings
-flow-typed/npm
-
-# compiled assets
-dist
-
 # test results
-coverage
-examples/results
+dist-integration-test
 
 # Ignore the symlink ".editorconfig" from the @immowelt/styleguide-javascript package.
 .editorconfig

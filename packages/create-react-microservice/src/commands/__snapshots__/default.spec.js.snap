@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`new Command().resolveAndPromptTemplateArgs() should call the create.resolveAndPromptOptions method and merge the resolve arguments with the resolved name 1`] = `
+Object {
+  "name": Object {
+    "camelCase": "myFancyApp",
+    "kebabCase": "my-fancy-app",
+    "lowerCase": "my fancy app",
+    "raw": "my fancy app",
+    "snakeCase": "my_fancy_app",
+    "startCase": "My Fancy App",
+    "upperCamelCase": "MyFancyApp",
+    "upperCase": "MY FANCY APP",
+  },
+  "someArg": Object {
+    "camelCase": "foo",
+    "kebabCase": "foo",
+    "lowerCase": "foo",
+    "raw": "foo",
+    "snakeCase": "foo",
+    "startCase": "Foo",
+    "upperCamelCase": "Foo",
+    "upperCase": "FOO",
+  },
+}
+`;

@@ -1,14 +1,24 @@
 {
   "name": "create-react-microservice",
   "version": "0.0.0-development",
-  "private": false,
+  "private": true,
   "author": "Immonet dev team <aegaeon@immonet.de> (https://immonet.de)",
   "license": "MIT",
   "description": "Mono-repository for the create-react-microservice packages.",
   "scripts": {
-    "pretest": "rimraf dist",
-    "test": "exit 0",
-    "precommit": "lint-staged && npm test"
+    "create-react-microservice": "create-react-microservice",
+    "prepare": "lerna run flow-typed-install && flow-mono create-symlinks packages/create-react-microservice/.flowconfig && flow-mono create-stubs",
+    "pretest:integration": "yarn run test:integration:clean",
+    "test:integration": "yarn run test:integration:create && yarn run test:integration:test",
+    "test:integration:create": "./node_modules/.bin/create-react-microservice dist-integration-test --license='MIT'",
+    "test:integration:test": "cd dist-integration-test && yarn test",
+    "test:integration:clean": "rimraf dist-integration-test",
+    "test": "lerna run test --parallel",
+    "flow": "lerna run flow --parallel",
+    "lint": "lerna run lint --parallel",
+    "build": "lerna run build --parallel",
+    "build:watch": "lerna run build:watch --parallel",
+    "precommit": "lint-staged && yarn test"
   },
   "lint-staged": {
     "src/**/*.{js,json,css}": [
@@ -18,11 +28,16 @@
   },
   "devDependencies": {
     "@immowelt/styleguide-javascript": "^1.0.6",
-    "rimraf": "^2.6.1",
-    "prettier": "^1.6.1",
+    "flow-mono-cli": "^1.2.2",
+    "husky": "^0.14.3",
+    "lerna": "^2.5.1",
     "lint-staged": "^5.0.0",
-    "husky": "^0.14.3"
+    "prettier": "^1.6.1",
+    "rimraf": "^2.6.1"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ImmoweltGroup/create-react-microservice.git"

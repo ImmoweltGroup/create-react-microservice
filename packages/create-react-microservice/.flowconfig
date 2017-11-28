@@ -1,0 +1,23 @@
+#
+# By default we ignore all `node_modules`, except for modules which ship typings, since this increases the startup time of Flow drastically
+# @see https://github.com/facebook/flow/issues/869
+#
+[ignore]
+.*\/node_modules\/(?!(log-fancy|create-any-cli|@immowelt)\/).*
+.*\/node_modules/npmconf/.*
+.*\/node_modules/config-chain/.*
+<PROJECT_ROOT>/dist/.*
+
+[include]
+
+[libs]
+
+[options]
+module.ignore_non_literal_requires=true
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
+
+[lints]
+# all=off by default
+all=warn
+untyped-type-import=error
+sketchy-null-bool=off
