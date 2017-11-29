@@ -94,10 +94,23 @@ class CreateReactMicroService extends Command {
       name: 'license',
       message: 'What is the preffered license of your application?',
       choices: ['Unlicense', 'Apache-2.0', 'MIT', 'other']
+    }, {
+      type: 'input',
+      name: 'npmScope',
+      message: 'What is the NPM organization scope for the React Component? (Optional)',
+      filter: this.filterNpmScopeArg
     }], this.flags);
     const args = await create.createDecoratedTemplateArgs({name, ...answers});
 
     return args;
+  }
+
+  filterNpmScopeArg = (str?: string) => {
+    if (str && str.length) {
+      return `@${str.replace(/\W/g, '')}/`
+    }
+
+    return '';
   }
 
   onFile = () => {

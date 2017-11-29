@@ -215,3 +215,84 @@ describe('new Command().onInvalidDistDir()', () => {
     expect(fail).toHaveBeenCalledTimes(1);
   });
 });
+
+describe('new Command().filterNpmScopeArg()', () => {
+  let instance;
+
+  beforeEach(() => {
+    instance = new DefaultCommand({input: [], flags: {}});
+  });
+
+  afterEach(() => {
+    // $FlowFixMe: Ignore errors since the jest type-def is out of date.
+    jest.restoreAllMocks();
+    jest.clearAllMocks();
+  });
+
+  it('should be a function', () => {
+    expect(typeof instance.filterNpmScopeArg).toBe('function');
+  });
+
+  it('should return an empty string if no argument was given', async () => {
+    expect(instance.filterNpmScopeArg()).toBe('');
+  });
+
+  it('should return an processed string without special characters and prepend the at as well as append the slash to the returned string', async () => {
+    expect(instance.filterNpmScopeArg('foo bar+')).toBe('@foobar/');
+  });
+});
+
+describe('new Command() on template hooks', () => {
+  let instance;
+  let opts;
+
+  beforeEach(() => {
+    instance = new DefaultCommand({input: [], flags: {}});
+    opts = {
+      filePaths: {
+        dist: 'fooDist',
+        src: 'fooSrc'
+      },
+      data: {
+        raw: 'foo',
+        processed: 'bar'
+      },
+      context: {
+        spinner: {
+          start: jest.fn(),
+          succeed: jest.fn()
+        }
+      }
+    }
+  });
+
+  afterEach(() => {
+    // $FlowFixMe: Ignore errors since the jest type-def is out of date.
+    jest.restoreAllMocks();
+    jest.clearAllMocks();
+  });
+
+  it('should call the "context.spinner.start" method when invoking the "onBeforeReadFile" method', async () => {
+    await instance.onBeforeReadFile(opts);
+
+    expect(opts.context.spinner.start).toHaveBeenCalledTimes(1);
+  });
+
+  it('should call the "context.spinner.start" method when invoking the "onBeforeProcessFile" method', async () => {
+    await instance.onBeforeProcessFile(opts);
+
+    expect(opts.context.spinner.start).toHaveBeenCalledTimes(1);
+  });
+
+  it('should call the "context.spinner.start" method when invoking the "onBeforeWriteFile" method', async () => {
+    await instance.onBeforeWriteFile(opts);
+
+    expect(opts.context.spinner.start).toHaveBeenCalledTimes(1);
+  });
+
+  it('should call the "context.spinner.start" method when invoking the "onAfterWriteFile" method', async () => {
+    await instance.onAfterWriteFile(opts);
+
+    expect(opts.context.spinner.succeed).toHaveBeenCalledTimes(1);
+  });
+});

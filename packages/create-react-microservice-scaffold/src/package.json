@@ -1,5 +1,5 @@
 {
-  "name": "{{=it.name.kebabCase}}",
+  "name": "{{=it.npmScope.raw}}{{=it.name.kebabCase}}",
   "license": "{{=it.license.raw}}",
   "engines": {
     "node": ">=8.9.0",

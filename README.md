@@ -20,9 +20,9 @@ Creating scalable, universal and well tested JavaScript application for enterpri
 - Containerized via Docker.
 - Highly flexible and performing architecture under the hood.
 
-**Why not Next.js?**
+**What about Next.js?**
 
-This scaffold is not aimed at "competing" against Next.js, quite the contrary we see Next.js as a valid addition to the scaffold if you are okay with not being able to adjust the webpack setup to the fullest, e.g. adding file-loaders. If that is the case, we provide you with a guide on how to integrate Next.js into our scaffold structure within minutes! :-)
+This scaffold is not aimed at "competing" against Next.js, quite the contrary we see Next.js as a valid addition to the scaffold! We even provide you with a guide on how to integrate Next.js into our scaffold structure within minutes! :-)
 
 ## Quick Start
 
