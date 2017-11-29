@@ -114,8 +114,9 @@ class CreateReactMicroService extends Command {
     }, {
       type: 'input',
       name: 'npmScope',
-      message: 'What is the NPM organization scope for the React Component? (Optional)',
-      filter: this.filterNpmScopeArg
+      message: 'What is the NPM organization scope for the mono repositories packages?',
+      filter: this.filterNpmScopeArg,
+      validate: Boolean
     }], this.flags);
     const args = await create.createDecoratedTemplateArgs({name, ...answers});
 
