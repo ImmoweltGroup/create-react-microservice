@@ -34,7 +34,7 @@ cd my-fancy-ui
 yarn run dev
 ```
 
-**That's it** - Open up [http://localhost:8080/](http://localhost:8080/) to see the application being rendered on both the server and the client.
+**That's it** - A browser should automatically open up [http://localhost:8080/](http://localhost:8080/) as soon as the application is fully ready.
 
 ## Documentation
 ...
