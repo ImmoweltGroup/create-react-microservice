@@ -1262,9 +1262,9 @@ cosmiconfig@^3.1.0:
     parse-json "^3.0.0"
     require-from-string "^2.0.1"
 
-create-any-cli@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/create-any-cli/-/create-any-cli-1.2.0.tgz#d087d585d1c553d78ae9bd1c3a21ddd0d9f3dc19"
+create-any-cli@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/create-any-cli/-/create-any-cli-1.2.1.tgz#b7f2227534652a54b6213681c159d4aa1dbc6256"
   dependencies:
     chalk "^2.3.0"
     dot "^1.1.2"
@@ -1548,7 +1548,7 @@ es-to-primitive@^1.1.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.1"
 
-escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
+escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.3, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
@@ -5165,6 +5165,12 @@ tr46@~0.0.3:
 "traverse@>=0.3.0 <0.4":
   version "0.3.9"
   resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.3.9.tgz#717b8f220cc0bb7b44e40514c22b2e8bbc70d8b9"
+
+trim-character@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/trim-character/-/trim-character-2.0.1.tgz#f5f1400884c204f6b455807afe8c762df0016184"
+  dependencies:
+    escape-string-regexp "^1.0.3"
 
 trim-newlines@^1.0.0:
   version "1.0.0"

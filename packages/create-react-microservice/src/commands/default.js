@@ -5,6 +5,7 @@ import type {TemplateHookArgsType} from 'create-any-cli/dist/types.js';
 const path = require('path');
 const ora = require('ora');
 const create = require('create-any-cli');
+const trim = require('trim-character');
 const Command = require('./../lib/command.js');
 const file = require('./../lib/file.js');
 
@@ -15,11 +16,17 @@ class CreateReactMicroService extends Command {
    * @return {Promise} The Promise that resolves once everything was setup correctly.
    */
   async exec() {
-    const dist = await this.resolveDistFolder();
     const name = await this.resolveAppName();
     const scaffoldPackagePath = path.resolve('node_modules', 'create-react-microservice-scaffold');
     const scaffoldPackageJson = file.require(path.join(scaffoldPackagePath, 'package.json'));
-    const src = path.join(scaffoldPackagePath, scaffoldPackageJson.main);
+    let dist = await this.resolveDistFolder();
+    let src = path.join(scaffoldPackagePath, scaffoldPackageJson.main);
+
+    //
+    // Trim file paths if necessary.
+    //
+    dist = trim.right(dist, '/');
+    src = trim.right(src, '/');
 
     this.log('start', 'Creating', name, 'in', dist);
     this.suspendLogging();
@@ -31,7 +38,16 @@ class CreateReactMicroService extends Command {
       template: {
         src,
         args,
-        filePatterns: ['**/*']
+        filePatterns: ['**/*'],
+        settings: {
+          evaluate:    /<%([\s\S]+?)%>/g,
+          interpolate: /<%=([\s\S]+?)%>/g,
+          encode:      /<%!([\s\S]+?)%>/g,
+          use:         /<%#([\s\S]+?)%>/g,
+          define:      /<%##\s*([\w\.$]+)\s*(\:|=)([\s\S]+?)#%>/g, // eslint-disable-line no-useless-escape
+          conditional: /<%\?(\?)?\s*([\s\S]*?)\s*%>/g,
+          iterate:     /<%~\s*(?:%>|([\s\S]+?)\s*\:\s*([\w$]+)\s*(?:\:\s*([\w$]+))?\s*%>)/g, // eslint-disable-line no-useless-escape
+        }
       },
       hooks: {
         onFile: this.onFile,
@@ -42,6 +58,7 @@ class CreateReactMicroService extends Command {
         onAfterWriteFile: this.onAfterWriteFile
       }
     });
+    // await this.moveScaffoldTemplatesIntoPlace(src, dist);
 
     this.log('succeed', 'Successfully created the scaffold in', dist);
     this.log('start', 'Installing all dependencies and bootstrapping the application.');

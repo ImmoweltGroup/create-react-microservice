@@ -6,6 +6,7 @@
 .*\/node_modules\/(?!(log-fancy|create-any-cli|@immowelt)\/).*
 .*\/node_modules/npmconf/.*
 .*\/node_modules/config-chain/.*
+.*\/create-react-microservice-scaffold/.*
 <PROJECT_ROOT>/dist/.*
 
 [include]
