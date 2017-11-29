@@ -58,7 +58,6 @@ class CreateReactMicroService extends Command {
         onAfterWriteFile: this.onAfterWriteFile
       }
     });
-    // await this.moveScaffoldTemplatesIntoPlace(src, dist);
 
     this.log('succeed', 'Successfully created the scaffold in', dist);
     this.log('start', 'Installing all dependencies and bootstrapping the application.');
