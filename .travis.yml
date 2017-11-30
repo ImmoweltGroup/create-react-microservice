@@ -9,4 +9,4 @@ install:
   - yarn install
 script:
   - yarn run test
-  - yarn run test:integration
+  - ./build/integration-test.sh

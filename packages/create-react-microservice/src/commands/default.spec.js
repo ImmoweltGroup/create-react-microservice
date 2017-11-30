@@ -71,8 +71,14 @@ describe('new Command().exec()', () => {
   it('should install all dependencies and bootstrap the application', async () => {
     await instance.exec();
 
-    expect(exec).toHaveBeenCalledTimes(2);
+    expect(exec).toHaveBeenCalledTimes(4);
     expect(exec).toHaveBeenCalledWith('yarn', ['install'], {
+      cwd: '/foo/bar/my fancy app'
+    });
+    expect(exec).toHaveBeenCalledWith('git', ['init'], {
+      cwd: '/foo/bar/my fancy app'
+    });
+    expect(exec).toHaveBeenCalledWith('yarn', ['add', '--dev', '-W', 'husky'], {
       cwd: '/foo/bar/my fancy app'
     });
     expect(exec).toHaveBeenCalledWith('yarn', ['run', 'bootstrap'], {
@@ -82,6 +88,8 @@ describe('new Command().exec()', () => {
 
   it('should call the fail method if the execution of one of the commands failed', async () => {
     exec
+      .mockReturnValueOnce(Promise.resolve())
+      .mockReturnValueOnce(Promise.resolve())
       .mockReturnValueOnce(Promise.resolve())
       .mockReturnValueOnce(Promise.reject(new Error('Nope')));
     await instance.exec();
@@ -235,7 +243,7 @@ describe('new Command().onInvalidDistDir()', () => {
   });
 });
 
-describe('new Command().filterNpmScopeArg()', () => {
+describe('new Command().safelyCreateNpmScopeArg()', () => {
   let instance;
 
   beforeEach(() => {
@@ -249,15 +257,17 @@ describe('new Command().filterNpmScopeArg()', () => {
   });
 
   it('should be a function', () => {
-    expect(typeof instance.filterNpmScopeArg).toBe('function');
+    expect(typeof instance.safelyCreateNpmScopeArg).toBe('function');
   });
 
   it('should return an empty string if no argument was given', async () => {
-    expect(instance.filterNpmScopeArg()).toBe('');
+    expect(instance.safelyCreateNpmScopeArg()).toBe('');
   });
 
   it('should return an processed string without special characters and prepend the at as well as append the slash to the returned string', async () => {
-    expect(instance.filterNpmScopeArg('foo bar23-baz')).toBe('@foo-bar-baz/');
+    expect(instance.safelyCreateNpmScopeArg('foo bar23-baz')).toBe(
+      '@foo-bar-baz/'
+    );
   });
 });
 

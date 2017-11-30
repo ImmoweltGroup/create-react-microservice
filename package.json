@@ -15,22 +15,11 @@
     "bootstrap": "yarn run bootstrap:self && yarn run bootstrap:scaffold",
     "bootstrap:self": "lerna run flow-typed-install && flow-mono create-symlinks packages/create-react-microservice/.flowconfig && flow-mono create-stubs",
     "bootstrap:scaffold": "cd packages/create-react-microservice-scaffold/src && yarn && yarn run bootstrap",
-    "pretest:integration": "yarn run test:integration:clean",
-    "test:integration": "yarn run test:integration:create && yarn run test:integration:test",
-    "test:integration:create": "./node_modules/.bin/create-react-microservice integration-test-ui --license='MIT' --npmScope='integration-scope'",
-    "test:integration:test": "cd integration-test-ui && yarn test",
-    "test:integration:clean": "rimraf integration-test-ui",
     "test": "lerna run test --parallel",
     "flow": "lerna run flow --parallel",
     "lint": "lerna run lint --parallel",
     "build": "lerna run build --parallel",
     "build:watch": "lerna run build:watch --parallel"
-  },
-  "lint-staged": {
-    "packages/**/*.{js,json,css}": [
-      "prettier --write",
-      "git add"
-    ]
   },
   "devDependencies": {
     "@immowelt/styleguide-javascript": "^1.0.10",

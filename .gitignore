@@ -3,9 +3,6 @@
 # dependencies
 node_modules
 
-# test results
-integration-test-ui
-
 # Ignore the symlink ".editorconfig" from the @immowelt/styleguide-javascript package.
 .editorconfig
 

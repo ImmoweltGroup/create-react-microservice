@@ -27,17 +27,13 @@ class CreateReactMicroService extends Command {
     const scaffoldPackageJson = file.require(
       path.join(scaffoldPackagePath, 'package.json')
     );
-    let dist = await this.resolveDistFolder();
-    let src = path.join(scaffoldPackagePath, scaffoldPackageJson.main);
-
-    //
-    // Trim file paths if necessary.
-    //
-    dist = trim.right(dist, '/');
-    src = trim.right(src, '/');
+    const dist = await this.resolveDistFolder();
+    const src = trim.right(
+      path.join(scaffoldPackagePath, scaffoldPackageJson.main),
+      '/'
+    );
 
     this.log('start', 'Creating', name, 'in', dist);
-    this.suspendLogging();
 
     const args = await this.resolveAndPromptTemplateArgs();
 
@@ -70,6 +66,23 @@ class CreateReactMicroService extends Command {
       await Command.exec('yarn', ['install'], {
         cwd: dist
       });
+
+      //
+      // We need to install husky separately since it would otherwise conflict
+      // with the root husky installation. Adding a "gitDir" option did not
+      // work out so we solve it this way.
+      //
+      // @see https://github.com/typicode/husky/issues/167
+      //
+      try {
+        await Command.exec('git', ['init'], {
+          cwd: dist
+        });
+        await Command.exec('yarn', ['add', '--dev', '-W', 'husky'], {
+          cwd: dist
+        });
+      } catch (e) {}
+
       this.log('succeed', 'Successfully installed all dependencies');
 
       this.log('start', 'Bootstrapping the service...');
@@ -94,7 +107,9 @@ class CreateReactMicroService extends Command {
    * @return {Promise} The Promise that resolves with the full path of the target folder.
    */
   async resolveDistFolder() {
-    return path.join(process.cwd(), this.input.join(' '));
+    const dist = path.join(process.cwd(), this.input.join(' '));
+
+    return trim.right(dist, '/');
   }
 
   /**
@@ -116,6 +131,9 @@ class CreateReactMicroService extends Command {
    */
   async resolveAndPromptTemplateArgs() {
     const name = await this.resolveAppName();
+
+    this.suspendLogging();
+
     const answers = await create.resolveAndPromptOptions(
       [
         {
@@ -129,7 +147,7 @@ class CreateReactMicroService extends Command {
           name: 'npmScope',
           message:
             'What is the NPM organization scope for the mono repositories packages?',
-          filter: this.filterNpmScopeArg,
+          filter: this.safelyCreateNpmScopeArg,
           validate: Boolean
         }
       ],
@@ -140,7 +158,13 @@ class CreateReactMicroService extends Command {
     return args;
   }
 
-  filterNpmScopeArg = (str?: string) => {
+  /**
+   * Filters invalid characters from the given string and returns either a NPM namespace or an empty string.
+   *
+   * @param  {String} str The to be processed string.
+   * @return {String}     The NPM scope string or an empty string.
+   */
+  safelyCreateNpmScopeArg = (str?: string) => {
     if (str && str.length) {
       const namespace = str
         .replace(/\s/g, '-')
@@ -154,6 +178,13 @@ class CreateReactMicroService extends Command {
     return '';
   };
 
+  /**
+   * We use a custom template engine to still be able to develop the scaffold without creating it via the CLI.
+   *
+   * @param  {String}  str  The string to process.
+   * @param  {Object}  args The template arguments.
+   * @return {Promise}      The Promise that resolves once the string has been processed.
+   */
   onTemplate = async (str: string, args: TemplateArgsType) => {
     let processedString = str;
 
@@ -188,12 +219,23 @@ class CreateReactMicroService extends Command {
     return processedString;
   };
 
+  /**
+   * Creates a context object containing a spinner instance for enhanced feedback in the users console.
+   *
+   * @return {Object} The files context.
+   */
   onFile = () => {
     return {
       spinner: ora()
     };
   };
 
+  /**
+   * Fataly exit if the target directory is not empty.
+   *
+   * @param  {String}  dist The full path to the resolved target directory.
+   * @return {Promise}      The Promise that never resolves.
+   */
   onInvalidDistDir = async (dist: string) => {
     this.fail(
       'Target directory',
