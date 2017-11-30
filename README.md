@@ -34,7 +34,7 @@ cd my-fancy-ui
 yarn run dev
 ```
 
-**That's it** - A browser should automatically open up [http://localhost:8080/](http://localhost:8080/) as soon as the application is fully ready.
+**That's it** - A browser should automatically open up [http://localhost:8080/](http://localhost:8080/) as soon as the application was compiled the first time.
 
 ## Documentation
 * [Introduction](/packages/create-react-microservice-scaffold/src/docs/introduction/README.md)
