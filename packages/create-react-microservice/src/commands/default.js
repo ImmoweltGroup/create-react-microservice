@@ -38,7 +38,7 @@ class CreateReactMicroService extends Command {
       template: {
         src,
         args,
-        filePatterns: ['**/*'],
+        filePatterns: ['**/*', '**/.*'],
         settings: {
           evaluate:    /<%([\s\S]+?)%>/g,
           interpolate: /<%=([\s\S]+?)%>/g,
