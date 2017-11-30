@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fetchComments() should fetch the comments from the API and dispatch a "setComments" action with the response to the store. 1`] = `
+Object {
+  "call": Array [
+    Object {
+      "@@redux-saga/IO": true,
+      "CALL": Object {
+        "args": Array [
+          "https://jsonplaceholder.typicode.com/comments",
+        ],
+        "context": null,
+        "fn": "@@redux-saga-test-plan/json/function/mockConstructor",
+      },
+    },
+  ],
+  "put": Array [
+    Object {
+      "@@redux-saga/IO": true,
+      "PUT": Object {
+        "action": Object {
+          "payload": Object {
+            "comments": Array [
+              "someComments",
+            ],
+          },
+          "type": "@@company-scope/my-fancy-ui/comments/SET_COMMENTS",
+        },
+        "channel": null,
+      },
+    },
+  ],
+}
+`;

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducer() reducer()[actionTypes.SET_COMMENTS] should transform and set the api response into the "byId" state structure 1`] = `
+Object {
+  "commentsById": Object {
+    "bar": Object {
+      "id": "bar",
+      "name": "Bar",
+    },
+    "foo": Object {
+      "id": "foo",
+      "name": "Foo",
+    },
+  },
+}
+`;

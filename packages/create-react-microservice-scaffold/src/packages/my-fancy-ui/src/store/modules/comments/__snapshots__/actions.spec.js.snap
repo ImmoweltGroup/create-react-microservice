@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions actions.loadComments() 1`] = `
+Object {
+  "type": "@@company-scope/my-fancy-ui/comments/LOAD_COMMENTS",
+}
+`;
+
+exports[`actions actions.setComments() should create a payload containing the passed argument as the "comments" property 1`] = `
+Object {
+  "payload": Object {
+    "comments": Array [
+      "foo",
+    ],
+  },
+  "type": "@@company-scope/my-fancy-ui/comments/SET_COMMENTS",
+}
+`;

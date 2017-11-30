@@ -1,0 +1,32 @@
+#
+# This file will be symlinked into all packages of the mono-repo,
+# therefore are paths like `./../../` just a reference to the root of the mono-repo.
+#
+# By default we ignore all `node_modules`, except for modules which ship typings.
+# This ignore pattern increases the startup time of Flow drastically.
+#
+# @see https://github.com/facebook/flow/issues/869
+#
+[ignore]
+.*\/node_modules\/(?!(@immowelt|@company-scope|log-fancy|create-config|redux-lumbergh)\/).*
+
+[include]
+
+[libs]
+#
+# Include patched typings from the root of the mono-repo.
+#
+./../../flow-typed/
+
+[options]
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
+
+#
+# Supress errors in case we require() something based on a variable (E.g. used in the getComponent function of hypernova).
+#
+module.ignore_non_literal_requires=true
+
+[lints]
+all=warn
+untyped-type-import=error
+sketchy-null-bool=off

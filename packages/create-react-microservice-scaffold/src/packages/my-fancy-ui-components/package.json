@@ -1,0 +1,57 @@
+{
+  "name": "@company-scope/my-fancy-ui-components",
+  "version": "0.0.0-development",
+  "private": true,
+  "author": "Immonet dev team <aegaeon@immonet.de> (https://immonet.de)",
+  "license": "my-chosen-spdx-license",
+  "description": "Re-Usable UI components that can be shared across projects",
+  "files": ["src/"],
+  "scripts": {
+    "test": "yarn run lint && yarn run flow && yarn run jest:coverage",
+    "lint": "eslint src",
+    "jest": "jest",
+    "jest:watch": "yarn run jest --watch",
+    "jest:coverage": "yarn run jest --coverage",
+    "flow": "flow",
+    "flow-typed": "flow-typed",
+    "flow-typed-install":
+      "flow-typed install --ignoreDeps=bundled peer --overwrite"
+  },
+  "engines": {
+    "node": ">=8.9.0",
+    "yarn": ">=1.0.2"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@immowelt/babel-preset-immowelt-node": "^1.1.0",
+    "@immowelt/babel-preset-immowelt-react": "^1.2.2"
+  },
+  "devDependencies": {
+    "@immowelt/eslint-config-immowelt-react": "^2.0.2",
+    "@immowelt/jest-preset-react": "^1.1.0",
+    "babel-jest": "20.0.3",
+    "classcat": "^1.1.0",
+    "empty": "^0.10.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.2",
+    "enzyme-to-json": "^3.1.3",
+    "eslint": "^4.9.0",
+    "flow-bin": "^0.57.3",
+    "flow-typed": "^2.2.1",
+    "jest": "^21.0.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-test-renderer": "^16.0.0"
+  },
+  "peerDependencies": {
+    "classcat": "^1.1.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "jest": {
+    "preset": "@immowelt/jest-preset-react",
+    "transformIgnorePatterns": ["node_modules/(?!@immowelt|@company-scope)"]
+  }
+}

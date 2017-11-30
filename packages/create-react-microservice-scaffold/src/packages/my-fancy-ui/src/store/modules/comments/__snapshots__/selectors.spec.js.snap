@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getCommentForId() should return the value of the "comments.commentsById" key which matches the propagated prop id. 1`] = `"bar"`;
+
+exports[`getCommentsById() should return the "comments.commentsById" value. 1`] = `"foo"`;

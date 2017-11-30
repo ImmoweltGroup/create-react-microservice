@@ -1,4 +1,4 @@
 // @flow
 
-export const namepsace = '<%=it.npmScope.raw%><%=it.name.kebabCase%>';
+export const namepsace = '@company-scope/my-fancy-ui';
 export const moduleId = '{{=it.name.camelCase}}';

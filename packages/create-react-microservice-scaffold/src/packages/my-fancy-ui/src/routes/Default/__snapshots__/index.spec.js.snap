@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Default/> should render correctly. 1`] = `
+<div
+  className="mdl-layout__content"
+  style={
+    Object {
+      "display": "flex",
+      "justifyContent": "center",
+    }
+  }
+>
+  <div
+    className="page-content"
+    style={
+      Object {
+        "maxWidth": "640px",
+      }
+    }
+  >
+    <h2>
+      Oii, foo!
+    </h2>
+    <Connect(CommentsList) />
+  </div>
+</div>
+`;

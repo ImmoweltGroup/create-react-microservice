@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CommentsListComment/> should render correctly. 1`] = `
+<div
+  className="mdl-card mdl-card__supporting-text mdl-shadow--2dp"
+  style={
+    Object {
+      "marginBottom": "1.5rem",
+      "width": "100%",
+    }
+  }
+>
+  <div>
+    <b>
+      fooId
+    </b>
+     
+    Foo Bar
+     (
+    foo@bar.com
+    )
+  </div>
+  <p
+    className="comments__comment__body"
+  >
+    Lorem ipsum
+  </p>
+</div>
+`;
+
+exports[`mapStateToProps() should execute all given selectors with the state and return an object containing the state props. 1`] = `
+Object {
+  "calls": Object {
+    "getCommentForId": Object {
+      "argsByCallCount": Object {
+        "0": Array [
+          Object {
+            "__mockState": true,
+          },
+          Object {
+            "id": "fooId",
+          },
+        ],
+      },
+      "callCount": 1,
+    },
+  },
+  "stateProps": Object {
+    "comment": Object {
+      "commentId": "fooId",
+    },
+  },
+}
+`;

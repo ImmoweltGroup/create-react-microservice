@@ -1,0 +1,10 @@
+{
+  "packages/*/{bin,src}/**/*.{js,json,scss,sass,css}": [
+    "prettier --write",
+    "git add"
+  ],
+  "build/**/*.{js,json,scss,sass,css}": [
+    "prettier --write",
+    "git add"
+  ]
+}

@@ -2,7 +2,8 @@ const path = require('path');
 
 module.exports = {
   id: 'redux-module',
-  description: 'A template that will scaffold a new redux module for you into the application.',
+  description:
+    'A template that will scaffold a new redux module for you into the application.',
   resolveQuestions: async flags => [
     {
       type: 'input',
@@ -13,10 +14,13 @@ module.exports = {
   ],
   resolveFiles: async (answers, flags) => ['*/**'],
   resolveDestinationFolder: async (answers, args, flags) => {
-    return path.join(__dirname, '../../../packages/<%=it.name.kebabCase%>/src/store/modules/');
+    return path.join(
+      __dirname,
+      '../../../packages/my-fancy-ui/src/store/modules/'
+    );
   },
-  onFinish: async(answers, args, flags) => {
-    console.log(`Redux module created - Please register it in your application by modifying "packages/<%=it.name.kebabCase%>/src/store/manifest.js".
+  onFinish: async (answers, args, flags) => {
+    console.log(`Redux module created - Please register it in your application by modifying "packages/my-fancy-ui/src/store/manifest.js".
 
 1. Import the created module, e.g.
 

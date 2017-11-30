@@ -2,7 +2,8 @@ const path = require('path');
 
 module.exports = {
   id: 'react-component',
-  description: 'A simple React Component template that will scaffold basic tests and the component itself.',
+  description:
+    'A simple React Component template that will scaffold basic tests and the component itself.',
   resolveQuestions: async flags => [
     {
       type: 'input',
@@ -13,6 +14,9 @@ module.exports = {
   ],
   resolveFiles: async (answers, flags) => ['*/**'],
   resolveDestinationFolder: async (answers, args, flags) => {
-    return path.join(__dirname, '../../../packages/<%=it.name.kebabCase%>-components/src/');
+    return path.join(
+      __dirname,
+      '../../../packages/my-fancy-ui-components/src/'
+    );
   }
 };

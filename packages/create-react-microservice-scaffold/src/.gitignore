@@ -1,0 +1,29 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+
+# flow typings of dependencies
+flow-typed/npm
+packages/*/flow-typed/npm
+
+# test results
+coverage
+
+# compiled assets
+dist
+
+# Symlinked flowconfigs of the packages
+packages/*/.flowconfig
+
+# misc
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore the symlink ".editorconfig" from the @immowelt/styleguide-javascript package.
+.editorconfig
+
+# Ignore the symlink ".prettierrc" from the @immowelt/styleguide-javascript package.
+.prettierrc

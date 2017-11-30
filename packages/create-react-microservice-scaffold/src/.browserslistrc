@@ -1,0 +1,10 @@
+# Browsers that the application supports
+
+last 2 version
+ff > 3
+ff esr
+safari >= 5
+ie >= 8
+opera >= 12
+ios >= 6
+android >= 4

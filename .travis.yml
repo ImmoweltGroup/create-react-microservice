@@ -8,5 +8,5 @@ notifications:
 install:
   - yarn install
 script:
-  - yarn test
-  - yarn integration-test
+  - yarn run test
+  - yarn run test:integration

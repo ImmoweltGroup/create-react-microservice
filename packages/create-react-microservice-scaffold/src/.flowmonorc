@@ -1,0 +1,15 @@
+{
+  "flowTypedCommandExecRetries": 3,
+  "create-symlinks": {
+    "ignore": [
+      "eslint",
+      "jest"
+    ]
+  },
+  "create-stubs": {
+    "dependencies": [
+      "create-config",
+      "log-fancy"
+    ]
+  }
+}

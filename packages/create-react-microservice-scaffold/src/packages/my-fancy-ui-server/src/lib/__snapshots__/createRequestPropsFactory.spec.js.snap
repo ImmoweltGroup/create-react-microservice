@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createRequestPropsFactory() should read and evaluate the bundlePath and resolve with a Promise containing the incomming query and initialState. 1`] = `
+Object {
+  "foo-bar": Object {
+    "foo": "bar",
+  },
+}
+`;

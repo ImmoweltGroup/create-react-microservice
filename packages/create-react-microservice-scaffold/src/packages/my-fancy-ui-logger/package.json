@@ -1,0 +1,42 @@
+{
+  "name": "@company-scope/my-fancy-ui-logger",
+  "version": "0.0.0-development",
+  "private": true,
+  "author": "Immonet dev team <aegaeon@immonet.de> (https://immonet.de)",
+  "license": "my-chosen-spdx-license",
+  "description": "The universal logger instance of the my-fancy-ui",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "yarn run lint && yarn run flow && yarn run jest:coverage",
+    "lint": "eslint src",
+    "jest": "jest",
+    "jest:watch": "yarn run jest --watch",
+    "jest:coverage": "yarn run jest --coverage",
+    "flow": "flow",
+    "flow-typed": "flow-typed",
+    "flow-typed-install":
+      "flow-typed install --ignoreDeps=bundled peer --overwrite"
+  },
+  "engines": {
+    "node": ">=8.9.0",
+    "yarn": ">=1.0.2"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@immowelt/babel-preset-immowelt-node": "^1.1.0",
+    "@immowelt/babel-preset-immowelt-react": "^1.2.2",
+    "log-fancy": "^1.3.0"
+  },
+  "devDependencies": {
+    "@immowelt/eslint-config-immowelt-react": "^2.0.2",
+    "@immowelt/jest-preset-node": "^1.0.0",
+    "eslint": "^4.9.0",
+    "flow-bin": "^0.57.3",
+    "flow-typed": "^2.2.1",
+    "jest": "^21.0.2"
+  },
+  "jest": {
+    "preset": "@immowelt/jest-preset-node",
+    "transformIgnorePatterns": ["node_modules/(?!@immowelt|@company-scope)"]
+  }
+}

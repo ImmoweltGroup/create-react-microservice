@@ -1,6 +1,9 @@
 // @flow
 
-import type {TemplateHookArgsType} from 'create-any-cli/dist/types.js';
+import type {
+  TemplateHookArgsType,
+  TemplateArgsType
+} from 'create-any-cli/dist/types.js';
 
 const path = require('path');
 const ora = require('ora');
@@ -17,8 +20,13 @@ class CreateReactMicroService extends Command {
    */
   async exec() {
     const name = await this.resolveAppName();
-    const scaffoldPackagePath = path.resolve('node_modules', 'create-react-microservice-scaffold');
-    const scaffoldPackageJson = file.require(path.join(scaffoldPackagePath, 'package.json'));
+    const scaffoldPackagePath = path.resolve(
+      'node_modules',
+      'create-react-microservice-scaffold'
+    );
+    const scaffoldPackageJson = file.require(
+      path.join(scaffoldPackagePath, 'package.json')
+    );
     let dist = await this.resolveDistFolder();
     let src = path.join(scaffoldPackagePath, scaffoldPackageJson.main);
 
@@ -39,18 +47,14 @@ class CreateReactMicroService extends Command {
         src,
         args,
         filePatterns: ['**/*', '**/.*'],
-        settings: {
-          evaluate:    /<%([\s\S]+?)%>/g,
-          interpolate: /<%=([\s\S]+?)%>/g,
-          encode:      /<%!([\s\S]+?)%>/g,
-          use:         /<%#([\s\S]+?)%>/g,
-          define:      /<%##\s*([\w\.$]+)\s*(\:|=)([\s\S]+?)#%>/g, // eslint-disable-line no-useless-escape
-          conditional: /<%\?(\?)?\s*([\s\S]*?)\s*%>/g,
-          iterate:     /<%~\s*(?:%>|([\s\S]+?)\s*\:\s*([\w$]+)\s*(?:\:\s*([\w$]+))?\s*%>)/g, // eslint-disable-line no-useless-escape
-        }
+        ignore: [
+          `${src}/{node_modules,dist,flow-typed/npm}/**`,
+          `${src}/packages/*/{node_modules,dist,flow-typed/npm}/**`
+        ]
       },
       hooks: {
         onFile: this.onFile,
+        onTemplate: this.onTemplate,
         onInvalidDistDir: this.onInvalidDistDir,
         onBeforeReadFile: this.onBeforeReadFile,
         onBeforeProcessFile: this.onBeforeProcessFile,
@@ -59,23 +63,30 @@ class CreateReactMicroService extends Command {
       }
     });
 
-    this.log('succeed', 'Successfully created the scaffold in', dist);
-    this.log('start', 'Installing all dependencies and bootstrapping the application.');
+    this.log('succeed', 'Processed the scaffold into', dist);
+    this.log('start', 'Installing all dependencies...');
 
     try {
       await Command.exec('yarn', ['install'], {
         cwd: dist
       });
+      this.log('succeed', 'Successfully installed all dependencies');
 
+      this.log('start', 'Bootstrapping the service...');
       await Command.exec('yarn', ['run', 'bootstrap'], {
         cwd: dist
       });
+      this.log('succeed', 'Successfully bootstrapped the service');
     } catch (e) {
       this.fail(e);
     }
 
-    this.log('succeed', 'Successfully bootstrapped the application in', dist);
-  };
+    this.log(
+      'succeed',
+      'Done! :-) Start the development server by executing',
+      `cd ${dist} && yarn run dev`
+    );
+  }
 
   /**
    * Resolves the target folder for the scaffold. The user can add a folder name himself via the CLI.
@@ -105,18 +116,25 @@ class CreateReactMicroService extends Command {
    */
   async resolveAndPromptTemplateArgs() {
     const name = await this.resolveAppName();
-    const answers = await create.resolveAndPromptOptions([{
-      type: 'list',
-      name: 'license',
-      message: 'What is the preffered license of your application?',
-      choices: ['Unlicense', 'Apache-2.0', 'MIT', 'other']
-    }, {
-      type: 'input',
-      name: 'npmScope',
-      message: 'What is the NPM organization scope for the mono repositories packages?',
-      filter: this.filterNpmScopeArg,
-      validate: Boolean
-    }], this.flags);
+    const answers = await create.resolveAndPromptOptions(
+      [
+        {
+          type: 'list',
+          name: 'license',
+          message: 'What is the preffered license of your application?',
+          choices: ['Unlicense', 'Apache-2.0', 'MIT', 'other']
+        },
+        {
+          type: 'input',
+          name: 'npmScope',
+          message:
+            'What is the NPM organization scope for the mono repositories packages?',
+          filter: this.filterNpmScopeArg,
+          validate: Boolean
+        }
+      ],
+      this.flags
+    );
     const args = await create.createDecoratedTemplateArgs({name, ...answers});
 
     return args;
@@ -124,11 +142,51 @@ class CreateReactMicroService extends Command {
 
   filterNpmScopeArg = (str?: string) => {
     if (str && str.length) {
-      return `@${str.replace(/\W/g, '')}/`
+      const namespace = str
+        .replace(/\s/g, '-')
+        .replace(/[0-9]/g, '')
+        .replace(/[^a-zA-Z]g/g, '')
+        .toLowerCase();
+
+      return `@${namespace}/`;
     }
 
     return '';
-  }
+  };
+
+  onTemplate = async (str: string, args: TemplateArgsType) => {
+    let processedString = str;
+
+    [
+      // The service name
+      ['my-fancy-ui', args.name.kebabCase],
+
+      // The service name for E.g. environment variables
+      ['MY_FANCY_UI', args.name.snakeCase.toUpperCase()],
+
+      // The package scope name
+      ['@company-scope/', args.npmScope.raw],
+
+      // The package scope name in RegExp patterns
+      [
+        new RegExp('[|]@company-scope', 'g'),
+        `|${args.npmScope.raw.replace('/', '')}`
+      ],
+
+      // The choosen license
+      ['my-chosen-spdx-license', args.license.raw]
+    ].forEach(identifierWithReplacer => {
+      let [before, after] = identifierWithReplacer;
+
+      if (typeof before === 'string') {
+        before = new RegExp(before, 'g');
+      }
+
+      processedString = processedString.replace(before, after);
+    });
+
+    return processedString;
+  };
 
   onFile = () => {
     return {
@@ -137,7 +195,11 @@ class CreateReactMicroService extends Command {
   };
 
   onInvalidDistDir = async (dist: string) => {
-    this.fail('Target directory', dist, 'is not empty. Aborting the creation of the application.')
+    this.fail(
+      'Target directory',
+      dist,
+      'is not empty. Aborting the creation of the application.'
+    );
   };
 
   onBeforeReadFile = async ({filePaths, context}: TemplateHookArgsType) => {

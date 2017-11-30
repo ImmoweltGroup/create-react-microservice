@@ -1,0 +1,6 @@
+{
+  "extends": "@immowelt/eslint-config-immowelt-react",
+  "settings": {
+    "polyfills": ["promises"]
+  }
+}

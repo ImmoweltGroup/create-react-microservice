@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CommentsList/> should render correctly. 1`] = `
+<div>
+  <div
+    className="mdl-grid"
+  >
+    <div
+      className="mdl-cell mdl-cell--6-col"
+    >
+      <h4
+        style={
+          Object {
+            "margin": "3px 0",
+          }
+        }
+      >
+        Comments
+      </h4>
+    </div>
+    <div
+      className="mdl-cell mdl-cell--6-col mdl-typography--text-right"
+    >
+      <Button
+        onClick={[Function]}
+      >
+        ↺ 
+        Load comments
+      </Button>
+    </div>
+  </div>
+  <Connect(CommentsListComment)
+    commentId="fooId"
+    key="fooId"
+  />
+  <Connect(CommentsListComment)
+    commentId="barId"
+    key="barId"
+  />
+</div>
+`;
+
+exports[`mapStateToProps() should execute all given selectors with the state and return an object containing the state props. 1`] = `
+Object {
+  "calls": Object {
+    "getCommentIds": Object {
+      "argsByCallCount": Object {
+        "0": Array [
+          Object {
+            "__mockState": true,
+          },
+        ],
+      },
+      "callCount": 1,
+    },
+  },
+  "stateProps": Object {
+    "commentsIds": Array [
+      "fooCommentId",
+      "barCommentId",
+    ],
+  },
+}
+`;

@@ -1,4 +1,5 @@
 {
+  "flowTypedCommandExecRetries": 3,
   "create-stubs": {
     "dependencies": ["create-any-cli"]
   }

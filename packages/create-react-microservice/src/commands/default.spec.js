@@ -27,10 +27,18 @@ describe('new Command().exec()', () => {
 
   beforeEach(() => {
     instance = new DefaultCommand({input: [], flags: {}});
-    processTemplateAndCreate = jest.spyOn(create, 'processTemplateAndCreate').mockImplementation(jest.fn());
-    resolveAndPromptTemplateArgs = jest.spyOn(instance, 'resolveAndPromptTemplateArgs').mockImplementation(jest.fn(() => ({someArg: 'foo'})));
-    resolveDistFolder = jest.spyOn(instance, 'resolveDistFolder').mockImplementation(jest.fn(() => '/foo/bar/my fancy app'));
-    resolveAppName = jest.spyOn(instance, 'resolveAppName').mockImplementation(jest.fn(() => 'my fancy app'));
+    processTemplateAndCreate = jest
+      .spyOn(create, 'processTemplateAndCreate')
+      .mockImplementation(jest.fn());
+    resolveAndPromptTemplateArgs = jest
+      .spyOn(instance, 'resolveAndPromptTemplateArgs')
+      .mockImplementation(jest.fn(() => ({someArg: 'foo'})));
+    resolveDistFolder = jest
+      .spyOn(instance, 'resolveDistFolder')
+      .mockImplementation(jest.fn(() => '/foo/bar/my fancy app'));
+    resolveAppName = jest
+      .spyOn(instance, 'resolveAppName')
+      .mockImplementation(jest.fn(() => 'my fancy app'));
     fail = jest.spyOn(instance, 'fail').mockImplementation(jest.fn());
     exec = jest.spyOn(Command, 'exec').mockImplementation(jest.fn());
     jest.spyOn(instance, 'log').mockImplementation(jest.fn());
@@ -64,8 +72,12 @@ describe('new Command().exec()', () => {
     await instance.exec();
 
     expect(exec).toHaveBeenCalledTimes(2);
-    expect(exec).toHaveBeenCalledWith('yarn', ['install'], {cwd: '/foo/bar/my fancy app'});
-    expect(exec).toHaveBeenCalledWith('yarn', ['run', 'bootstrap'], {cwd: '/foo/bar/my fancy app'});
+    expect(exec).toHaveBeenCalledWith('yarn', ['install'], {
+      cwd: '/foo/bar/my fancy app'
+    });
+    expect(exec).toHaveBeenCalledWith('yarn', ['run', 'bootstrap'], {
+      cwd: '/foo/bar/my fancy app'
+    });
   });
 
   it('should call the fail method if the execution of one of the commands failed', async () => {
@@ -84,8 +96,12 @@ describe('new Command().resolveAndPromptTemplateArgs()', () => {
 
   beforeEach(() => {
     instance = new DefaultCommand({input: [], flags: {}});
-    resolveAndPromptOptions = jest.spyOn(create, 'resolveAndPromptOptions').mockImplementation(jest.fn(() => ({someArg: 'foo'})));
-    jest.spyOn(instance, 'resolveAppName').mockImplementation(jest.fn(() => 'my fancy app'));
+    resolveAndPromptOptions = jest
+      .spyOn(create, 'resolveAndPromptOptions')
+      .mockImplementation(jest.fn(() => ({someArg: 'foo'})));
+    jest
+      .spyOn(instance, 'resolveAppName')
+      .mockImplementation(jest.fn(() => 'my fancy app'));
   });
 
   afterEach(() => {
@@ -106,13 +122,14 @@ describe('new Command().resolveAndPromptTemplateArgs()', () => {
   });
 });
 
-
 describe('new Command().resolveDistFolder()', () => {
   let instance;
 
   beforeEach(() => {
     instance = new DefaultCommand({input: [], flags: {}});
-    jest.spyOn(process, 'cwd').mockImplementation(jest.fn(() => '/usr/src/foo'));
+    jest
+      .spyOn(process, 'cwd')
+      .mockImplementation(jest.fn(() => '/usr/src/foo'));
   });
 
   afterEach(() => {
@@ -142,7 +159,9 @@ describe('new Command().resolveAppName()', () => {
 
   beforeEach(() => {
     instance = new DefaultCommand({input: [], flags: {}});
-    jest.spyOn(process, 'cwd').mockImplementation(jest.fn(() => '/usr/src/foo'));
+    jest
+      .spyOn(process, 'cwd')
+      .mockImplementation(jest.fn(() => '/usr/src/foo'));
   });
 
   afterEach(() => {
@@ -238,7 +257,7 @@ describe('new Command().filterNpmScopeArg()', () => {
   });
 
   it('should return an processed string without special characters and prepend the at as well as append the slash to the returned string', async () => {
-    expect(instance.filterNpmScopeArg('foo bar+')).toBe('@foobar/');
+    expect(instance.filterNpmScopeArg('foo bar23-baz')).toBe('@foo-bar-baz/');
   });
 });
 
@@ -263,7 +282,7 @@ describe('new Command() on template hooks', () => {
           succeed: jest.fn()
         }
       }
-    }
+    };
   });
 
   afterEach(() => {

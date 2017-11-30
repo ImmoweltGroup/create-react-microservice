@@ -1,0 +1,180 @@
+# Connecting the UI
+
+In this chapter we will connect the previously written redux store logic with the UI.
+
+## Table of Contents
+
+- [Making the form more modular](#making-the-form-modular)
+- [Retrieving the data from the store](#retrieving-data-from-the-store)
+- [Dispatching changes to the store](#dispatching-changes-to-the-store)
+
+
+<a id="making-the-form-modular"></a>
+## Making the form more modular
+In our case we should split up the view into two parts to make it more effective, keep the form in the `index.js` file and move the input and it's mapping logic into a separate file, e.g. `input.js`. Let's start by simply creating a copy of the whole `index.js` file as `input.js` and reduce all of the JSX down to the input HTML node.
+
+```js
+// @flow
+
+import type {Connector} from 'react-redux';
+import type {StateType} from './../../store/types.js';
+
+type OwnPropsType = {};
+type StatePropsType = {};
+type DispatchPropsType = {};
+type PropsType = OwnPropsType & StatePropsType & DispatchPropsType;
+
+import React from 'react';
+import {connect} from 'react-redux';
+
+const CommentFormInput = (props: PropsType) => {
+  return (
+    <input name="id" type="text"/>
+  );
+};
+
+const mapStateToProps = (state: StateType): StatePropsType => ({});
+const mapDispatchToProps = (dispatch: Function, ownProps: OwnPropsType): DispatchPropsType => ({});
+const connector: Connector<OwnPropsType, PropsType> = connect(
+  mapStateToProps,
+  mapDispatchToProps
+);
+const Container = connector(CommentFormInput);
+
+export {
+  CommentFormInput,
+  mapStateToProps,
+  mapDispatchToProps,
+  Container as default
+};
+```
+
+The first thing we should do is to make the `name` attribute configurable, we can do this by defining the type in the `OwnPropsType` and retrieving it from the `props` inside the component.
+
+```js
+import type {CommentType} from './../../store/modules/comments/types.js';
+
+type OwnPropsType = {
+  //
+  // Again we define an enum of the possible keys using flows $Keys helper type.
+  // This prop `propertyKey` must now be passed in from the outside if the container will be used.
+  //
+  propertyKey: $Keys<CommentType>
+};
+
+// ... other types and imports ...
+
+const CommentFormInput = (props: PropsType) => {
+  const {propertyKey, ...rest} = props;
+
+  return (
+    <input {...rest} name={propertyKey} type="text"/>
+  );
+};
+```
+
+Let's start using the new container in the Form itself in `CommentForm/index.js`.
+
+```js
+// ... other types and imports ...
+
+import CommentFormInput from './input.js';
+
+const CommentForm = (props: PropsType) => {
+  return (
+    <form>
+      {['id', 'postId', 'email', 'name', 'body'].map(propertyKey => (
+        <CommentFormInput key={propertyKey} propertyKey={propertyKey}/>
+      ))}
+
+      <input type="submit" value="Create comment"/>
+    </form>
+  );
+};
+
+// ... connect HOC configuration and exports ...
+```
+
+<a id="retrieving-the-data-from-the-store"></a>
+## Retrieving the data from the store
+Retrieving something from the store is done by configuring the `connect` HOC in your view to do it, in the best case using a selector. So let's jump into our previously written `CommentFormInput` container in `packages/my-fancy-ui/src/containers/CommentForm/input.js`. Below the component you will find a `mapStateToProps` function, this is the place to describe what you want to retrieve from the redux store and pass it down to the component as props.
+
+```js
+// ... other types and imports ...
+
+//
+// Annotate the value as a required prop which will be queried from the redux store.
+//
+type StatePropsType = {
+  value: string
+};
+
+// ... other types and imports ...
+
+//
+// Import our selector that we've written in the previous chapter.
+//
+import {getCommentFormDataValueForPropertyKey} from './../../store/modules/comments/selectors.js';
+
+// ... Component definition ...
+
+//
+// The `mapStateToProps` function get's executed with the global redux-state and the `ownProps` that got passed in from the outside.
+// Based on these two arguments we return an object with the key `value` and the value being the result of the selector that we've imported.
+//
+const mapStateToProps = (state: StateType, ownProps: OwnPropsType): StatePropsType => ({
+  value: getCommentFormDataValueForPropertyKey(state, {key: ownProps.propertyKey})
+});
+
+// ... other configurations for the HOC and exports ...
+```
+
+If you reload your browser you will most probably not see any differences, but try to type in something into an input, this should now not be possible anymore, to re-enable this functionality let's create an `onChange` handler and dispatch the changed value to the store.
+
+
+<a id="dispatching-changes-to-the-store"></a>
+## Dispatching changes to the store
+As with the retrieval of data, dispatching an action to the store is also possible using the configuration options of the `connect` HOC.
+
+```js
+// ... other types and imports ...
+
+//
+// Annotate the `onChange` as a required prop which will be generated by the `connect` HOC.
+//
+type DispatchPropsType = {
+  onChange: Function
+};
+
+// ... other types and imports ...
+
+//
+// Import the actions of our redux module.
+//
+import {actions as commentsActions} from './../../store/modules/comments/';
+
+// ... Component definition ...
+
+//
+// The `mapDispatchToProps` function get's executed with the `dispatch` method of the redux-state and the `ownProps` that got passed in from the outside.
+// Based on these two arguments we return an object with the key `onChange` which is the change handler that get's called once the user types within the input HTML node.
+//
+const mapDispatchToProps = (dispatch: Function, ownProps: OwnPropsType): DispatchPropsType => ({
+  onChange(e) {
+    const {value} = e.target;
+
+    dispatch(commentsActions.setCommentFormPropertyValue(ownProps.propertyKey, value));
+  }
+});
+```
+
+Done, now you should be able to type something into the inputs again, the redux unidirectional data flow is now done. Let's revisit what is happening once someone types something into an input.
+
+1. The `onChange` prop gets called by React with the internal change Event. (This prop was injected by the `connect` HOC using the `mapDispatchToProps` configuration)
+2. Within the injected `onChange` function we retrieve the value from the Event and dispatch the `setCommentFormPropertyValue` action using the `propertyKey` which was passed from the outside and the retrieved value.
+3. The `actionHandler` of the `SET_COMMENT_FORM_PROPERTY_VALUE` actionType get's executed and sets the incoming value and `propertyKey` combination to the redux state.
+4. Since a state update happened all `connect` HOCs get re-evaluated, thus the `mapStateToProps` function of our `CommentFormInput` container gets executed.
+5. In our `mapStateToProps` we retrieve the new value using our `getCommentFormDataValueForPropertyKey` selector and pass it in as the `value` prop to the component.
+6. The `CommentFormInput` component receives new props thus gets re-rendered.
+
+Awesome! Let's continue and integrate the submit logic.
