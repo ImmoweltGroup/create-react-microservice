@@ -64,7 +64,7 @@ yarn run dev
 * [Troubleshooting](/packages/create-react-microservice-scaffold/docs/Troubleshooting.md)
 
 ## Contributing
-See the `CONTRIBUTING.md` file at the root of the repository.
+See the [`CONTRIBUTING.md`](/CONTRIBUTING.md) file at the root of the repository.
 
 ## Licensing
-See the `LICENSE` file at the root of the repository.
+See the [`LICENSE`](/LICENSE) file at the root of the repository.
