@@ -6,9 +6,9 @@ type PropsType = {
 
 import React from 'react';
 import i18n from '@company-scope/my-fancy-ui-i18n';
-import CommentsList from './../../containers/CommentsList/';
+import CommentsList from './../containers/CommentsList/';
 
-const DefaultRoute = (props: PropsType) => {
+const IndexRoute = (props: PropsType) => {
   return (
     <div
       className="mdl-layout__content"
@@ -22,4 +22,4 @@ const DefaultRoute = (props: PropsType) => {
   );
 };
 
-export {DefaultRoute as default};
+export {IndexRoute as default};
