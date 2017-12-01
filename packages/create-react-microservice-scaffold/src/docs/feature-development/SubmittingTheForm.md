@@ -90,7 +90,7 @@ Great! Let's continue with connecting the `submitCommentForm` action and the For
 ```js
 // ... other types ...
 type DispatchPropsType = {
-  onSubmit: Function
+  submitCommentForm: Function
 };
 type PropsType = OwnPropsType & StatePropsType & DispatchPropsType;
 
