@@ -31,7 +31,7 @@ module.exports = {
   externals: [
     nodeExternals({
       modulesDir: config.paths.modules(),
-      whitelist: [/^@immowelt.*$/, /react-/g, /lodash-/g]
+      whitelist: [/^@immowelt.*$/, /^@company-scope.*$/, /react-/g, /lodash-/g]
     })
   ],
 

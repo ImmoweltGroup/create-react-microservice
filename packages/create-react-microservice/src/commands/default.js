@@ -199,6 +199,7 @@ class CreateReactMicroService extends Command {
       ['@company-scope/', args.npmScope.raw],
 
       // The package scope name in RegExp patterns
+      ['/^@company-scope.*$/', `'/^${args.npmScope.raw.replace('/', '')}.*$/'`],
       [
         new RegExp('[|]@company-scope', 'g'),
         `|${args.npmScope.raw.replace('/', '')}`
