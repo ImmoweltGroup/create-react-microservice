@@ -59,6 +59,7 @@ yarn run dev
   * [Submitting the data to an API](/packages/create-react-microservice-scaffold/src/docs/feature-development/SubmittingTheForm.md)
   * [Internationalization of the UI (i18n)](/packages/create-react-microservice-scaffold/src/docs/feature-development/i18n.md)
 * [Recipes](/packages/create-react-microservice-scaffold/src/docs/recipes/README.md)
+  * [Integrating CSS / PostCSS](/packages/create-react-microservice-scaffold/src/docs/recipes/IntegratingPostCss.md)
 * [FAQ](/packages/create-react-microservice-scaffold/src/docs/FAQ.md)
 * [Glossary](/packages/create-react-microservice-scaffold/src/docs/Glossary.md)
 * [Troubleshooting](/packages/create-react-microservice-scaffold/src/docs/Troubleshooting.md)
