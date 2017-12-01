@@ -1,6 +1,6 @@
 // @flow
 
-import type {EffectTask as EffectTaskType} from 'redux-saga/effects';
+import type {Task as ReduxSagaInstanceType} from 'redux-saga';
 import type {StateType} from './types.js';
 
 export type StoreOptionsType = {
@@ -9,7 +9,7 @@ export type StoreOptionsType = {
 };
 type StoreContextType = {
   store: any,
-  rootSagaInstance: EffectTaskType
+  rootSagaInstance: ReduxSagaInstanceType<*>
 };
 
 import {applyMiddleware, createStore} from 'redux';
