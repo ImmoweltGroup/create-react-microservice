@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Default/> should render correctly. 1`] = `
+exports[`<IndexRoute/> should render correctly. 1`] = `
 <div
   className="mdl-layout__content"
   style={

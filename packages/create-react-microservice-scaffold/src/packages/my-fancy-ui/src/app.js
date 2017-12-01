@@ -23,7 +23,7 @@ class App extends Component<PropsType> {
    * @param  {Object}  opts The options from either `next.js` or the `express-hypernova` middleware.
    * @return {Promise}      The Promise that resolves with the server side props of the application.
    */
-  static async getInitialProps({req}): Promise<PropsType> {
+  static async getInitialProps({req}: Object): Promise<PropsType> {
     const {query} = req;
     const errors = [];
 
