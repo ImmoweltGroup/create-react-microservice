@@ -44,7 +44,7 @@ const mapStateToProps = (
 ): StatePropsType => ({
   comment: commentsSelectors.getCommentForId(state, {id: ownProps.commentId})
 });
-const connector: Connector<OwnPropsType, PropsType> = connect(mapStateToProps);
-const Container = connector(CommentsListComment);
+const withState: Connector<OwnPropsType, PropsType> = connect(mapStateToProps);
+const Container = withState(CommentsListComment);
 
 export {CommentsListComment, mapStateToProps, Container as default};

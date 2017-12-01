@@ -48,11 +48,11 @@ const mapStateToProps = (state: StateType): StatePropsType => ({
 const mapDispatchToProps: DispatchPropsType = {
   loadComments: commentsActions.loadComments
 };
-const connector: Connector<OwnPropsType, PropsType> = connect(
+const withState: Connector<OwnPropsType, PropsType> = connect(
   mapStateToProps,
   mapDispatchToProps
 );
-const Container = connector(CommentsList);
+const Container = withState(CommentsList);
 
 export {
   CommentsList,
