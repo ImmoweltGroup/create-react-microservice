@@ -95,28 +95,31 @@ type DispatchPropsType = {
 type PropsType = OwnPropsType & StatePropsType & DispatchPropsType;
 
 // ... other imports ...
+import React, {Component} from 'react';
 import {actions as commentsActions} from './../../store/modules/comments/';
 
-const CommentForm = (props: PropsType) => {
-  const {onSubmit, ...rest} = props;
+class CommentForm extends Component<PropsType> {
+  render() {
+    return (
+      <form>
+        // ... additional JSX markup ...
 
-  return (
-    <form {...rest}>
-      // ... additional JSX markup ...
+        <input onClick={this.handleFormSubmit} type="submit" value={i18n.t('comments.form.submit')} />
+      </form>
+    );
+  }
+  
+  handleFormSubmit = (e) => {
+    e.preventDefault();
 
-      <input onClick={onSubmit} type="submit" value={i18n.t('comments.form.submit')} />
-    </form>
-  );
+    this.props.submitCommentForm();
+  }
 };
 
 // ... configuration of the `mapStateToProps` ...
-const mapDispatchToProps = (dispatch: Function, ownProps: OwnPropsType): DispatchPropsType => ({
-  onSubmit(e) {
-    e.preventDefault();
-
-    dispatch(commentsActions.submitCommentForm());
-  }
-});
+const mapDispatchToProps: DispatchPropsType = {
+  submitCommentForm: commentsActions.submitCommentForm
+};
 
 // ... connect HOC configuration and exports ...
 ```
