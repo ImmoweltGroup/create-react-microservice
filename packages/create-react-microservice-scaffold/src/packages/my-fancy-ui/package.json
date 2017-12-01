@@ -33,7 +33,6 @@
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
     "node-polyglot": "^2.2.2",
-    "object-assign": "4.1.1",
     "plow-js": "^2.1.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
@@ -43,12 +42,12 @@
     "recompose": "^0.26.0",
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
-    "redux-lumbergh": "1.0.5",
+    "redux-lumbergh": "^1.0.5",
     "redux-saga": "^0.16.0",
     "reselect": "^3.0.1",
     "serialize-error": "^2.1.0",
     "webpack": "^3.9.1",
-    "whatwg-fetch": "2.0.3"
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "@immowelt/eslint-config-immowelt-react": "^2.0.2",
