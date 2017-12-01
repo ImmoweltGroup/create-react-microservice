@@ -29,6 +29,10 @@ module.exports = createConfig({
     MY_FANCY_UI_SSR_PORT: num({
       default: 8081,
       desc: 'The HTTP port of the hypernova microservice.'
+    }),
+    MY_FANCY_UI_API_STAGE: num({
+      default: 'development',
+      desc: 'The stage pointer for the API´s you use in the service.'
     })
   },
   configsPathsByEnvironmentKey: {
