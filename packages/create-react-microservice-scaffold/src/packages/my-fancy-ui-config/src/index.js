@@ -30,7 +30,7 @@ module.exports = createConfig({
       default: 8081,
       desc: 'The HTTP port of the hypernova microservice.'
     }),
-    MY_FANCY_UI_API_STAGE: num({
+    MY_FANCY_UI_API_STAGE: str({
       default: 'development',
       desc: 'The stage pointer for the API´s you use in the service.'
     })
