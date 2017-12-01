@@ -37,33 +37,7 @@ yarn run dev
 **That's it** - A browser should automatically open up [http://localhost:8080/](http://localhost:8080/) as soon as the application was compiled the first time.
 
 ## Documentation
-* [Introduction](/packages/create-react-microservice-scaffold/src/docs/introduction/README.md)
-  * [Motivation](/packages/create-react-microservice-scaffold/src/docs/introduction/Motivation.md)
-  * [Structure](/packages/create-react-microservice-scaffold/src/docs/introduction/Structure.md)
-* [Basics](/packages/create-react-microservice-scaffold/src/docs/basics/README.md)
-  * [Prerequisites](/packages/create-react-microservice-scaffold/src/docs/basics/Prerequisites.md)
-  * [Technologies](/packages/create-react-microservice-scaffold/src/docs/basics/Technologies.md)
-  * [Getting Started](/packages/create-react-microservice-scaffold/src/docs/basics/GettingStarted.md)
-  * [Scripts](/packages/create-react-microservice-scaffold/src/docs/basics/Scripts.md)
-* [Advanced](/packages/create-react-microservice-scaffold/src/docs/advanced/README.md)
-  * [Configuration](/packages/create-react-microservice-scaffold/src/docs/advanced/Configuration.md)
-  * [Deploying](/packages/create-react-microservice-scaffold/src/docs/advanced/Deploying.md)
-  * [Tests](/packages/create-react-microservice-scaffold/src/docs/advanced/Tests.md)
-  * [Server-Side-Rendering](/packages/create-react-microservice-scaffold/src/docs/advanced/ServerSideRendering.md)
-* [Developing your first feature](/packages/create-react-microservice-scaffold/src/docs/feature-development/README.md)
-  * [Introduction](/packages/create-react-microservice-scaffold/src/docs/feature-development/Introduction.md)
-  * [Building the UI](/packages/create-react-microservice-scaffold/src/docs/feature-development/BuildingTheFormUi.md)
-  * [i18n](/packages/create-react-microservice-scaffold/src/docs/feature-development/i18n.md)
-  * [Thinking in redux](/packages/create-react-microservice-scaffold/src/docs/feature-development/ThinkingInRedux.md)
-  * [Connecting the UI](/packages/create-react-microservice-scaffold/src/docs/feature-development/ConnectingTheUi.md)
-  * [Submitting the data to an API](/packages/create-react-microservice-scaffold/src/docs/feature-development/SubmittingTheForm.md)
-  * [Internationalization of the UI (i18n)](/packages/create-react-microservice-scaffold/src/docs/feature-development/i18n.md)
-* [Recipes](/packages/create-react-microservice-scaffold/src/docs/recipes/README.md)
-  * [Integrating CSS / PostCSS](/packages/create-react-microservice-scaffold/src/docs/recipes/IntegratingPostCss.md)
-  * [Integrating SCSS / SASS](/packages/create-react-microservice-scaffold/src/docs/recipes/IntegratingSass.md)
-* [FAQ](/packages/create-react-microservice-scaffold/src/docs/FAQ.md)
-* [Glossary](/packages/create-react-microservice-scaffold/src/docs/Glossary.md)
-* [Troubleshooting](/packages/create-react-microservice-scaffold/src/docs/Troubleshooting.md)
+A detailed documentation including a test feature integration guide as well as a bunch of recipes to integrate other technologies/frameworks into the scaffold can be found over at [https://immoweltgroup.gitbooks.io/create-react-microservice/](https://immoweltgroup.gitbooks.io/create-react-microservice/) - Check it out! :-)
 
 ## Contributing
 See the [`CONTRIBUTING.md`](/CONTRIBUTING.md) file at the root of the repository.
