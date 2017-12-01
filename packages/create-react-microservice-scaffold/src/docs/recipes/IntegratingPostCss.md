@@ -7,6 +7,7 @@ In this recipe we will add in JS CSS imports to the scaffold. Like with an other
 - [Adding an example CSS import to the scaffold](#adding-the-example-css-import)
 - [Installing new dependencies](#installing-dependencies)
 - [Configuring PostCSS](#configuring-postcss)
+- [Configuring Flow](#configuring-flow)
 - [Adjusting the server-side webpack config](#adjusting-the-server-side-webpack-config)
 - [Adjusting the client-side webpack config](#adjusting-the-client-side-webpack-config)
 
@@ -43,6 +44,14 @@ module.exports = {
 };
 ```
 
+<a id="configuring-flow"></a>
+## Configuring Flow
+Out of the box Flow will not be able to parse / understand the `css` imports, we re-map every `.css` import into an empty object type, add the following line into the `[options]` of the `build/.flowconfig` file in the root of your mono repository.
+
+```
+module.name_mapper='.*\(.css\)' -> 'empty/object'
+```
+
 <a id="adjusting-the-server-side-webpack-config"></a>
 ## Adjusting the server-side webpack config
 Since we don't need to compile the CSS for the server, let's head into the default configuration of webpack for the server side bundle, e.g. `packages/my-fancy-ui-config/src/webpack.config.server.defaults.js`. Open up the file and add the following snippet into the `module.rules` array.
@@ -70,7 +79,7 @@ const extractCss = new ExtractTextPlugin({
 
 ```js
 {
-  test: /\.css$/,
+  test: /\.(css|scss|sass)$/,
   use: extractCss.extract({
     use: [
       {

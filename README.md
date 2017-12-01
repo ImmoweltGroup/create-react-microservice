@@ -60,6 +60,7 @@ yarn run dev
   * [Internationalization of the UI (i18n)](/packages/create-react-microservice-scaffold/src/docs/feature-development/i18n.md)
 * [Recipes](/packages/create-react-microservice-scaffold/src/docs/recipes/README.md)
   * [Integrating CSS / PostCSS](/packages/create-react-microservice-scaffold/src/docs/recipes/IntegratingPostCss.md)
+  * [Integrating SCSS / SASS](/packages/create-react-microservice-scaffold/src/docs/recipes/IntegratingSass.md)
 * [FAQ](/packages/create-react-microservice-scaffold/src/docs/FAQ.md)
 * [Glossary](/packages/create-react-microservice-scaffold/src/docs/Glossary.md)
 * [Troubleshooting](/packages/create-react-microservice-scaffold/src/docs/Troubleshooting.md)
