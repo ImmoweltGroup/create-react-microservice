@@ -1,9 +1,5 @@
 {
   "name": "@company-scope/my-fancy-ui-i18n",
-  "version": "0.0.0-development",
-  "private": true,
-  "author": "Immonet dev team <aegaeon@immonet.de> (https://immonet.de)",
-  "license": "my-chosen-spdx-license",
   "description": "Translation files and the associated API for the my-fancy-ui",
   "main": "src/index.js",
   "scripts": {
@@ -49,5 +45,12 @@
         "statements": 50
       }
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/my-user/my-repo.git"
+  },
+  "version": "0.0.0-development",
+  "private": true,
+  "license": "my-chosen-spdx-license"
 }

@@ -11,12 +11,12 @@ Creating scalable, universal and well tested JavaScript application for enterpri
 
 **What's in the box?**
 
-- Universal by default since we use [AirBnB's hypernova](https://github.com/airbnb/hypernova) render microservice under the hood.
+- Universal by default using [AirBnB's hypernova](https://github.com/airbnb/hypernova) render microservice under the hood.
 - Built with React, Redux, Reselect and Plow-JS.
 - Comes with best-practices in regards on how to unit- and performance-test your universal application.
 - 100% Statically typed via Flow from Facebook.
 - Built in support for internationalization (i18n).
-- No assumptions (ejected by default) about your CSS setup, but with guides on how to setup each in minutes.
+- No assumptions about your CSS setup, but with guides on how to setup each in minutes.
 - Containerized via Docker.
 - Highly flexible and performing architecture under the hood.
 

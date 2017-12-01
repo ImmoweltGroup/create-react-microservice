@@ -67,21 +67,7 @@ class CreateReactMicroService extends Command {
         cwd: dist
       });
 
-      //
-      // We need to install husky separately since it would otherwise conflict
-      // with the root husky installation. Adding a "gitDir" option did not
-      // work out so we solve it this way.
-      //
-      // @see https://github.com/typicode/husky/issues/167
-      //
-      try {
-        await Command.exec('git', ['init'], {
-          cwd: dist
-        });
-        await Command.exec('yarn', ['add', '--dev', '-W', 'husky'], {
-          cwd: dist
-        });
-      } catch (e) {}
+      await this.setupGitRepository(args.gitRepoUrl.raw);
 
       this.log('succeed', 'Successfully installed all dependencies');
 
@@ -149,6 +135,13 @@ class CreateReactMicroService extends Command {
             'What is the NPM organization scope for the mono repositories packages?',
           filter: this.safelyCreateNpmScopeArg,
           validate: Boolean
+        },
+        {
+          type: 'input',
+          name: 'gitRepoUrl',
+          message:
+            'What is the git repository URL for the mono repositories packages?',
+          validate: Boolean
         }
       ],
       this.flags
@@ -206,7 +199,10 @@ class CreateReactMicroService extends Command {
       ],
 
       // The choosen license
-      ['my-chosen-spdx-license', args.license.raw]
+      ['my-chosen-spdx-license', args.license.raw],
+
+      // Git URL.
+      ['https://github.com/my-user/my-repo.git', args.gitRepoUrl.raw]
     ].forEach(identifierWithReplacer => {
       let [before, after] = identifierWithReplacer;
 
@@ -219,6 +215,24 @@ class CreateReactMicroService extends Command {
 
     return processedString;
   };
+
+  /**
+   * We need to install husky separately since it would otherwise conflict
+   * with the root husky installation. Adding a "gitDir" option did not
+   * work out so we solve it this way.
+   *
+   * @see https://github.com/typicode/husky/issues/167
+   * @param  {String}  repositoryUrl The URL to the git remote repository that will be setup as `origin`.
+   * @return {Promise}               The Promise that resolves once the repository was properly setup.
+   */
+  async setupGitRepository(repositoryUrl: string) {
+    const cwd = await this.resolveDistFolder();
+    const opts = {cwd};
+
+    await Command.exec('git', ['init'], opts);
+    await Command.exec('git', ['remote', 'add', 'origin', repositoryUrl], opts);
+    await Command.exec('yarn', ['add', '--dev', '-W', 'husky'], opts);
+  }
 
   /**
    * Creates a context object containing a spinner instance for enhanced feedback in the users console.

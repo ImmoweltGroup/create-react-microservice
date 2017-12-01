@@ -1,9 +1,5 @@
 {
   "name": "@company-scope/my-fancy-ui-components",
-  "version": "0.0.0-development",
-  "private": true,
-  "author": "Immonet dev team <aegaeon@immonet.de> (https://immonet.de)",
-  "license": "my-chosen-spdx-license",
   "description": "Re-Usable UI components that can be shared across projects",
   "files": ["src/"],
   "scripts": {
@@ -52,5 +48,12 @@
   "jest": {
     "preset": "@immowelt/jest-preset-react",
     "transformIgnorePatterns": ["node_modules/(?!@immowelt|@company-scope)"]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/my-user/my-repo.git"
+  },
+  "version": "0.0.0-development",
+  "private": true,
+  "license": "my-chosen-spdx-license"
 }

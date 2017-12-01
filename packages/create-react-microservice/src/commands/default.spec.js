@@ -22,6 +22,7 @@ describe('new Command().exec()', () => {
   let resolveAndPromptTemplateArgs;
   let resolveDistFolder;
   let resolveAppName;
+  let setupGitRepository;
   let fail;
   let exec;
 
@@ -32,13 +33,16 @@ describe('new Command().exec()', () => {
       .mockImplementation(jest.fn());
     resolveAndPromptTemplateArgs = jest
       .spyOn(instance, 'resolveAndPromptTemplateArgs')
-      .mockImplementation(jest.fn(() => ({someArg: 'foo'})));
+      .mockImplementation(jest.fn(() => ({someArg: 'foo', gitRepoUrl: {}})));
     resolveDistFolder = jest
       .spyOn(instance, 'resolveDistFolder')
       .mockImplementation(jest.fn(() => '/foo/bar/my fancy app'));
     resolveAppName = jest
       .spyOn(instance, 'resolveAppName')
       .mockImplementation(jest.fn(() => 'my fancy app'));
+    setupGitRepository = jest
+      .spyOn(instance, 'setupGitRepository')
+      .mockImplementation(jest.fn());
     fail = jest.spyOn(instance, 'fail').mockImplementation(jest.fn());
     exec = jest.spyOn(Command, 'exec').mockImplementation(jest.fn());
     jest.spyOn(instance, 'log').mockImplementation(jest.fn());
@@ -71,14 +75,8 @@ describe('new Command().exec()', () => {
   it('should install all dependencies and bootstrap the application', async () => {
     await instance.exec();
 
-    expect(exec).toHaveBeenCalledTimes(4);
+    expect(exec).toHaveBeenCalledTimes(2);
     expect(exec).toHaveBeenCalledWith('yarn', ['install'], {
-      cwd: '/foo/bar/my fancy app'
-    });
-    expect(exec).toHaveBeenCalledWith('git', ['init'], {
-      cwd: '/foo/bar/my fancy app'
-    });
-    expect(exec).toHaveBeenCalledWith('yarn', ['add', '--dev', '-W', 'husky'], {
       cwd: '/foo/bar/my fancy app'
     });
     expect(exec).toHaveBeenCalledWith('yarn', ['run', 'bootstrap'], {
@@ -86,10 +84,14 @@ describe('new Command().exec()', () => {
     });
   });
 
+  it('should setup the git repository', async () => {
+    await instance.exec();
+
+    expect(setupGitRepository).toHaveBeenCalledTimes(1);
+  });
+
   it('should call the fail method if the execution of one of the commands failed', async () => {
     exec
-      .mockReturnValueOnce(Promise.resolve())
-      .mockReturnValueOnce(Promise.resolve())
       .mockReturnValueOnce(Promise.resolve())
       .mockReturnValueOnce(Promise.reject(new Error('Nope')));
     await instance.exec();
@@ -188,6 +190,122 @@ describe('new Command().resolveAppName()', () => {
     const name = await instance.resolveAppName();
 
     expect(name).toBe('my fancy folder');
+  });
+});
+
+describe('new Command().onTemplate()', () => {
+  let instance;
+
+  beforeEach(() => {
+    instance = new DefaultCommand({input: [], flags: {}});
+  });
+
+  afterEach(() => {
+    // $FlowFixMe: Ignore errors since the jest type-def is out of date.
+    jest.restoreAllMocks();
+    jest.clearAllMocks();
+  });
+
+  it('should be a function', () => {
+    expect(typeof instance.onTemplate).toBe('function');
+  });
+
+  it('should setup the .', async () => {
+    const input = `https://github.com/my-user/my-repo.git, my-fancy-ui`;
+
+    const output = await instance.onTemplate(input, {
+      name: {
+        camelCase: 'fooUi',
+        kebabCase: 'foo-ui',
+        lowerCase: 'foo ui',
+        raw: 'Foo ui',
+        snakeCase: 'foo_ui',
+        startCase: 'Foo ui',
+        upperCamelCase: 'FooUi'
+      },
+      npmScope: {
+        camelCase: '@myScope',
+        kebabCase: '@my-scope',
+        lowerCase: '@my-scope',
+        raw: '@my-scope',
+        snakeCase: '@my_scope',
+        startCase: '@my-scope',
+        upperCamelCase: '@myScope'
+      },
+      license: {
+        camelCase: 'MIT',
+        kebabCase: 'MIT',
+        lowerCase: 'MIT',
+        raw: 'MIT',
+        snakeCase: 'MIT',
+        startCase: 'MIT',
+        upperCamelCase: 'MIT'
+      },
+      gitRepoUrl: {
+        camelCase: 'https://github.com/fancy-user/fancy-repo.git',
+        kebabCase: 'https://github.com/fancy-user/fancy-repo.git',
+        lowerCase: 'https://github.com/fancy-user/fancy-repo.git',
+        raw: 'https://github.com/fancy-user/fancy-repo.git',
+        snakeCase: 'https://github.com/fancy-user/fancy-repo.git',
+        startCase: 'https://github.com/fancy-user/fancy-repo.git',
+        upperCamelCase: 'https://github.com/fancy-user/fancy-repo.git'
+      }
+    });
+
+    expect(output).toBe('https://github.com/fancy-user/fancy-repo.git, foo-ui');
+  });
+});
+
+describe('new Command().setupGitRepository()', () => {
+  let instance;
+  let resolveDistFolder;
+  let exec;
+
+  beforeEach(() => {
+    instance = new DefaultCommand({input: [], flags: {}});
+    resolveDistFolder = jest
+      .spyOn(instance, 'resolveDistFolder')
+      .mockImplementation(jest.fn(() => '/foo/bar/my fancy app'));
+    exec = jest.spyOn(Command, 'exec').mockImplementation(jest.fn());
+  });
+
+  afterEach(() => {
+    // $FlowFixMe: Ignore errors since the jest type-def is out of date.
+    jest.restoreAllMocks();
+    jest.clearAllMocks();
+  });
+
+  it('should be a function', () => {
+    expect(typeof instance.setupGitRepository).toBe('function');
+  });
+
+  it('should setup the git repository with the provided remote origin URL in the resolved CWD.', async () => {
+    const opts = {
+      cwd: '/foo/bar/my fancy app'
+    };
+
+    await instance.setupGitRepository(
+      'https://github.com/fancy-user/fancy-repo.git'
+    );
+
+    expect(resolveDistFolder).toHaveBeenCalledTimes(1);
+    expect(exec).toHaveBeenCalledTimes(3);
+    expect(exec).toHaveBeenCalledWith('git', ['init'], opts);
+    expect(exec).toHaveBeenCalledWith(
+      'git',
+      [
+        'remote',
+        'add',
+        'origin',
+        'https://github.com/fancy-user/fancy-repo.git'
+      ],
+      opts
+    );
+    expect(exec).toHaveBeenCalledWith(
+      'yarn',
+      ['add', '--dev', '-W', 'husky'],
+      opts
+    );
   });
 });
 

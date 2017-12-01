@@ -1,9 +1,5 @@
 {
   "name": "@company-scope/my-fancy-ui-server",
-  "version": "0.0.0-development",
-  "private": true,
-  "author": "Immonet dev team <aegaeon@immonet.de> (https://immonet.de)",
-  "license": "my-chosen-spdx-license",
   "description":
     "The web server which exposes and renders the universal UI application via the HTTP protocol",
   "main": "dist/index.js",
@@ -66,5 +62,12 @@
   "jest": {
     "preset": "@immowelt/jest-preset-node",
     "transformIgnorePatterns": ["node_modules/(?!@immowelt|@company-scope)"]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/my-user/my-repo.git"
+  },
+  "version": "0.0.0-development",
+  "private": true,
+  "license": "my-chosen-spdx-license"
 }

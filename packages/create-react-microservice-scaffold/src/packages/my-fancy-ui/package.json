@@ -1,9 +1,5 @@
 {
   "name": "@company-scope/my-fancy-ui",
-  "version": "0.0.0-development",
-  "private": true,
-  "author": "Immonet dev team <aegaeon@immonet.de> (https://immonet.de)",
-  "license": "my-chosen-spdx-license",
   "description": "The universal UI application for the user",
   "scripts": {
     "test": "yarn run lint && yarn run flow && yarn run jest:coverage",
@@ -71,5 +67,12 @@
   "jest": {
     "preset": "@immowelt/jest-preset-react",
     "transformIgnorePatterns": ["node_modules/(?!@immowelt|@company-scope)"]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/my-user/my-repo.git"
+  },
+  "version": "0.0.0-development",
+  "private": true,
+  "license": "my-chosen-spdx-license"
 }

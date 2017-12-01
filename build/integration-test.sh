@@ -14,7 +14,11 @@ printf "\nCleaning up previous runs of the integration-test\n"
 rm -rf ../create-react-microservice-test-scaffold
 
 printf "\nCreating the scaffold via the CLI\n"
-npx create-react-microservice ../create-react-microservice-test-scaffold --license="MIT" --npmScope="integration-scope"
+npx create-react-microservice \
+  ../create-react-microservice-test-scaffold \
+  --license="MIT" \
+  --npmScope="integration-scope" \
+  --gitRepoUrl="https://github.com/ImmoweltGroup/create-react-microservice.git"
 
 printf "\nExecuting the tests within the created scaffold\n"
 cd ../create-react-microservice-test-scaffold
