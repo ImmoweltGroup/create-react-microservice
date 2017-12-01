@@ -69,7 +69,7 @@
   dependencies:
     babel-jest "^21.2.0"
 
-"@immowelt/styleguide-javascript@1.0.10":
+"@immowelt/styleguide-javascript@^1.0.10":
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/@immowelt/styleguide-javascript/-/styleguide-javascript-1.0.10.tgz#3a0e313e84449bf097ed602fdc6654fa89b65379"
   dependencies:
@@ -2481,7 +2481,7 @@ create-any-cli@^1.3.0:
     meow "^4.0.0"
     ora "^1.3.0"
 
-create-config@1.0.4:
+create-config@1.0.4, create-config@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/create-config/-/create-config-1.0.4.tgz#958f1ec468256c7be0ce433d7b306dd5a2fd2a11"
   dependencies:
@@ -3734,7 +3734,7 @@ extglob@^2.0.2:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-extract-text-webpack-plugin@3.0.2:
+extract-text-webpack-plugin@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.2.tgz#5f043eaa02f9750a9258b78c0a6e0dc1408fb2f7"
   dependencies:
@@ -3926,7 +3926,7 @@ flat-cache@^1.2.1:
     graceful-fs "^4.1.2"
     write "^0.2.1"
 
-flow-bin@0.59.0, flow-bin@^0.59.0:
+flow-bin@0.59.0:
   version "0.59.0"
   resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.59.0.tgz#8c151ee7f09f1deed9bf0b9d1f2e8ab9d470f1bb"
 
@@ -4792,7 +4792,7 @@ html-minifier@^3.2.3:
     relateurl "0.2.x"
     uglify-js "3.1.x"
 
-html-webpack-plugin@2.30.1:
+html-webpack-plugin@^2.30.1:
   version "2.30.1"
   resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-2.30.1.tgz#7f9c421b7ea91ec460f56527d78df484ee7537d5"
   dependencies:
@@ -7027,13 +7027,13 @@ oauth-sign@~0.8.1, oauth-sign@~0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
 
-object-assign@4.1.1, object-assign@^4, object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
-
 object-assign@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-2.1.1.tgz#43c36e5d569ff8e4816c4efa8be02d26967c18aa"
+
+object-assign@^4, object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
 object-component@0.0.3:
   version "0.0.3"
@@ -8087,7 +8087,7 @@ redux-actions@^2.2.1:
     lodash-es "^4.17.4"
     reduce-reducers "^0.1.0"
 
-redux-lumbergh@1.0.5:
+redux-lumbergh@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/redux-lumbergh/-/redux-lumbergh-1.0.5.tgz#548004f63ff16bf8aa31216c3e86440ce09094fe"
 
@@ -9916,7 +9916,7 @@ webpack-visualizer-plugin@^0.1.11:
     react "^0.14.0"
     react-dom "^0.14.0"
 
-webpack@3.9.1, webpack@^3.9.1:
+webpack@^3.9.1:
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.9.1.tgz#9a60aa544ed5d4d454c069e3f521aa007e02643c"
   dependencies:
@@ -9960,7 +9960,7 @@ whatwg-encoding@^1.0.1:
   dependencies:
     iconv-lite "0.4.19"
 
-whatwg-fetch@2.0.3, whatwg-fetch@>=0.10.0:
+whatwg-fetch@>=0.10.0, whatwg-fetch@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
 
