@@ -37,7 +37,7 @@ Since we make good use of `yarn`, we require it to be installed as well. As with
 yarn --version
 ```
 
-We require at least `v1.0.0` to be installed, if it was not installed or if it's outdated, please head to the [Installation guide of yarn](https://yarnpkg.com/en/docs/install) and execute the necessary steps.
+We require at least `v1.3.2` to be installed, if it was not installed or if it's outdated, please head to the [Installation guide of yarn](https://yarnpkg.com/en/docs/install) and execute the necessary steps.
 
 
 <a id="yarn-workspace-feature"></a>
