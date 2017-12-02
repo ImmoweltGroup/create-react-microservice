@@ -24,6 +24,7 @@
   * [Internationalization of the UI (i18n)](feature-development/i18n.md)
 * [Recipes](recipes/README.md)
   * [Integrating CSS / PostCSS](recipes/IntegratingPostCss.md)
+  * [Integrating CSS Modules](recipes/IntegratingCssModules.md)
   * [Integrating SCSS / SASS](recipes/IntegratingSass.md)
 * [FAQ](FAQ.md)
 * [Glossary](Glossary.md)

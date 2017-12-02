@@ -83,7 +83,7 @@ const extractCss = new ExtractTextPlugin({
   use: extractCss.extract({
     use: [
       {
-       loader: "css-loader",
+        loader: "css-loader",
         options: {
           minimize: !isDev,
           sourceMap: config.webpack.hasSourceMaps
