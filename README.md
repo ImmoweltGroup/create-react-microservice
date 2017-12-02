@@ -24,6 +24,10 @@ Creating scalable, universal and well tested JavaScript application for enterpri
 
 This scaffold is not aimed at "competing" against Next.js, quite the contrary we see Next.js as a valid addition to the scaffold! We even provide you with a guide on how to integrate Next.js into our scaffold structure within minutes! :-)
 
+**Why is this scaffold called `create-react-microservice` / What is a frontend-microservice?**
+
+At ImmoweltGroup we are currently re-structuring our plattform from a big monolithic application into small, composable services that take care of one specific UI part, the bigger picture will be composed at a higher level with a tool such as [node-tailor](https://github.com/zalando/tailor). If you haven't heard of frontend microservices, we recommend you to read Tom Söderlund's great article [Micro frontends—a microservice approach to front-end web development](https://medium.com/@tomsoderlund/micro-frontends-a-microservice-approach-to-front-end-web-development-f325ebdadc16). This scaffold is a result of the requirements and therefore called `create-react-microservice`, nevertheless this scaffold can still be used for traditional web applications, e.g. in combination with Zeit's great [next.js](https://github.com/zeit/next.js) framework.
+
 ## Quick Start
 
 ```bash
