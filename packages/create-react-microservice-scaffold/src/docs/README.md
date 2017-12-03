@@ -23,6 +23,7 @@
   * [Submitting the data to an API](feature-development/SubmittingTheForm.md)
   * [Internationalization of the UI (i18n)](feature-development/i18n.md)
 * [Recipes](recipes/README.md)
+  * [Integrating Next.js](recipes/IntegratingNextJs.md)
   * [Integrating CSS / PostCSS](recipes/IntegratingPostCss.md)
   * [Integrating CSS Modules](recipes/IntegratingCssModules.md)
   * [Integrating SCSS / SASS](recipes/IntegratingSass.md)
