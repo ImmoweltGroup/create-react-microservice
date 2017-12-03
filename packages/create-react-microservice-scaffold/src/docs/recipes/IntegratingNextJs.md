@@ -2,7 +2,7 @@
 
 In this recipe we will integrate next.js - The popular React framework that comes with a simple SSR solution built in.
 
-**Warning: This recipe is highly unstable as long as the following issues are not properly solved, integrate it at your own risk!**
+**Warning: This recipe is highly unstable as long as the following issues within next.js are not properly solved, integrate it at your own risk!**
 
 - [Webpack config does not get loaded when specifying a custom dir in CLI commands](https://github.com/zeit/next.js/issues/1195)
 - [Make minify(uglify) opt-in or use a substitute](https://github.com/zeit/next.js/issues/1195)
