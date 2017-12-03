@@ -9,7 +9,7 @@ set -e
 # releases will be done via CI.
 #
 npx semantic-release pre
-$VERSION=$(cat package.json |  jq '.version');
+VERSION="$(cat package.json |  jq '.version')"
 echo "Releasing $VERSION ..."
 npx lerna publish --skip-git --yes --repo-version=$VERSION
 npx semantic-release post
