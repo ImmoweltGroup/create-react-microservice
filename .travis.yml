@@ -7,6 +7,8 @@ notifications:
   email: false
 install:
   - yarn install
+  - yarn bootstrap
 script:
+  - yarn run build
   - yarn run test
   - ./build/integration-test.sh
