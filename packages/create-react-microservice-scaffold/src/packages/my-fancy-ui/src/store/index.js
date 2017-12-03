@@ -27,7 +27,7 @@ export class Store {
    * @return {Object}      The object containing the finalized redux store and saga instance.
    */
   static createStore(opts: StoreOptionsType): StoreContextType {
-    const {initialState = {}, reduxSagaContext} = opts;
+    const {initialState, reduxSagaContext} = opts;
     const {rootReducer, rootSaga} = combineReduxDucks({
       ducks: reduxModules,
       context: reduxSagaContext
@@ -79,6 +79,3 @@ export class Store {
     };
   }
 }
-
-export const createStore = Store.createStore;
-export const createServerProps = Store.createServerProps;

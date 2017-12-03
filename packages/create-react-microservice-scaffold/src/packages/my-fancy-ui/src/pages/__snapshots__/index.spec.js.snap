@@ -30,7 +30,7 @@ exports[`<IndexPage/> should render correctly. 1`] = `
       }
     >
       <h2>
-        Oii, foo!
+        Oii, mate!
       </h2>
       <Connect(CommentsList) />
     </div>

@@ -5,7 +5,7 @@ import type {StateType} from './../store/types.js';
 type PropsType = {
   query: Object,
   errors: Array<{message: string, stack: string}>,
-  initialState: StateType | Object,
+  initialState?: StateType | Object,
   reduxSagaContext: 'client' | 'server' | 'universal' | 'test'
 };
 
@@ -13,7 +13,7 @@ import React, {Component} from 'react';
 import {Provider} from 'react-redux';
 import i18n from '@company-scope/my-fancy-ui-i18n';
 import logger from '@company-scope/my-fancy-ui-logger';
-import {createStore, createServerProps} from './../store/';
+import {Store} from './../store/';
 import CommentsList from './../containers/CommentsList/';
 
 class IndexPage extends Component<PropsType> {
@@ -24,7 +24,7 @@ class IndexPage extends Component<PropsType> {
    * @return {Promise}      The Promise that resolves with the server side props of the application.
    */
   static async getInitialProps({req}: Object): Promise<PropsType> {
-    const storeProps = await createServerProps();
+    const storeProps = await Store.createServerProps();
 
     return {
       query: req.query,
@@ -33,9 +33,9 @@ class IndexPage extends Component<PropsType> {
   }
 
   render() {
-    const {errors = [], query, initialState, reduxSagaContext} = this.props;
+    const {errors, query, initialState, reduxSagaContext} = this.props;
     const {name = 'mate'} = query;
-    const {store} = createStore({
+    const {store} = Store.createStore({
       reduxSagaContext,
       initialState
     });

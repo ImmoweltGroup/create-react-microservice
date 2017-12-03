@@ -1,8 +1,8 @@
 // @flow
 
-import {Store, createStore, createServerProps} from './index.js';
+import {Store} from './index.js';
 
-describe('createStore()', () => {
+describe('Store.createStore()', () => {
   let opts;
 
   beforeEach(() => {
@@ -18,19 +18,19 @@ describe('createStore()', () => {
   });
 
   it('should be a function.', () => {
-    expect(typeof createStore).toBe('function');
+    expect(typeof Store.createStore).toBe('function');
   });
 
   it('should return a context object containing the store and rootSagaInstance.', () => {
     // $FlowFixMe: Ignore this error since it is a valid test case.
-    const context = createStore(opts);
+    const context = Store.createStore(opts);
 
     expect(context.store).toBeDefined();
     expect(context.rootSagaInstance).toBeDefined();
   });
 });
 
-describe('createStore()', () => {
+describe('Store.createStore()', () => {
   let createStore;
 
   beforeEach(() => {
@@ -46,7 +46,7 @@ describe('createStore()', () => {
   });
 
   it('should be a function', () => {
-    expect(typeof createServerProps).toBe('function');
+    expect(typeof Store.createServerProps).toBe('function');
   });
 
   it('should create the store context and await the result of the redux-saga middleware instance and resolve with the generated state', async () => {
@@ -60,7 +60,7 @@ describe('createStore()', () => {
     });
 
     // $FlowFixMe: suppressing this error since it is a test case
-    const props = await createServerProps({
+    const props = await Store.createServerProps({
       req: {query: {}}
     });
 
@@ -81,7 +81,7 @@ describe('createStore()', () => {
     });
 
     // $FlowFixMe: suppressing this error since it is a test case
-    const props = await createServerProps({
+    const props = await Store.createServerProps({
       req: {query: {}}
     });
 

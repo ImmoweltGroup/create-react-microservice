@@ -16,14 +16,14 @@
     "bootstrap:flow:types":
       "flow-mono install-types --overwrite --ignoreDeps=peer && flow-mono create-stubs --use-root",
     "bootstrap:flow:stubs": "flow-mono create-stubs --use-root",
-    "lint": "yarn run lint:editorconfig && lerna run --parallel lint",
+    "lint": "yarn run lint:editorconfig && lerna run lint --parallel",
     "lint:editorconfig":
       "editorconfig-checker --exclude-pattern **/*.js.snap packages/*/src/** packages/*/bin/* build",
     "prettier":
       "prettier --write 'build/**/*.{js,json,scss,sass,css}' 'packages/*/{src,bin}/**/*.{js,json,scss,sass,css}'",
-    "flow": "lerna run --parallel flow",
-    "jest": "lerna run --parallel jest",
-    "jest:coverage": "lerna run --parallel jest:coverage",
+    "flow": "lerna run flow --parallel",
+    "jest": "lerna run jest --parallel",
+    "jest:coverage": "lerna run jest:coverage --parallel",
     "test": "better-npm-run test",
     "testcafe":
       "testcafe -- chrome:headless __tests__/**/*.js --selector-timeout=30000 --assertion-timeout=30000",
@@ -36,7 +36,7 @@
   },
   "betterScripts": {
     "dev": {
-      "command": "lerna run --parallel dev",
+      "command": "lerna run dev --parallel",
       "env": {
         "DEBUG":
           "*,-babel*,-socket*,-express*,-connect*,-body-parser*,-morgan*,-compression*,-send*,-tinylr*",
@@ -63,7 +63,7 @@
       }
     },
     "test": {
-      "command": "yarn run lint:editorconfig && lerna run --parallel test",
+      "command": "yarn run lint:editorconfig && lerna run test --parallel",
       "env": {
         "BABEL_ENV": "test",
         "NODE_ENV": "test"
