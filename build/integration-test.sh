@@ -23,6 +23,11 @@ npx create-react-microservice \
 printf "\nExecuting the tests within the created scaffold\n"
 cd ../create-react-microservice-test-scaffold
 yarn run test
+yarn run start &
+START_PID=$!
+sleep 5s
+yarn run testcafe
+kill $START_PID
 
 printf "\nFinished the integration-test\n"
 cd $PWD
