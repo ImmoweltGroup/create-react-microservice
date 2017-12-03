@@ -1,5 +1,10 @@
 // @flow
 
+const {existsSync} = require('fs');
+const findNodeModules = require('find-node-modules');
+
 module.exports = {
-  require
+  require,
+  findNodeModules,
+  existsSync
 };

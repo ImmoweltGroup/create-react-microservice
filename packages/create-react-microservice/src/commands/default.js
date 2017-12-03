@@ -20,18 +20,8 @@ class CreateReactMicroService extends Command {
    */
   async exec() {
     const name = await this.resolveAppName();
-    const scaffoldPackagePath = path.resolve(
-      'node_modules',
-      'create-react-microservice-scaffold'
-    );
-    const scaffoldPackageJson = file.require(
-      path.join(scaffoldPackagePath, 'package.json')
-    );
+    const src = await this.resolveScaffold();
     const dist = await this.resolveDistFolder();
-    const src = trim.right(
-      path.join(scaffoldPackagePath, scaffoldPackageJson.main),
-      '/'
-    );
 
     this.log('start', 'Creating', name, 'in', dist);
 
@@ -85,6 +75,35 @@ class CreateReactMicroService extends Command {
       'Done! :-) Start the development server by executing',
       `cd ${dist} && yarn run dev`
     );
+  }
+
+  /**
+   * Resolves the scaffolds src folder path.
+   *
+   * @return {Promise} The Promise that resolves with the full path pointing to the scaffolds src folder.
+   */
+  async resolveScaffold() {
+    const modulesPath = file
+      .findNodeModules({cwd: __dirname})
+      .map(modulesPath => path.join(__dirname, modulesPath))
+      .find(modulesPath =>
+        file.existsSync(
+          path.join(modulesPath, 'create-react-microservice-scaffold')
+        )
+      );
+    const scaffoldPackagePath = path.join(
+      modulesPath,
+      'create-react-microservice-scaffold'
+    );
+    const scaffoldPackageJson = file.require(
+      'create-react-microservice-scaffold/package.json'
+    );
+    const src = trim.right(
+      path.join(scaffoldPackagePath, scaffoldPackageJson.main),
+      '/'
+    );
+
+    return src;
   }
 
   /**

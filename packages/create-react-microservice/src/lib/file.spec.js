@@ -7,3 +7,15 @@ describe('file.require()', () => {
     expect(typeof file.require).toBe('function');
   });
 });
+
+describe('file.findNodeModules()', () => {
+  it('should be a function', () => {
+    expect(typeof file.findNodeModules).toBe('function');
+  });
+});
+
+describe('file.existsSync()', () => {
+  it('should be a function', () => {
+    expect(typeof file.existsSync).toBe('function');
+  });
+});

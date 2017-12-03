@@ -1,7 +1,10 @@
 // @flow
 
+jest.mock('./../lib/file.js');
+
 const create = require('create-any-cli');
 const Command = require('./../lib/command.js');
+const file: any = require('./../lib/file.js');
 const DefaultCommand = require('./default.js');
 
 describe('DefaultCommand', () => {
@@ -45,6 +48,11 @@ describe('new Command().exec()', () => {
       .mockImplementation(jest.fn());
     fail = jest.spyOn(instance, 'fail').mockImplementation(jest.fn());
     exec = jest.spyOn(Command, 'exec').mockImplementation(jest.fn());
+    jest
+      .spyOn(instance, 'resolveScaffold')
+      .mockImplementation(
+        jest.fn(() => '/foo/src/create-react-microservice-scaffold/src')
+      );
     jest.spyOn(instance, 'log').mockImplementation(jest.fn());
   });
 
@@ -97,6 +105,37 @@ describe('new Command().exec()', () => {
     await instance.exec();
 
     expect(fail).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('new Command().resolveScaffold()', () => {
+  let instance;
+
+  beforeEach(() => {
+    instance = new DefaultCommand({input: [], flags: {}});
+  });
+
+  afterEach(() => {
+    // $FlowFixMe: Ignore errors since the jest type-def is out of date.
+    jest.restoreAllMocks();
+    jest.clearAllMocks();
+  });
+
+  it('should be a function', () => {
+    expect(typeof instance.resolveScaffold).toBe('function');
+  });
+
+  it('should resolve all node_modules and find the first one that holds the "create-react-microservice-scaffold" package', async () => {
+    file.findNodeModules.mockReturnValueOnce([
+      '../node_modules',
+      '../../node_modules'
+    ]);
+    file.existsSync.mockReturnValueOnce(false).mockReturnValueOnce(true);
+    file.require.mockReturnValueOnce({main: 'foo/bar'});
+
+    const src = await instance.resolveScaffold();
+
+    expect(src).toContain('/foo/bar');
   });
 });
 
