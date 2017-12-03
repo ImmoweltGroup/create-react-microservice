@@ -1,27 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IndexPage/> should render correctly. 1`] = `
-<div
-  className="mdl-layout__content"
-  style={
+<Provider
+  store={
     Object {
-      "display": "flex",
-      "justifyContent": "center",
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
     }
   }
 >
   <div
-    className="page-content"
+    className="mdl-layout__content"
     style={
       Object {
-        "maxWidth": "640px",
+        "display": "flex",
+        "justifyContent": "center",
       }
     }
   >
-    <h2>
-      Oii, foo!
-    </h2>
-    <Connect(CommentsList) />
+    <div
+      className="page-content"
+      style={
+        Object {
+          "maxWidth": "640px",
+        }
+      }
+    >
+      <h2>
+        Oii, foo!
+      </h2>
+      <Connect(CommentsList) />
+    </div>
   </div>
-</div>
+</Provider>
 `;

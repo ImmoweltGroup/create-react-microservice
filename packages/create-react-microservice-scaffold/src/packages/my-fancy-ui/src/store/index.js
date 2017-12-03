@@ -4,7 +4,8 @@ import type {Task as ReduxSagaInstanceType} from 'redux-saga';
 import type {StateType} from './types.js';
 
 export type StoreOptionsType = {
-  initialState?: StateType,
+  initialState?: StateType | Object,
+  errors?: Array<{message: string, stack: string}>,
   reduxSagaContext: 'client' | 'server' | 'universal' | 'test'
 };
 type StoreContextType = {
@@ -12,30 +13,72 @@ type StoreContextType = {
   rootSagaInstance: ReduxSagaInstanceType<*>
 };
 
-import {applyMiddleware, createStore} from 'redux';
+import {applyMiddleware, createStore as createReduxStore} from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import {combineReduxDucks} from 'redux-lumbergh';
+import serialize from 'serialize-error';
 import reduxModules from './manifest.js';
 
-/**
- * Creates the redux store context of the
- * application, e.g. bootstrapping middlewares and returning the finalized store instance.
- *
- * @param  {Object} opts The options to bootstrap the redux store.
- * @return {*}           The finalized redux store.
- */
-export function createStoreContext(opts: StoreOptionsType): StoreContextType {
-  const {initialState = {}, reduxSagaContext} = opts;
-  const {rootReducer, rootSaga} = combineReduxDucks({
-    ducks: reduxModules,
-    context: reduxSagaContext
-  });
-  const sagaMiddleware = createSagaMiddleware();
-  const rootMiddleware = applyMiddleware(sagaMiddleware);
-  const store = createStore(rootReducer, initialState, rootMiddleware);
-  const rootSagaInstance = sagaMiddleware.run(rootSaga);
+export class Store {
+  /**
+   * Creates the redux store instance of the application.
+   *
+   * @param  {Object} opts The options to bootstrap the redux store.
+   * @return {Object}      The object containing the finalized redux store and saga instance.
+   */
+  static createStore(opts: StoreOptionsType): StoreContextType {
+    const {initialState = {}, reduxSagaContext} = opts;
+    const {rootReducer, rootSaga} = combineReduxDucks({
+      ducks: reduxModules,
+      context: reduxSagaContext
+    });
+    const sagaMiddleware = createSagaMiddleware();
+    const rootMiddleware = applyMiddleware(sagaMiddleware);
+    const store = createReduxStore(rootReducer, initialState, rootMiddleware);
+    const rootSagaInstance = sagaMiddleware.run(rootSaga);
 
-  return {store, rootSagaInstance};
+    return {store, rootSagaInstance};
+  }
+
+  /**
+   * Prepare the server side props for the application.
+   *
+   * @return {Promise}      The Promise that resolves with the server side props of the application.
+   */
+  static async createServerProps(): Promise<StoreOptionsType> {
+    const errors = [];
+
+    //
+    // Since this function creates the props for the client, we explicitely set the reduxSagaContext to client only,
+    // to avoid e.g. duplicate HTTP requests which where already executed on the server.
+    //
+    let reduxSagaContext = 'client';
+    let initialState = {};
+
+    //
+    // We wrap the server side state generation inside a try/catch to have the ability to fall back to an
+    // server AND client saga behavior if the state generation failed.
+    //
+    try {
+      const {store, rootSagaInstance} = Store.createStore({
+        reduxSagaContext: 'server'
+      });
+
+      await rootSagaInstance.done;
+
+      initialState = store.getState();
+    } catch (e) {
+      reduxSagaContext = 'universal';
+      errors.push(serialize(e));
+    }
+
+    return {
+      reduxSagaContext,
+      errors,
+      initialState
+    };
+  }
 }
 
-export default createStoreContext;
+export const createStore = Store.createStore;
+export const createServerProps = Store.createServerProps;

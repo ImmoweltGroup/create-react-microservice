@@ -4,7 +4,7 @@
 // Note: Do not use ES modules in this file since it will be parsed in CommonJS environments too!
 //
 const {renderReact} = require('hypernova-react');
-const App = require('./app.js').default;
+const IndexPage = require('./pages/').default;
 
-module.exports = renderReact('my-fancy-ui', App);
-module.exports.getInitialProps = App.getInitialProps;
+module.exports = renderReact('my-fancy-ui', IndexPage);
+module.exports.getInitialProps = IndexPage.getInitialProps;
