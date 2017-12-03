@@ -1,9 +1,0 @@
-src/.editorconfig
-src/.prettierrc
-src/flow-typed/npm
-src/node_modules
-src/packages/*/flow-typed/npm
-src/packages/*/coverage
-src/packages/*/dist
-src/packages/*/.flowconfig
-src/packages/*/node_modules
