@@ -21,16 +21,23 @@
   },
   "devDependencies": {
     "@immowelt/styleguide-javascript": "^1.0.10",
+    "@inkdpixels/commit-analyzer": "^1.0.0",
+    "@inkdpixels/release-notes-generator": "^1.0.0",
     "flow-mono-cli": "^1.3.0",
     "husky": "^0.14.3",
     "lerna": "^2.5.1",
     "lint-staged": "^6.0.0",
     "prettier": "^1.6.1",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "semantic-release": "^8.2.0"
   },
   "workspaces": [
     "packages/*"
   ],
+  "release": {
+    "analyzeCommits": "@inkdpixels/commit-analyzer",
+    "generateNotes": "@inkdpixels/release-notes-generator"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ImmoweltGroup/create-react-microservice.git"
