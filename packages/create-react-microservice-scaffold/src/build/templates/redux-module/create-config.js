@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   id: 'redux-module',
   description:
-    'A template that will scaffold a new redux module for you into the application.',
+    'A template that will scaffold a new redux module for you into the "my-fancy-ui" package.',
   resolveQuestions: async flags => [
     {
       type: 'input',
