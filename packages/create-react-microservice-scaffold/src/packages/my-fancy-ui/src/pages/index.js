@@ -10,7 +10,7 @@ import mergeClassNames from 'classcat';
 import i18n from '@company-scope/my-fancy-ui-i18n';
 import CommentsList from './../containers/CommentsList/';
 
-const IndexRoute = (props: PropsType) => {
+const IndexPage = (props: PropsType) => {
   const {name, className, ...rest} = props;
   const finalClassName = mergeClassNames(['mdl-layout__content', className]);
 
@@ -28,4 +28,4 @@ const IndexRoute = (props: PropsType) => {
   );
 };
 
-export {IndexRoute as default};
+export {IndexPage as default};

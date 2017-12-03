@@ -3,9 +3,9 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import toJson from 'enzyme-to-json';
-import IndexRoute from './index.js';
+import IndexPage from './index.js';
 
-describe('<IndexRoute/>', () => {
+describe('<IndexPage/>', () => {
   let props;
 
   beforeEach(() => {
@@ -15,7 +15,7 @@ describe('<IndexRoute/>', () => {
   });
 
   it('should render correctly.', () => {
-    const wrapper = shallow(<IndexRoute {...props} />);
+    const wrapper = shallow(<IndexPage {...props} />);
 
     expect(toJson(wrapper)).toMatchSnapshot();
   });

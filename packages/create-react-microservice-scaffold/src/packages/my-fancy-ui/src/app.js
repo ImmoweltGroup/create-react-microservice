@@ -13,7 +13,7 @@ import React, {Component} from 'react';
 import logger from '@company-scope/my-fancy-ui-logger';
 import {Provider} from 'react-redux';
 import serialize from 'serialize-error';
-import IndexRoute from './routes/';
+import IndexPage from './pages/';
 import {createStoreContext} from './store/';
 
 class App extends Component<PropsType> {
@@ -73,7 +73,7 @@ class App extends Component<PropsType> {
 
     return (
       <Provider store={store}>
-        <IndexRoute name={name} />
+        <IndexPage name={name} />
       </Provider>
     );
   }
