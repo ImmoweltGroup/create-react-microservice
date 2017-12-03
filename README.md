@@ -31,7 +31,7 @@ At ImmoweltGroup we are currently re-structuring our plattform from a big monoli
 ## Quick Start
 
 ```bash
-yarn add -g create-react-microservice
+yarn global add create-react-microservice
 
 create-react-microservice my-fancy-ui
 cd my-fancy-ui

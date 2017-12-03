@@ -2,33 +2,34 @@
 
 // @flow
 
-const meow = require('meow');
-const ora = require('ora');
-const versions = require('versions-checker');
-const pkg = require('./../package.json');
+var path = require('path');
+var pkg = require(path.join(__dirname, './../package.json'));
 
-if (!versions.validate(pkg.engines)) {
-  ora().fail(`System binaries do not meet constraints: ${JSON.stringify(pkg.engines)}.`);
-  process.exit(1);
-};
+require('check-engines')(pkg, function (err) {
+  if (err) {
+    console.log(err);
+    require('ora')().fail(`System binaries do not meet constraints: ${JSON.stringify(pkg.engines)}.`);
+    process.exit(1);
 
-(async function () {
-  try {
-    const cli = meow({pkg, help: false});
-    const commandsByName = {
-      default: require('./../dist/commands/default.js')
-    };
-    const commandName = cli.input.join(' ');
-    const Command = commandsByName[commandName] || commandsByName.default;
-    const instance = new Command({
-      input: cli.input,
-      flags: cli.flags
-    });
+    return;
+  }
 
-    await instance.exec();
-  } catch (e) {
+  const meow = require('meow');
+  const ora = require('ora');
+  const cli = meow({pkg, help: false});
+  const commandsByName = {
+    default: require('./../dist/commands/default.js')
+  };
+  const commandName = cli.input.join(' ');
+  const Command = commandsByName[commandName] || commandsByName.default;
+  const instance = new Command({
+    input: cli.input,
+    flags: cli.flags
+  });
+
+  instance.exec().catch(e => {
     console.error(e);
 
     process.exit(1);
-  }
-})()
+  });
+});
