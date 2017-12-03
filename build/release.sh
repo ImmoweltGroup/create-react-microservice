@@ -16,6 +16,9 @@ VERSION="$(cat package.json |  jq '.version')"
 # Replace the string quotes from the variable
 VERSION="$(echo $VERSION | sed -e 's/^"//' -e 's/"$//')"
 
+# Create the required .npmrc file which points the `npm` CLI to use the `NPM_TOKEN``for auth.
+echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+
 echo "Releasing $VERSION ..."
 npx lerna publish --skip-git --yes --repo-version=$VERSION
 npx semantic-release post
