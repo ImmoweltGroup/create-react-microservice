@@ -16,7 +16,7 @@ script:
   - yarn run test
   - ./build/integration-test.sh
 after_success:
-  - npm run semantic-release
+  - ./build/release.sh
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
