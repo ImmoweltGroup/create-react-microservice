@@ -22,18 +22,18 @@ npx create-react-microservice \
   --npmScope="integration-scope" \
   --gitRepoUrl="https://github.com/ImmoweltGroup/create-react-microservice.git"
 
-ls -lah ../create-react-microservice-test-scaffold/packages/create-react-microservice-test-scaffold-components
-
 printf "\nExecuting the tests within the created scaffold\n"
 cd ../create-react-microservice-test-scaffold
 yarn run lint
 yarn run flow
-yarn run jest:coverage -w 2
+yarn run jest:coverage -- -w 2
 yarn run start &
 START_PID=$!
 sleep 5s
 yarn run testcafe
 kill $START_PID
+
+ls -lah packages/create-react-microservice-scaffold/src/packages/my-fancy-ui-components/
 
 printf "\nFinished the integration-test\n"
 cd $PWD
