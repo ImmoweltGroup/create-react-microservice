@@ -33,7 +33,7 @@ sleep 5s
 yarn run testcafe
 kill $START_PID
 
-ls -lah packages/create-react-microservice-scaffold/src/packages/my-fancy-ui-components/
-
 printf "\nFinished the integration-test\n"
 cd $PWD
+
+ls -lah packages/create-react-microservice-scaffold/src/packages/my-fancy-ui-components/
