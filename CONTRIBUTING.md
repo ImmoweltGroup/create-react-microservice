@@ -8,35 +8,46 @@ Before opening an issue, please make sure that your issue hasn't been already re
 Visit the [issue tracker](https://github.com/ImmoweltGroup/create-react-microservice/issues) to find a list of open issues that are easy to pick up or need some love.
 
 Fork, then clone the repo:
-```
+```sh
 git clone https://github.com/your-username/create-react-microservice.git
+cd create-react-microservice
+yarn install
+yarn run bootstrap
 ```
 
 ### Building
-Running the `build` task will transpile the code and move all flow annotations into separate files.
-```
-npm run build
+Running the `build` task will re-build the CLI.
+```sh
+yarn run build
 ```
 
 ### Testing, Type-Checking with Flow and Linting
 To run the tests:
-```
-npm run test
+```sh
+yarn run test
 ```
 
 To continuously watch and run the unit-tests, execute the following:
-```
-npm run jest:watch
+```sh
+yarn run jest:watch
 ```
 
 To perform linting with `eslint`, run the following:
-```
-npm run lint
+```sh
+yarn run lint
 ```
 
 To perform a single check of the types with `flow`, run the following:
+```sh
+yarn run flow
 ```
-npm run flow
+
+### Development in the scaffold
+In case you would like to contribute to the scaffold, we recommend you to change into `packages/create-react-microservice-scaffold/src` and run the following commands to bootstrap it.
+
+```sh
+yarn install
+yarn run bootstrap
 ```
 
 ### New Features

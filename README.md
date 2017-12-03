@@ -22,7 +22,7 @@ Creating scalable, universal and well tested JavaScript application for enterpri
 
 **What about Next.js?**
 
-This scaffold is not aimed at "competing" against Next.js, quite the contrary we see Next.js as a valid addition to the scaffold! We even provide you with a guide on how to integrate Next.js into our scaffold structure within minutes! :-)
+This scaffold is not aimed at "competing" against Next.js, quite the contrary we see Next.js as a valid addition to the scaffold! We even provide you with a guide on [how to integrate Next.js into the scaffold structure]((/packages/create-react-microservice-scaffold/src/docs/recipes/IntegratingNextJs.md)) within minutes! :-)
 
 **Why is this scaffold called `create-react-microservice` / What is a frontend-microservice?**
 
