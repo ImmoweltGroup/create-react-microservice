@@ -4,7 +4,9 @@
 set -e
 
 #
-# Releases the mono-repo via lerna and adjusts the version number from semantic-release beforehand.
+# Releases the mono-repo via semantic-release and lerna.
+# Do not run this script on your local installation since
+# releases will be done via CI.
 #
 npx semantic-release pre
 $VERSION=$(cat package.json |  jq '.version');
