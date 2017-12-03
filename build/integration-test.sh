@@ -22,7 +22,9 @@ npx create-react-microservice \
 
 printf "\nExecuting the tests within the created scaffold\n"
 cd ../create-react-microservice-test-scaffold
-yarn run test
+yarn run lint
+yarn run flow
+yarn run jest:coverage -w 2
 yarn run start &
 START_PID=$!
 sleep 5s
