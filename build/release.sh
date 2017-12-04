@@ -29,7 +29,7 @@ ls -lah packages/create-react-microservice-scaffold/src/packages/create-react-mi
 
 echo "Releasing $VERSION ..."
 ls -lah packages/create-react-microservice-scaffold/src/packages/create-react-microservice-test-scaffold-components/
-npx lerna publish --skip-npm --skip-git --yes --exact --repo-version=$VERSION
+npx lerna publish --skip-git --yes --exact --repo-version=$VERSION
 ls -lah packages/create-react-microservice-scaffold/src/packages/create-react-microservice-test-scaffold-components/
 npx semantic-release post
 ls -lah packages/create-react-microservice-scaffold/src/packages/create-react-microservice-test-scaffold-components/
