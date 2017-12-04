@@ -3,7 +3,7 @@
 # Please be cautious when adding new instructions,
 # this Dockerfile is optimized for dockers caching abilities as best as possible.
 #
-FROM immowelt/node-alpine:8
+FROM immowelt/node-alpine:8@sha256:2b892077976a400fa249fde080db92cb2bf926e11d9211846266496819e048f5
 
 #
 # Enable yarn's workspace feature
