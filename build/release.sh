@@ -19,13 +19,15 @@ VERSION="$(echo $VERSION | sed -e 's/^"//' -e 's/"$//')"
 # Create the required .npmrc file which points the `npm` CLI to use the `NPM_TOKEN``for auth.
 echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 
-ls -lah packages/create-react-microservice-scaffold/src/packages/my-fancy-ui-components/
+ls -lah packages/create-react-microservice-scaffold/src/packages/create-react-microservice-test-scaffold-components/
 
 # Perform a hard reset to avoid changed/missing files.
 git reset --hard
 
-ls -lah packages/create-react-microservice-scaffold/src/packages/my-fancy-ui-components/
+ls -lah packages/create-react-microservice-scaffold/src/packages/create-react-microservice-test-scaffold-components/
 
 echo "Releasing $VERSION ..."
+ls -lah packages/create-react-microservice-scaffold/src/packages/create-react-microservice-test-scaffold-components/
 npx lerna publish --skip-git --yes --exact --repo-version=$VERSION
+ls -lah packages/create-react-microservice-scaffold/src/packages/create-react-microservice-test-scaffold-components/
 npx semantic-release post
