@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.org/ImmoweltGroup/create-react-microservice.svg?branch=master)](https://travis-ci.org/ImmoweltGroup/create-react-microservice)
 [![Dependency Status](https://david-dm.org/ImmoweltGroup/create-react-microservice.svg)](https://david-dm.org/ImmoweltGroup/create-react-microservice)
 [![devDependency Status](https://david-dm.org/ImmoweltGroup/create-react-microservice/dev-status.svg)](https://david-dm.org/ImmoweltGroup/create-react-microservice#info=devDependencies&view=table)
+[![Dependency Status](https://dependencyci.com/github/ImmoweltGroup/create-react-microservice/badge)](https://dependencyci.com/github/ImmoweltGroup/create-react-microservice)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 Creating scalable, universal and well tested JavaScript application for enterprise companies with many teams and products is a hard task. We at Immowelt Group took gathered all of our knowledge and aimed to fill this void. `create-react-microservice` is a scaffold that will provide you with an mono-repository structure so it is easy as pie to share code with co-workers, best practices in regards to testing as well as server side rendering support. All of it while providing you the whole flexibility of changing stuff under the hood. :rocket:
