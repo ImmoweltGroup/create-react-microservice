@@ -32,30 +32,30 @@
       "flow-typed install --ignoreDeps=bundled peer --overwrite"
   },
   "devDependencies": {
-    "@immowelt/babel-preset-immowelt-node": "^1.1.0",
-    "@immowelt/eslint-config-immowelt-react": "^2.0.0",
-    "@immowelt/jest-preset-node": "^1.0.0",
-    "babel-cli": "^6.26.0",
-    "eslint": "^4.12.1",
-    "flow-bin": "^0.59.0",
-    "flow-copy-source": "^1.2.1",
-    "flow-typed": "^2.1.2",
-    "jest": "^21.2.1"
+    "@immowelt/babel-preset-immowelt-node": "1.1.0",
+    "@immowelt/eslint-config-immowelt-react": "2.0.2",
+    "@immowelt/jest-preset-node": "1.0.0",
+    "babel-cli": "6.26.0",
+    "eslint": "4.12.1",
+    "flow-bin": "0.59.0",
+    "flow-copy-source": "1.2.1",
+    "flow-typed": "2.2.3",
+    "jest": "21.2.1"
   },
   "jest": {
     "preset": "@immowelt/jest-preset-node"
   },
   "dependencies": {
-    "chalk": "^2.3.0",
-    "check-engines": "^1.5.0",
-    "create-any-cli": "^1.3.0",
+    "chalk": "2.3.0",
+    "check-engines": "1.5.0",
+    "create-any-cli": "1.3.0",
     "create-react-microservice-scaffold": "0.0.0-development",
-    "execa": "^0.8.0",
-    "find-node-modules": "^1.0.4",
-    "meow": "^4.0.0",
-    "ora": "^1.3.0",
-    "per-env": "^1.0.2",
-    "trim-character": "^2.0.1"
+    "execa": "0.8.0",
+    "find-node-modules": "1.0.4",
+    "meow": "4.0.0",
+    "ora": "1.3.0",
+    "per-env": "1.0.2",
+    "trim-character": "2.0.1"
   },
   "engines": {
     "node": ">=8.9.0",
