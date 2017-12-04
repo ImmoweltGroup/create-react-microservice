@@ -16,7 +16,7 @@ VERSION="$(cat package.json |  jq '.version')"
 # Replace the string quotes from the variable
 VERSION="$(echo $VERSION | sed -e 's/^"//' -e 's/"$//')"
 
-if [ $VERSION != "0.0.0-development" ]
+if [ $VERSION == "0.0.0-development" ]
 then
   echo "skipping development release of version $VERSION"
 else
