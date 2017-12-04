@@ -10,8 +10,6 @@ set -e
 #
 PWD="$(pwd)"
 
-ls -lah packages/create-react-microservice-scaffold/src/packages/my-fancy-ui-components/
-
 printf "\nCleaning up previous runs of the integration-test\n"
 rm -rf ../create-react-microservice-test-scaffold
 
@@ -35,5 +33,3 @@ kill $START_PID
 
 printf "\nFinished the integration-test\n"
 cd $PWD
-
-ls -lah packages/create-react-microservice-scaffold/src/packages/my-fancy-ui-components/

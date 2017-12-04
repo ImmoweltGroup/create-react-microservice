@@ -8,6 +8,7 @@ set -e
 # Do not run this script on your local installation since
 # releases will be done via CI.
 #
+ls -lah packages/create-react-microservice-scaffold/src/packages/create-react-microservice-test-scaffold-components/
 npx semantic-release pre
 
 # Read the generated version from the package.json.
@@ -28,6 +29,7 @@ ls -lah packages/create-react-microservice-scaffold/src/packages/create-react-mi
 
 echo "Releasing $VERSION ..."
 ls -lah packages/create-react-microservice-scaffold/src/packages/create-react-microservice-test-scaffold-components/
-npx lerna publish --skip-git --yes --exact --repo-version=$VERSION
+npx lerna publish --skip-npm --skip-git --yes --exact --repo-version=$VERSION
 ls -lah packages/create-react-microservice-scaffold/src/packages/create-react-microservice-test-scaffold-components/
 npx semantic-release post
+ls -lah packages/create-react-microservice-scaffold/src/packages/create-react-microservice-test-scaffold-components/
