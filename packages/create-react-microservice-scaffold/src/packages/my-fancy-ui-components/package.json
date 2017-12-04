@@ -1,7 +1,6 @@
 {
   "name": "@company-scope/my-fancy-ui-components",
   "description": "Re-Usable UI components that can be shared across projects",
-  "files": ["src/"],
   "scripts": {
     "test": "yarn run lint && yarn run flow && yarn run jest:coverage",
     "lint": "eslint src",
