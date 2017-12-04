@@ -1,7 +1,6 @@
 ![create-react-microservice](https://user-images.githubusercontent.com/1557092/33328489-6a916806-d45a-11e7-8589-853b6c447a68.jpg)
 
 [![Powered by Immowelt](https://img.shields.io/badge/powered%20by-immowelt-yellow.svg?colorB=ffb200)](https://stackshare.io/immowelt-group/)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ImmoweltGroup/create-react-microservice.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/ImmoweltGroup/create-react-microservice.svg?branch=master)](https://travis-ci.org/ImmoweltGroup/create-react-microservice)
 [![Dependency Status](https://david-dm.org/ImmoweltGroup/create-react-microservice.svg)](https://david-dm.org/ImmoweltGroup/create-react-microservice)
 [![devDependency Status](https://david-dm.org/ImmoweltGroup/create-react-microservice/dev-status.svg)](https://david-dm.org/ImmoweltGroup/create-react-microservice#info=devDependencies&view=table)
