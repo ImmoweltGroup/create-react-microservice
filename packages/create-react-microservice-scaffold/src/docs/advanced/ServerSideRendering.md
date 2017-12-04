@@ -7,6 +7,7 @@ Rendering your application on both the client and the server enhances the user e
 - [How does server side rendering work in this scaffold?](#how-does-it-work)
 - [Performance considerations](#performance-considerations)
 
+![serversiderendering](https://user-images.githubusercontent.com/1557092/33560240-7edb2964-d90f-11e7-93cb-16a4cfa37961.png)
 
 <a id="how-does-it-work"></a>
 ### How does server side rendering work in this scaffold?
@@ -19,12 +20,11 @@ Before we jump into the flow of rendering the app on the server, lets take a loo
 #### Application bundles:
 1. The whole application bundled for the client
 2. The whole application bundled for node (since we can assume certain features of EcmaScript to be supported and use CommonJS as the module system of choice on Node)
-3. The redux store / business logic for node (since we want to pre-fetch the data if necessary on the server side before actually rendering the application).
 
 #### Web server
-The web server is is a simple HTTP server which uses the express framework, it will serve the whole app and it's assets to the user. By default it's configured to catch all `GET` requests to `/`, once a get request hits this route it will prepare a so called request query to the hypernova server instance.
+The web server is is a simple HTTP server which uses the express framework, it will serve the whole app and it's assets to the user. By default it's configured to catch all `GET` requests to `/`, once a get request hits this route it will executes the pages `getInitialProps()` function to generate the request payload to pre-render the app on the server.
 
-The request query to hypernova contains the `appId` to be rendered as well as an `initialState` which we generate by creating an instance of the applications redux store using the third application bundle. Once all server side sagas have finished we call the `store.getState()` method of redux to retrieve the `initialState` with which we send to the hypernova server instance via an HTTP `POST`.
+The request payload to hypernova contains the `appId` to be rendered as well as the `initialState` which we generated in the previous step and will be sent to the hypernova server instance via an HTTP `POST`.
 
 #### Hypernova
 Once hypernova receives the render request, it will decide on which worker instance (CPU core) the task needs to be rendered on. The chosen worker will pre-render the application in a VM with the `initialState` provided in our request body and as soon as React rendered the application it will return the HTML to the web server instance via the response body. It's now up to the web server again to wrap the received HTML of hypernova into the `index.html` template that webpack provided us and of course send the result to the user.
