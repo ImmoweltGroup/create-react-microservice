@@ -18,7 +18,7 @@ VERSION="$(echo $VERSION | sed -e 's/^"//' -e 's/"$//')"
 
 if [ $VERSION != "0.0.0-development" ]
 then
-  echo "skipping development release"
+  echo "skipping development release of version $VERSION"
 else
   # Create the required .npmrc file which points the `npm` CLI to use the `NPM_TOKEN``for auth.
   echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
