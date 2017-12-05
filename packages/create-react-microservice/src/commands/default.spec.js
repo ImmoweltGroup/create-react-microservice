@@ -54,6 +54,7 @@ describe('new Command().exec()', () => {
         jest.fn(() => '/foo/src/create-react-microservice-scaffold/src')
       );
     jest.spyOn(instance, 'log').mockImplementation(jest.fn());
+    jest.spyOn(console, 'log').mockImplementation(jest.fn());
   });
 
   afterEach(() => {

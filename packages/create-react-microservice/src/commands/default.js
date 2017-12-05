@@ -7,6 +7,8 @@ import type {
 
 const path = require('path');
 const ora = require('ora');
+const emoji = require('node-emoji');
+const chalk = require('chalk');
 const create = require('create-any-cli');
 const trim = require('trim-character');
 const Command = require('./../lib/command.js');
@@ -50,7 +52,10 @@ class CreateReactMicroService extends Command {
     });
 
     this.log('succeed', 'Processed the scaffold into', dist);
-    this.log('start', 'Installing all dependencies...');
+    this.log(
+      'start',
+      'Installing all dependencies (this might take a while)...'
+    );
 
     try {
       await Command.exec('yarn', ['install'], {
@@ -61,7 +66,10 @@ class CreateReactMicroService extends Command {
 
       this.log('succeed', 'Successfully installed all dependencies');
 
-      this.log('start', 'Bootstrapping the service...');
+      this.log(
+        'start',
+        'Bootstrapping the service (this might take a while)...'
+      );
       await Command.exec('yarn', ['run', 'bootstrap'], {
         cwd: dist
       });
@@ -70,11 +78,8 @@ class CreateReactMicroService extends Command {
       this.fail(e);
     }
 
-    this.log(
-      'succeed',
-      'Done! :-) Start the development server by executing',
-      `cd ${dist} && yarn run dev`
-    );
+    this.log('succeed');
+    this.printStartInstructions(dist);
   }
 
   /**
@@ -247,6 +252,43 @@ class CreateReactMicroService extends Command {
     await Command.exec('git', ['init'], opts);
     await Command.exec('git', ['remote', 'add', 'origin', repositoryUrl], opts);
     await Command.exec('yarn', ['add', '--dev', '-W', 'husky'], opts);
+  }
+
+  printStartInstructions(dist: string) {
+    const separator = `
+=====================================================================================
+`;
+    const log = `
+${separator}
+${emoji.get('rocket')}  ${chalk.bold(
+      'We have lift off! Your service is ready to be developed / started.'
+    )}
+
+${chalk.bold('First of all, change into the direcotry, e.g.:')}
+${chalk.bgGreenBright.black(`cd ${dist}`)}
+
+${chalk.bold('Starting the development server:')}
+${chalk.bgGreenBright.black('yarn run dev')}
+
+${chalk.bold('Starting the production server:')}
+${chalk.bgGreenBright.black('yarn run start')}
+
+${chalk.bold('Building for production:')}
+${chalk.bgGreenBright.black('yarn run build')}
+
+${chalk.bold('Docs/help is available at')} ${chalk.cyan.underline(
+      'https://github.com/ImmoweltGroup/create-react-microservice'
+    )}
+${chalk.bold('Dont forget to')} ${emoji.get('star')}  ${chalk.bold(
+      'us on GitHub!'
+    )}
+${chalk.cyan.underline(
+      'https://github.com/ImmoweltGroup/create-react-microservice'
+    )}
+${separator}
+  `.trim();
+
+    console.log(chalk.white(log));
   }
 
   /**
