@@ -1,5 +1,9 @@
 {
   "semanticCommitType": "TASK",
   "semanticCommitScope": null,
-  "semanticCommits": true
+  "semanticCommits": true,
+  "automerge": true,
+  "major": {
+    "automerge": false
+  }
 }
