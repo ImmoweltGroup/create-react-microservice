@@ -25,6 +25,10 @@ cd ../create-react-microservice-test-scaffold
 yarn run lint
 yarn run flow
 yarn run jest:coverage -- -w 2
+
+#
+# Start the production server in the background, save the process PID and after the e2e tests passed shut down the server process again.
+#
 yarn run start &
 START_PID=$!
 sleep 5s
