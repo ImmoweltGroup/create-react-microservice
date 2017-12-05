@@ -24,7 +24,12 @@ printf "\nExecuting the tests within the created scaffold\n"
 cd ../create-react-microservice-test-scaffold
 yarn run lint
 yarn run flow
-yarn run jest:coverage -- -w 2
+
+#
+# Manually run jest in all packages with a limit of 2 workers per package to avoid long-running tests on Travis CI.
+# @see https://github.com/facebook/jest/issues/3765
+#
+npx lerna run jest --parallel -- --runInBand --coverage
 
 #
 # Start the production server in the background, save the process PID and after the e2e tests passed shut down the server process again.
