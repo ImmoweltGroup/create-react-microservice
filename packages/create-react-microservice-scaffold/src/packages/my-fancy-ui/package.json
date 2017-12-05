@@ -28,7 +28,6 @@
     "@company-scope/my-fancy-ui-logger": "0.0.0-development",
     "classcat": "1.1.1",
     "empty": "0.10.1",
-    "hypernova": "2.2.0",
     "hypernova-react": "2.1.0",
     "isomorphic-fetch": "2.2.1",
     "lodash": "4.17.4",
