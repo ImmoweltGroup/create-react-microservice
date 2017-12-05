@@ -78,7 +78,7 @@ class CreateReactMicroService extends Command {
       this.fail(e);
     }
 
-    this.log('succeed');
+    this.log('succeed', 'Done!');
     this.printStartInstructions(dist);
   }
 
