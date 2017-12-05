@@ -23,9 +23,6 @@ else
   # Create the required .npmrc file which points the `npm` CLI to use the `NPM_TOKEN``for auth.
   echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 
-  # Perform a hard reset to avoid changed/missing files.
-  git reset --hard
-
   echo "Releasing $VERSION ..."
   npx lerna publish --skip-git --yes --exact --repo-version=$VERSION
 
