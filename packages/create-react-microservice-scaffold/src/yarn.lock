@@ -6916,9 +6916,9 @@ node-version@^1.0.0, node-version@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/node-version/-/node-version-1.1.0.tgz#f437d7ba407e65e2c4eaef8887b1718ba523d4f0"
 
-nodemon@1.12.1:
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.12.1.tgz#996a56dc49d9f16bbf1b78a4de08f13634b3878d"
+nodemon@1.12.4:
+  version "1.12.4"
+  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.12.4.tgz#b3cedad2845ee27298aa889b903b2e324fe57cda"
   dependencies:
     chokidar "^1.7.0"
     debug "^2.6.8"
@@ -6929,7 +6929,7 @@ nodemon@1.12.1:
     ps-tree "^1.1.0"
     touch "^3.1.0"
     undefsafe "0.0.3"
-    update-notifier "^2.2.0"
+    update-notifier "^2.3.0"
 
 nomnom@~1.6.2:
   version "1.6.2"
@@ -9679,7 +9679,7 @@ unzip@^0.1.11:
     readable-stream "~1.0.31"
     setimmediate ">= 1.0.1 < 2"
 
-update-notifier@^2.1.0, update-notifier@^2.2.0:
+update-notifier@^2.1.0, update-notifier@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/update-notifier/-/update-notifier-2.3.0.tgz#4e8827a6bb915140ab093559d7014e3ebb837451"
   dependencies:
