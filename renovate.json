@@ -2,6 +2,7 @@
   "semanticCommitType": "TASK",
   "semanticCommitScope": null,
   "semanticCommits": true,
+  "docker": false,
   "automerge": true,
   "major": {
     "automerge": false
