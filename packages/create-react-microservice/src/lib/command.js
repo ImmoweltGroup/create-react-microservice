@@ -7,11 +7,17 @@ const ora = require('ora');
 class Command {
   static exec = exec;
 
-  input: Array<string>
-  flags: {[string]: mixed}
-  spinner = ora()
+  pkg: Object;
+  input: Array<string>;
+  flags: {[string]: mixed};
+  spinner = ora();
 
-  constructor(args: {input: Array<string>, flags: {[string]: mixed}}) {
+  constructor(args: {
+    input: Array<string>,
+    flags: {[string]: mixed},
+    pkg: Object
+  }) {
+    this.pkg = args.pkg;
     this.input = args.input;
     this.flags = args.flags;
   }
@@ -35,7 +41,12 @@ class Command {
    *
    * @return {String}
    */
-  createLogMsg(a: string, b?: string, c?: string, ...args: Array<string>): string {
+  createLogMsg(
+    a: string,
+    b?: string,
+    c?: string,
+    ...args: Array<string>
+  ): string {
     return [
       chalk.bold.white(`create-react-microservice » ${a}`),
       b ? chalk.bold.dim(`» ${b}`) : null,

@@ -9,6 +9,7 @@ const path = require('path');
 const ora = require('ora');
 const emoji = require('node-emoji');
 const chalk = require('chalk');
+const lodash = require('lodash');
 const create = require('create-any-cli');
 const trim = require('trim-character');
 const Command = require('./../lib/command.js');
@@ -21,6 +22,10 @@ class CreateReactMicroService extends Command {
    * @return {Promise} The Promise that resolves once everything was setup correctly.
    */
   async exec() {
+    if (this.flags.help || this.flags.h) {
+      return this.printHelp();
+    }
+
     const name = await this.resolveAppName();
     const src = await this.resolveScaffold();
     const dist = await this.resolveDistFolder();
@@ -135,6 +140,38 @@ class CreateReactMicroService extends Command {
   }
 
   /**
+   * Returns the list of questions prompted to inquirer.js if not provided via CLI flags.
+   *
+   * @return {Array} The list of inquirer questions.
+   */
+  getInquirerQuestions() {
+    return [
+      {
+        type: 'list',
+        name: 'license',
+        message:
+          'What is the preffered license for the mono repository and its packages?',
+        choices: ['Unlicense', 'Apache-2.0', 'MIT', 'other']
+      },
+      {
+        type: 'input',
+        name: 'npmScope',
+        message:
+          'What is the NPM organization scope for the mono repositories packages?',
+        filter: this.safelyCreateNpmScopeArg,
+        validate: Boolean
+      },
+      {
+        type: 'input',
+        name: 'gitRepoUrl',
+        message:
+          'What is the git repository URL for the mono repositories packages?',
+        validate: Boolean
+      }
+    ];
+  }
+
+  /**
    * Resolves argumetns via the CLI and optionally prompts the user if the argument was not provided via the CLI flags.
    *
    * @return {Promise} The Promise that resolves with the object containing the template arguments.
@@ -145,29 +182,7 @@ class CreateReactMicroService extends Command {
     this.suspendLogging();
 
     const answers = await create.resolveAndPromptOptions(
-      [
-        {
-          type: 'list',
-          name: 'license',
-          message: 'What is the preffered license of your application?',
-          choices: ['Unlicense', 'Apache-2.0', 'MIT', 'other']
-        },
-        {
-          type: 'input',
-          name: 'npmScope',
-          message:
-            'What is the NPM organization scope for the mono repositories packages?',
-          filter: this.safelyCreateNpmScopeArg,
-          validate: Boolean
-        },
-        {
-          type: 'input',
-          name: 'gitRepoUrl',
-          message:
-            'What is the git repository URL for the mono repositories packages?',
-          validate: Boolean
-        }
-      ],
+      this.getInquirerQuestions(),
       this.flags
     );
     const args = await create.createDecoratedTemplateArgs({name, ...answers});
@@ -226,9 +241,7 @@ class CreateReactMicroService extends Command {
     ].forEach(identifierWithReplacer => {
       let [before, after] = identifierWithReplacer;
 
-      if (typeof before === 'string') {
-        before = new RegExp(before, 'g');
-      }
+      before = new RegExp(before, 'g');
 
       processedString = processedString.replace(before, after);
     });
@@ -254,6 +267,44 @@ class CreateReactMicroService extends Command {
     await Command.exec('yarn', ['add', '--dev', '-W', 'husky'], opts);
   }
 
+  /**
+   * Pretty prints the help instructions of the CLI.
+   *
+   * @return {void}
+   */
+  printHelp() {
+    const questions = this.getInquirerQuestions();
+    const padding =
+      questions.reduce((padding, question) => {
+        const questionPadding = question.name.length;
+        return questionPadding > padding ? questionPadding : padding;
+      }, 0) + 1;
+
+    console.log(
+      `
+${this.pkg.description}
+
+Usage:
+$ create-react-microservice [name] <...options>
+
+Options:
+${questions
+        .map(question => {
+          const {name, message} = question;
+
+          return `  --${lodash.padEnd(name, padding)} ${message}`;
+        })
+        .join('\n')}
+    `.trim()
+    );
+  }
+
+  /**
+   * Pretty prints start instructions of the created service.
+   *
+   * @param  {String} dist The target directory of the created service.
+   * @return {void}
+   */
   printStartInstructions(dist: string) {
     const separator = `
 =====================================================================================

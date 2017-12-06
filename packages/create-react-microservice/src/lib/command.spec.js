@@ -13,8 +13,10 @@ describe('new Command().log()', () => {
   let createLogMsg;
 
   beforeEach(() => {
-    instance = new Command({input: [], flags: {}});
-    createLogMsg = jest.spyOn(instance, 'createLogMsg').mockImplementation(jest.fn());
+    instance = new Command({input: [], flags: {}, pkg: {}});
+    createLogMsg = jest
+      .spyOn(instance, 'createLogMsg')
+      .mockImplementation(jest.fn());
   });
 
   afterEach(() => {
@@ -43,7 +45,7 @@ describe('new Command().createLogMsg()', () => {
   let instance;
 
   beforeEach(() => {
-    instance = new Command({input: [], flags: {}});
+    instance = new Command({input: [], flags: {}, pkg: {}});
   });
 
   afterEach(() => {
@@ -72,7 +74,7 @@ describe('new Command().fail()', () => {
   let log;
 
   beforeEach(() => {
-    instance = new Command({input: [], flags: {}});
+    instance = new Command({input: [], flags: {}, pkg: {}});
     exit = jest.spyOn(process, 'exit').mockImplementation(jest.fn());
     log = jest.spyOn(instance, 'log').mockImplementation(jest.fn());
   });
@@ -99,7 +101,7 @@ describe('new Command().suspendLogging()', () => {
   let instance;
 
   beforeEach(() => {
-    instance = new Command({input: [], flags: {}});
+    instance = new Command({input: [], flags: {}, pkg: {}});
   });
 
   afterEach(() => {

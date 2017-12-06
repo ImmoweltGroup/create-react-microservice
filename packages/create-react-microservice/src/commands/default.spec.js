@@ -26,11 +26,12 @@ describe('new Command().exec()', () => {
   let resolveDistFolder;
   let resolveAppName;
   let setupGitRepository;
+  let printHelp;
   let fail;
   let exec;
 
   beforeEach(() => {
-    instance = new DefaultCommand({input: [], flags: {}});
+    instance = new DefaultCommand({input: [], flags: {}, pkg: {}});
     processTemplateAndCreate = jest
       .spyOn(create, 'processTemplateAndCreate')
       .mockImplementation(jest.fn());
@@ -46,6 +47,7 @@ describe('new Command().exec()', () => {
     setupGitRepository = jest
       .spyOn(instance, 'setupGitRepository')
       .mockImplementation(jest.fn());
+    printHelp = jest.spyOn(instance, 'printHelp').mockImplementation(jest.fn());
     fail = jest.spyOn(instance, 'fail').mockImplementation(jest.fn());
     exec = jest.spyOn(Command, 'exec').mockImplementation(jest.fn());
     jest
@@ -65,6 +67,20 @@ describe('new Command().exec()', () => {
 
   it('should be a function', () => {
     expect(typeof instance.exec).toBe('function');
+  });
+
+  it('should execute the printHelp method if the flags include a truthy "h" or "help" key', async () => {
+    instance.flags = {h: true};
+
+    await instance.exec();
+
+    expect(printHelp).toHaveBeenCalledTimes(1);
+
+    instance.flags = {help: true};
+
+    await instance.exec();
+
+    expect(printHelp).toHaveBeenCalledTimes(2);
   });
 
   it('should resolve the dist folder, the app name and template args', async () => {
@@ -113,7 +129,7 @@ describe('new Command().resolveScaffold()', () => {
   let instance;
 
   beforeEach(() => {
-    instance = new DefaultCommand({input: [], flags: {}});
+    instance = new DefaultCommand({input: [], flags: {}, pkg: {}});
   });
 
   afterEach(() => {
@@ -145,7 +161,7 @@ describe('new Command().resolveAndPromptTemplateArgs()', () => {
   let resolveAndPromptOptions;
 
   beforeEach(() => {
-    instance = new DefaultCommand({input: [], flags: {}});
+    instance = new DefaultCommand({input: [], flags: {}, pkg: {}});
     resolveAndPromptOptions = jest
       .spyOn(create, 'resolveAndPromptOptions')
       .mockImplementation(jest.fn(() => ({someArg: 'foo'})));
@@ -176,7 +192,7 @@ describe('new Command().resolveDistFolder()', () => {
   let instance;
 
   beforeEach(() => {
-    instance = new DefaultCommand({input: [], flags: {}});
+    instance = new DefaultCommand({input: [], flags: {}, pkg: {}});
     jest
       .spyOn(process, 'cwd')
       .mockImplementation(jest.fn(() => '/usr/src/foo'));
@@ -208,7 +224,7 @@ describe('new Command().resolveAppName()', () => {
   let instance;
 
   beforeEach(() => {
-    instance = new DefaultCommand({input: [], flags: {}});
+    instance = new DefaultCommand({input: [], flags: {}, pkg: {}});
     jest
       .spyOn(process, 'cwd')
       .mockImplementation(jest.fn(() => '/usr/src/foo'));
@@ -237,7 +253,7 @@ describe('new Command().onTemplate()', () => {
   let instance;
 
   beforeEach(() => {
-    instance = new DefaultCommand({input: [], flags: {}});
+    instance = new DefaultCommand({input: [], flags: {}, pkg: {}});
   });
 
   afterEach(() => {
@@ -302,7 +318,7 @@ describe('new Command().setupGitRepository()', () => {
   let exec;
 
   beforeEach(() => {
-    instance = new DefaultCommand({input: [], flags: {}});
+    instance = new DefaultCommand({input: [], flags: {}, pkg: {}});
     resolveDistFolder = jest
       .spyOn(instance, 'resolveDistFolder')
       .mockImplementation(jest.fn(() => '/foo/bar/my fancy app'));
@@ -353,7 +369,7 @@ describe('new Command().onFile()', () => {
   let instance;
 
   beforeEach(() => {
-    instance = new DefaultCommand({input: [], flags: {}});
+    instance = new DefaultCommand({input: [], flags: {}, pkg: {}});
   });
 
   afterEach(() => {
@@ -380,7 +396,7 @@ describe('new Command().onInvalidDistDir()', () => {
   let fail;
 
   beforeEach(() => {
-    instance = new DefaultCommand({input: [], flags: {}});
+    instance = new DefaultCommand({input: [], flags: {}, pkg: {}});
     fail = jest.spyOn(instance, 'fail').mockImplementation(jest.fn());
   });
 
@@ -405,7 +421,7 @@ describe('new Command().safelyCreateNpmScopeArg()', () => {
   let instance;
 
   beforeEach(() => {
-    instance = new DefaultCommand({input: [], flags: {}});
+    instance = new DefaultCommand({input: [], flags: {}, pkg: {}});
   });
 
   afterEach(() => {
@@ -429,12 +445,64 @@ describe('new Command().safelyCreateNpmScopeArg()', () => {
   });
 });
 
+describe('new Command().printStartInstructions()', () => {
+  let instance;
+  let log;
+
+  beforeEach(() => {
+    instance = new DefaultCommand({input: [], flags: {}, pkg: {}});
+    log = jest.spyOn(console, 'log').mockImplementation(jest.fn());
+  });
+
+  afterEach(() => {
+    // $FlowFixMe: Ignore errors since the jest type-def is out of date.
+    jest.restoreAllMocks();
+    jest.clearAllMocks();
+  });
+
+  it('should be a function', () => {
+    expect(typeof instance.printStartInstructions).toBe('function');
+  });
+
+  it('should log help instructions to the console.log method', async () => {
+    await instance.printStartInstructions('/foo/bar');
+
+    expect(log).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('new Command().printHelp()', () => {
+  let instance;
+  let log;
+
+  beforeEach(() => {
+    instance = new DefaultCommand({input: [], flags: {}, pkg: {}});
+    log = jest.spyOn(console, 'log').mockImplementation(jest.fn());
+  });
+
+  afterEach(() => {
+    // $FlowFixMe: Ignore errors since the jest type-def is out of date.
+    jest.restoreAllMocks();
+    jest.clearAllMocks();
+  });
+
+  it('should be a function', () => {
+    expect(typeof instance.printHelp).toBe('function');
+  });
+
+  it('should log help instructions to the console.log method', async () => {
+    await instance.printHelp();
+
+    expect(log).toHaveBeenCalledTimes(1);
+  });
+});
+
 describe('new Command() on template hooks', () => {
   let instance;
   let opts;
 
   beforeEach(() => {
-    instance = new DefaultCommand({input: [], flags: {}});
+    instance = new DefaultCommand({input: [], flags: {}, pkg: {}});
     opts = {
       filePaths: {
         dist: 'fooDist',

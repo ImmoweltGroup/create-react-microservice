@@ -16,13 +16,14 @@ require('check-engines')(pkg, function (err) {
 
   const meow = require('meow');
   const ora = require('ora');
-  const cli = meow({pkg, help: false});
+  const cli = meow({pkg, autoHelp: false});
   const commandsByName = {
     default: require('./../dist/commands/default.js')
   };
   const commandName = cli.input.join(' ');
   const Command = commandsByName[commandName] || commandsByName.default;
   const instance = new Command({
+    pkg,
     input: cli.input,
     flags: cli.flags
   });
