@@ -4,8 +4,7 @@
   "private": false,
   "author": "Immonet dev team <aegaeon@immonet.de> (https://immonet.de)",
   "license": "MIT",
-  "description":
-    "Create highly scalable and universal React microservices/applications within seconds.",
+  "description": "Create highly scalable and universal React microservices/applications within seconds.",
   "bin": {
     "create-react-microservice": "./.bin/create-react-microservice"
   },
@@ -20,16 +19,14 @@
     "jest:watch": "yarn run jest -- --watch",
     "jest:coverage": "yarn run jest -- --coverage",
     "build:clean": "rimraf dist",
-    "build:babel":
-      "NODE_ENV=production babel src --out-dir dist --ignore spec.js",
+    "build:babel": "NODE_ENV=production babel src --out-dir dist --ignore spec.js",
     "build:flow": "flow-copy-source -v src dist --ignore='*.spec.js'",
     "build:watch": "yarn run build:babel -- -w",
     "prebuild": "yarn run build:clean",
     "build": "yarn run build:babel && yarn run build:flow",
     "flow": "flow",
     "flow-typed": "flow-typed",
-    "flow-typed-install":
-      "flow-typed install --ignoreDeps=bundled peer --overwrite"
+    "flow-typed-install": "flow-typed install --ignoreDeps=bundled peer --overwrite"
   },
   "devDependencies": {
     "@immowelt/babel-preset-immowelt-node": "1.1.0",
@@ -37,11 +34,11 @@
     "@immowelt/jest-preset-node": "1.0.0",
     "babel-cli": "6.26.0",
     "eslint": "4.12.1",
-    "rimraf": "2.6.2",
     "flow-bin": "0.60.1",
     "flow-copy-source": "1.2.1",
     "flow-typed": "2.2.3",
-    "jest": "21.2.1"
+    "jest": "21.2.1",
+    "rimraf": "2.6.2"
   },
   "jest": {
     "preset": "@immowelt/jest-preset-node"
@@ -53,7 +50,6 @@
     "create-react-microservice-scaffold": "0.0.0-development",
     "execa": "0.8.0",
     "find-node-modules": "1.0.4",
-    "lodash": "^4.17.4",
     "meow": "4.0.0",
     "node-emoji": "1.8.1",
     "ora": "1.3.0",

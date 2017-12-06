@@ -9,7 +9,6 @@ const path = require('path');
 const ora = require('ora');
 const emoji = require('node-emoji');
 const chalk = require('chalk');
-const lodash = require('lodash');
 const create = require('create-any-cli');
 const trim = require('trim-character');
 const Command = require('./../lib/command.js');
@@ -292,7 +291,7 @@ ${questions
         .map(question => {
           const {name, message} = question;
 
-          return `  --${lodash.padEnd(name, padding)} ${message}`;
+          return `  --${name.padEnd(padding, ' ')} ${message}`;
         })
         .join('\n')}
     `.trim()
