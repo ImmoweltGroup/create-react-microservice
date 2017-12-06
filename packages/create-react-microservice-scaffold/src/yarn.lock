@@ -6583,7 +6583,7 @@ micromatch@^3.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-"micromatch@github:jonschlinkert/micromatch#2.2.0":
+micromatch@jonschlinkert/micromatch#2.2.0:
   version "2.2.0"
   resolved "https://codeload.github.com/jonschlinkert/micromatch/tar.gz/5017fd78202e04c684cc31d3c2fb1f469ea222ff"
   dependencies:
@@ -6916,9 +6916,9 @@ node-version@^1.0.0, node-version@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/node-version/-/node-version-1.1.0.tgz#f437d7ba407e65e2c4eaef8887b1718ba523d4f0"
 
-nodemon@1.12.4:
-  version "1.12.4"
-  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.12.4.tgz#b3cedad2845ee27298aa889b903b2e324fe57cda"
+nodemon@1.12.5:
+  version "1.12.5"
+  resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-1.12.5.tgz#bd34afa1aa855f1996b561147848519f136de620"
   dependencies:
     chokidar "^1.7.0"
     debug "^2.6.8"
@@ -7604,9 +7604,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.9.0.tgz#1a7205bdb6126b30cf8c0a7b2b86997162e1ee3e"
+prettier@1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.9.1.tgz#41638a0d47c1efbd1b7d5a742aaa5548eab86d70"
 
 pretty-error@^2.0.2:
   version "2.1.1"
