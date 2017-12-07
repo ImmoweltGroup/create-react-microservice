@@ -4,12 +4,12 @@ import type {CommentType} from './types.js';
 
 import {createAction} from 'redux-actions';
 import {createActionTypeFactory} from 'redux-lumbergh';
-import {moduleId, namepsace} from './config.js';
+import {moduleId, namespace} from './config.js';
 
 //
 // Action types
 //
-const createActionType = createActionTypeFactory(namepsace, moduleId);
+const createActionType = createActionTypeFactory(namespace, moduleId);
 
 const actionTypes = {
   LOAD_COMMENTS: createActionType('LOAD_COMMENTS'),

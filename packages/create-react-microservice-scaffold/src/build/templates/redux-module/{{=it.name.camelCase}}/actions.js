@@ -2,12 +2,12 @@
 
 import {createAction} from 'redux-actions';
 import {createActionTypeFactory} from 'redux-lumbergh';
-import {namepsace, moduleId} from './config.js';
+import {namespace, moduleId} from './config.js';
 
 //
 // Action types
 //
-const createActionType = createActionTypeFactory(namepsace, moduleId);
+const createActionType = createActionTypeFactory(namespace, moduleId);
 
 const actionTypes = {
   SET_COUNTER: createActionType('SET_COUNTER')
