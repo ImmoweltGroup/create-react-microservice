@@ -335,6 +335,20 @@ describe('new Command().setupGitRepository()', () => {
     expect(typeof instance.setupGitRepository).toBe('function');
   });
 
+  it('should rename the .gitignore-keep file if present to .gitignore to avoid a weird error in NPM.', async () => {
+    file.existsSync.mockReturnValueOnce(true);
+    await instance.setupGitRepository('foo.git');
+
+    expect(file.existsSync).toHaveBeenCalledTimes(1);
+    expect(file.renameSync).toHaveBeenCalledTimes(1);
+
+    file.existsSync.mockReturnValueOnce(false);
+    await instance.setupGitRepository('foo.git');
+
+    expect(file.existsSync).toHaveBeenCalledTimes(2);
+    expect(file.renameSync).toHaveBeenCalledTimes(1);
+  });
+
   it('should setup the git repository with the provided remote origin URL in the resolved CWD.', async () => {
     const opts = {
       cwd: '/foo/bar/my fancy app'

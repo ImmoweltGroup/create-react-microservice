@@ -1,10 +1,11 @@
 // @flow
 
-const {existsSync} = require('fs');
+const {existsSync, renameSync} = require('fs');
 const findNodeModules = require('find-node-modules');
 
 module.exports = {
   require,
   findNodeModules,
-  existsSync
+  existsSync,
+  renameSync
 };

@@ -261,6 +261,16 @@ class CreateReactMicroService extends Command {
     const cwd = await this.resolveDistFolder();
     const opts = {cwd};
 
+    //
+    // Rename the .gitignore of the scaffold to it's original name since NPM was ignoring it while publishing no matter what.
+    // @see https://github.com/npm/npm/issues/3763
+    //
+    const srcGitIgnore = path.join(cwd, '.gitignore-keep');
+
+    if (file.existsSync(srcGitIgnore)) {
+      file.renameSync(srcGitIgnore, path.join(cwd, '.gitignore'))
+    }
+
     await Command.exec('git', ['init'], opts);
     await Command.exec('git', ['remote', 'add', 'origin', repositoryUrl], opts);
     await Command.exec('yarn', ['add', '--dev', '-W', 'husky'], opts);
