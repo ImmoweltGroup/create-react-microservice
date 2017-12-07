@@ -23,6 +23,9 @@ else
   # Create the required .npmrc file which points the `npm` CLI to use the `NPM_TOKEN``for auth.
   echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 
+  # Create an empty npm ignore to avoid not shipping/packing the scaffolds .gitignore.
+  touch packages/create-react-microservice-scaffold/src/.npmignore
+
   echo "Releasing $VERSION ..."
   npx lerna publish --skip-git --yes --exact --repo-version=$VERSION
 
