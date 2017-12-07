@@ -6,7 +6,6 @@ While we try to keep the effort of setting up your system as small as possible, 
 
 - [NVM (Node Version Manager)](#nvm)
 - [Yarn (Package Manager)](#yarn)
-- [Enabling Yarn's workspace feature](#yarn-workspace-feature)
 
 
 <a id="nvm"></a>
@@ -38,14 +37,5 @@ yarn --version
 ```
 
 We require at least `v1.3.2` to be installed, if it was not installed or if it's outdated, please head to the [Installation guide of yarn](https://yarnpkg.com/en/docs/install) and execute the necessary steps.
-
-
-<a id="yarn-workspace-feature"></a>
-## Enabling Yarn's workspace feature
-One of the most crucial step is that you enable the worksapce feature of yarn by executing the following command
-
-```sh
-yarn config set workspaces-experimental true
-```
 
 Afterwards you are good to go! :-)
