@@ -28,7 +28,9 @@ else
   # We will rename it upon bootstrapping the application to the original name again.
   # @see https://github.com/npm/npm/issues/3763
   #
-  mv packages/create-react-microservice-scaffold/src/.gitignore packages/create-react-microservice-scaffold/src/.gitignore-keep
+  cat packages/create-react-microservice-scaffold/src/.gitignore > packages/create-react-microservice-scaffold/src/.npmignore
+  mv packages/create-react-microservice-scaffold/src/.gitignore packages/create-react-microservice-scaffold/src/.git-ignore
+  ls -lah packages/create-react-microservice-scaffold/src/
 
   echo "Releasing $VERSION ..."
   npx lerna publish --skip-git --yes --exact --repo-version=$VERSION
