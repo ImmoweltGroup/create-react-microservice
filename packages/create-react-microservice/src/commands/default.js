@@ -92,20 +92,21 @@ class CreateReactMicroService extends Command {
    * @return {Promise} The Promise that resolves with the full path pointing to the scaffolds src folder.
    */
   async resolveScaffold() {
+    const scaffoldPackageName = 'create-react-microservice-scaffold';
     const modulesPath = file
       .findNodeModules({cwd: __dirname})
       .map(modulesPath => path.join(__dirname, modulesPath))
       .find(modulesPath =>
         file.existsSync(
-          path.join(modulesPath, 'create-react-microservice-scaffold')
+          path.join(modulesPath, scaffoldPackageName)
         )
       );
     const scaffoldPackagePath = path.join(
       modulesPath,
-      'create-react-microservice-scaffold'
+      scaffoldPackageName
     );
     const scaffoldPackageJson = file.require(
-      'create-react-microservice-scaffold/package.json'
+      path.join(scaffoldPackageName, 'package.json')
     );
     const src = trim.right(
       path.join(scaffoldPackagePath, scaffoldPackageJson.main),
