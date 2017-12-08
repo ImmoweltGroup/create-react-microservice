@@ -33,7 +33,7 @@
     "@immowelt/eslint-config-immowelt-react": "2.0.2",
     "@immowelt/jest-preset-node": "1.0.0",
     "babel-cli": "6.26.0",
-    "eslint": "4.12.1",
+    "eslint": "4.13.0",
     "flow-bin": "0.60.1",
     "flow-copy-source": "1.2.1",
     "flow-typed": "2.2.3",
