@@ -12,7 +12,7 @@
 
 We started using [CRA](https://github.com/facebookincubator/create-react-app) or commonly known as `create-react-app` but soon enough we realized that this scaffold is just a simple playground to get up and running. It does not provide any guidance in regards to testing, structure or features like server side rendering.
 
-[Next.js](https://github.com/zeit/next.js) on the other hand seemed like a better fit, we even took some things like the great `getInitialProps` concept on the route component. We do recommend it for most use cases, but once you want to...
+[Next.js](https://github.com/zeit/next.js) on the other hand seemed like a better fit, we even took some things like the great `getInitialProps` concept on the page component. We do recommend it for most use cases, but once you want to...
 
 * ... use webpack loaders for new file-types
 * ... have full control over the configuration, structure and the underlying code

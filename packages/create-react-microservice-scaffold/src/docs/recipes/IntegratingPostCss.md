@@ -14,7 +14,7 @@ In this recipe we will add in JS CSS imports to the scaffold. Like with an other
 <a id="adding-the-example-css-import"></a>
 ## Adding an example CSS import to the scaffold
 
-First let's add an generic CSS file into the main applications package, head into e.g. `packages/my-fancy-ui/src/` and create a `style.css` file and paste the following contents into it.
+First let's add an generic CSS file into the main applications package, head into e.g. `packages/my-fancy-ui/src/pages/` and create a `style.css` file and paste the following contents into it.
 
 ```css
 .exampleCssIntegrationClassName {
@@ -22,7 +22,7 @@ First let's add an generic CSS file into the main applications package, head int
 }
 ```
 
-Afterwards open up the `app.js`, import the css file, e.g. `import './style.css'` and propagate the className to the `IndexRoute`, e.g. `<IndexRoute name={name} className="exampleCssIntegrationClassName" />`.
+Afterwards open up the `pages/index.js`, import the css file, e.g. `import './style.css'` and propagate the className a div, e.g. `<div className="exampleCssIntegrationClassName" />`.
 
 <a id="installing-dependencies"></a>
 ## Installing new dependencies

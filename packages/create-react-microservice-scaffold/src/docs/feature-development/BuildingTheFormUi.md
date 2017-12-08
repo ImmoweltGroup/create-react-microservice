@@ -88,7 +88,7 @@ When removing all of the comments you will end up with a lean basis to create Co
 
 
 <a id="rendering-the-container"></a>
-## Rendering the created Form container in the `Default` route
+## Rendering the created Form container in the index page
 So lets render the created container so we have some feedback when writing the markup within the browser. Head into the `packages/my-fancy-ui/pages/index.js` file and import the newly created container...
 
 ```js

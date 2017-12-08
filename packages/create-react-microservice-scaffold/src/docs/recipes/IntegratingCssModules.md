@@ -11,7 +11,7 @@ In this recipe we will add in JS CSS imports with the addition of CSS modules to
 
 <a id="changing-the-import-statement"></a>
 ## Changing the import statement
-After finishing the regular CSS setup, our first step is to adapt our example css import statement in our app entry, e.g. `packages/my-fancy-ui/src/app.js`, from `import './style.css'` to `import styles from './style.css'`. Since we now import the object containing our generated class names into the JavaScript file, we can also adapt the usage, so replace `<IndexRoute name={name} className="exampleCssIntegrationClassName" />` to `<IndexRoute name={name} className={styles.exampleCssIntegrationClassName} />` and you should be done! :-)
+After finishing the regular CSS setup, our first step is to adapt our example css import statement in our page component, e.g. `packages/my-fancy-ui/src/pages/index.js`, from `import './style.css'` to `import styles from './style.css'`. Since we now import the object containing our generated class names into the JavaScript file, we can also adapt the usage, so replace `<div className="exampleCssIntegrationClassName" />` to `<div className={styles.exampleCssIntegrationClassName} />` and you should be done! :-)
 
 
 <a id="adjusting-the-client-side-webpack-config"></a>
