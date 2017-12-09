@@ -41,7 +41,7 @@
     "@immowelt/jest-preset-node": "1.0.0",
     "create-config": "1.0.4",
     "eslint": "4.13.0",
-    "flow-bin": "0.60.1",
+    "flow-bin": "0.61.0",
     "flow-typed": "2.2.3",
     "invalidate-module": "1.0.0",
     "jest": "21.2.1",
