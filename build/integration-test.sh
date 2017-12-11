@@ -9,19 +9,21 @@ set -e
 # `husky` git hooks from the scaffold <-> `husky` git hooks from the mono-repo.
 #
 PWD="$(pwd)"
+DEFAULT_WORKINGDIR="../create-react-microservice-test-scaffold"
+WORKINGDIR=${1:-$DEFAULT_WORKINGDIR}
 
 printf "\nCleaning up previous runs of the integration-test\n"
-rm -rf ../create-react-microservice-test-scaffold
+rm -rf $WORKINGDIR
 
 printf "\nCreating the scaffold via the CLI\n"
 npx create-react-microservice \
-  ../create-react-microservice-test-scaffold \
+  $WORKINGDIR \
   --license="MIT" \
   --npmScope="integration-scope" \
   --gitRepoUrl="https://github.com/ImmoweltGroup/create-react-microservice.git"
 
 printf "\nExecuting the tests within the created scaffold\n"
-cd ../create-react-microservice-test-scaffold
+cd $WORKINGDIR
 yarn run lint
 yarn run flow
 
