@@ -25,6 +25,8 @@ class CreateReactMicroService extends Command {
       return this.printHelp();
     }
 
+    await this.validateInstallation();
+
     const name = await this.resolveAppName();
     const src = await this.resolveScaffold();
     const dist = await this.resolveDistFolder();

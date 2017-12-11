@@ -7,47 +7,29 @@ var pkg = require(path.join(__dirname, './../package.json'));
 
 require('check-engines')(pkg, function (err) {
   var ora = require('ora');
-  var spinner = ora().start('Checking for updates and validating the system context.');
 
   if (err) {
-    console.log(err);
-    spinner.fail('System binaries do not meet constraints: ' + JSON.stringify(pkg.engines)});
-    process.exit(1);
+    ora().fail(err.message);
+    ora().fail('System binaries do not meet constraints: ' + JSON.stringify(pkg.engines));
 
-    return;
+    return process.exit(1);
   }
 
-  (async function() {
-    const meow = require('meow');
-    const latestVersion = require('latest-version');
-    const version = await latestVersion(pkg.name);
+  var cli = require('meow')({pkg, autoHelp: false});
+  var commandsByName = {
+    default: require('./../dist/commands/default.js')
+  };
+  var commandName = cli.input.join(' ');
+  var Command = commandsByName[commandName] || commandsByName.default;
+  var instance = new Command({
+    pkg,
+    input: cli.input,
+    flags: cli.flags
+  });
 
-    if (version !== pkg.version && pkg.version !== '0.0.0-development') {
-      spinner.fail(`Oudated version of "${pkg.name}" found. Please update your global installation by executing "yarn global upgrade ${pkg.name}@${version}".`);
-
-      return process.exit(1);
-    }
-
-    spinner.stop();
-
-    const cli = meow({pkg, autoHelp: false});
-    const commandsByName = {
-      default: require('./../dist/commands/default.js')
-    };
-    const commandName = cli.input.join(' ');
-    const Command = commandsByName[commandName] || commandsByName.default;
-    const instance = new Command({
-      pkg,
-      input: cli.input,
-      flags: cli.flags
-    });
-
-    try {
-      await instance.exec()
-    } catch (e) {
-      console.error(e);
-
-      process.exit(1);
-    }
-  })()
+  instance.exec().catch(function (e) {
+    ora().fail(e.message);
+    console.error(e);
+    process.exit(1);
+  });
 });

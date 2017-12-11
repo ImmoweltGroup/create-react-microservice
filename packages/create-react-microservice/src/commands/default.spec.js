@@ -21,6 +21,7 @@ describe('DefaultCommand', () => {
 
 describe('new Command().exec()', () => {
   let instance;
+  let validateInstallation;
   let processTemplateAndCreate;
   let resolveAndPromptTemplateArgs;
   let resolveDistFolder;
@@ -32,6 +33,9 @@ describe('new Command().exec()', () => {
 
   beforeEach(() => {
     instance = new DefaultCommand({input: [], flags: {}, pkg: {}});
+    validateInstallation = jest
+      .spyOn(instance, 'validateInstallation')
+      .mockImplementation(jest.fn());
     processTemplateAndCreate = jest
       .spyOn(create, 'processTemplateAndCreate')
       .mockImplementation(jest.fn());
@@ -86,6 +90,7 @@ describe('new Command().exec()', () => {
   it('should resolve the dist folder, the app name and template args', async () => {
     await instance.exec();
 
+    expect(validateInstallation).toHaveBeenCalledTimes(1);
     expect(resolveAppName).toHaveBeenCalledTimes(1);
     expect(resolveDistFolder).toHaveBeenCalledTimes(1);
     expect(resolveAndPromptTemplateArgs).toHaveBeenCalledTimes(1);
