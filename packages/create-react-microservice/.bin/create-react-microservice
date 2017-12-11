@@ -7,11 +7,11 @@ var pkg = require(path.join(__dirname, './../package.json'));
 
 require('check-engines')(pkg, function (err) {
   var ora = require('ora');
-  var spinner = ora().start(`Checking for updates and validating the system context.`);
+  var spinner = ora().start('Checking for updates and validating the system context.');
 
   if (err) {
     console.log(err);
-    spinner.fail(`System binaries do not meet constraints: ${JSON.stringify(pkg.engines)}.`);
+    spinner.fail('System binaries do not meet constraints: ' + JSON.stringify(pkg.engines)});
     process.exit(1);
 
     return;
