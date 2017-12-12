@@ -1,10 +1,53 @@
 // @flow
 
+jest.mock('./npm.js');
+
+const npm: any = require('./npm.js');
 const Command = require('./command.js');
 
 describe('Command()', () => {
   it('should be a function', () => {
     expect(typeof Command).toBe('function');
+  });
+});
+
+describe('new Command().validateInstallation()', () => {
+  let instance;
+
+  beforeEach(() => {
+    instance = new Command({input: [], flags: {}, pkg: {name: 'foo-name', version: '1.0.0'}});
+  });
+
+  afterEach(() => {
+    // $FlowFixMe: Ignore errors since the jest type-def is out of date.
+    jest.restoreAllMocks();
+    jest.clearAllMocks();
+  });
+
+  it('should be a function', () => {
+    expect(typeof instance.validateInstallation).toBe('function');
+  });
+
+  it('should query the latest published version and should not throw an erorr if it matches the initialized version number in the package.json.', async () => {
+    npm.latestVersion.mockReturnValue('1.0.0');
+
+    await instance.validateInstallation();
+
+    expect(npm.latestVersion).toHaveBeenCalledWith('foo-name');
+  });
+
+  it('should not throw an erorr if the initialized version number in the package.json matches "0.0.0-development".', async () => {
+    instance.pkg.version = '0.0.0-development';
+
+    npm.latestVersion.mockReturnValue('1.2.0');
+
+    await expect(instance.validateInstallation()).resolves;
+  });
+
+  it('should throw an erorr if the queried version does not match the initialized version number in the package.json.', async () => {
+    npm.latestVersion.mockReturnValue('1.2.0');
+
+    await expect(instance.validateInstallation()).rejects;
   });
 });
 

@@ -4,7 +4,8 @@
   "private": false,
   "author": "Immonet dev team <aegaeon@immonet.de> (https://immonet.de)",
   "license": "MIT",
-  "description": "Create highly scalable and universal React microservices/applications within seconds.",
+  "description":
+    "Create highly scalable and universal React microservices/applications within seconds.",
   "bin": {
     "create-react-microservice": "./.bin/create-react-microservice"
   },
@@ -19,14 +20,16 @@
     "jest:watch": "yarn run jest -- --watch",
     "jest:coverage": "yarn run jest -- --coverage",
     "build:clean": "rimraf dist",
-    "build:babel": "NODE_ENV=production babel src --out-dir dist --ignore spec.js",
+    "build:babel":
+      "NODE_ENV=production babel src --out-dir dist --ignore spec.js",
     "build:flow": "flow-copy-source -v src dist --ignore='*.spec.js'",
     "build:watch": "yarn run build:babel -- -w",
     "prebuild": "yarn run build:clean",
     "build": "yarn run build:babel && yarn run build:flow",
     "flow": "flow",
     "flow-typed": "flow-typed",
-    "flow-typed-install": "flow-typed install --ignoreDeps=bundled peer --overwrite"
+    "flow-typed-install":
+      "flow-typed install --ignoreDeps=bundled peer --overwrite"
   },
   "devDependencies": {
     "@immowelt/babel-preset-immowelt-node": "1.1.0",
@@ -50,6 +53,7 @@
     "create-react-microservice-scaffold": "0.0.0-development",
     "execa": "0.8.0",
     "find-node-modules": "1.0.4",
+    "latest-version": "^3.1.0",
     "meow": "4.0.0",
     "node-emoji": "1.8.1",
     "ora": "1.3.0",

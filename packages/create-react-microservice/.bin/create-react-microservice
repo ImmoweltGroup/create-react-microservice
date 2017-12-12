@@ -6,31 +6,30 @@ var path = require('path');
 var pkg = require(path.join(__dirname, './../package.json'));
 
 require('check-engines')(pkg, function (err) {
-  if (err) {
-    console.log(err);
-    require('ora')().fail(`System binaries do not meet constraints: ${JSON.stringify(pkg.engines)}.`);
-    process.exit(1);
+  var ora = require('ora');
 
-    return;
+  if (err) {
+    ora().fail(err.message);
+    ora().fail('System binaries do not meet constraints: ' + JSON.stringify(pkg.engines));
+
+    return process.exit(1);
   }
 
-  const meow = require('meow');
-  const ora = require('ora');
-  const cli = meow({pkg, autoHelp: false});
-  const commandsByName = {
+  var cli = require('meow')({pkg, autoHelp: false});
+  var commandsByName = {
     default: require('./../dist/commands/default.js')
   };
-  const commandName = cli.input.join(' ');
-  const Command = commandsByName[commandName] || commandsByName.default;
-  const instance = new Command({
+  var commandName = cli.input.join(' ');
+  var Command = commandsByName[commandName] || commandsByName.default;
+  var instance = new Command({
     pkg,
     input: cli.input,
     flags: cli.flags
   });
 
-  instance.exec().catch(e => {
+  instance.exec().catch(function (e) {
+    ora().fail(e.message);
     console.error(e);
-
     process.exit(1);
   });
 });

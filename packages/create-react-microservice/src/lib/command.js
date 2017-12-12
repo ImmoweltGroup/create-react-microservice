@@ -3,6 +3,7 @@
 const exec = require('execa');
 const chalk = require('chalk');
 const ora = require('ora');
+const npm = require('./npm.js');
 
 class Command {
   static exec = exec;
@@ -20,6 +21,20 @@ class Command {
     this.pkg = args.pkg;
     this.input = args.input;
     this.flags = args.flags;
+  }
+
+  /**
+   * Validates the global CLI installation so we can be sure that the newest version is always installed.
+   *
+   * @return {Promise} The Promise that resolves if everything is installed properly / rejects if something is wrong.
+   */
+  async validateInstallation() {
+    const {name, version} = this.pkg;
+    const latestPublishedVersion = await npm.latestVersion(name);
+
+    if (latestPublishedVersion !== version && version !== '0.0.0-development') {
+      throw new Error(`Oudated version of "${name}" found. Please update your global installation by executing "yarn global upgrade ${name}@${latestPublishedVersion}".`);
+    }
   }
 
   /**
