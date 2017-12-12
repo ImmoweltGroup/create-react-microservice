@@ -42,6 +42,7 @@ class CreateReactMicroService extends Command {
         args,
         filePatterns: ['**/*', '**/.*'],
         ignore: [
+          `${src}/.{editorconfig,prettierrc}`,
           `${src}/{node_modules,dist,flow-typed/npm}/**`,
           `${src}/packages/*/{node_modules,dist,flow-typed/npm}/**`
         ]
