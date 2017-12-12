@@ -99,14 +99,9 @@ class CreateReactMicroService extends Command {
       .findNodeModules({cwd: __dirname})
       .map(modulesPath => path.join(__dirname, modulesPath))
       .find(modulesPath =>
-        file.existsSync(
-          path.join(modulesPath, scaffoldPackageName)
-        )
+        file.existsSync(path.join(modulesPath, scaffoldPackageName))
       );
-    const scaffoldPackagePath = path.join(
-      modulesPath,
-      scaffoldPackageName
-    );
+    const scaffoldPackagePath = path.join(modulesPath, scaffoldPackageName);
     const scaffoldPackageJson = file.require(
       path.join(scaffoldPackageName, 'package.json')
     );
@@ -203,7 +198,7 @@ class CreateReactMicroService extends Command {
       const namespace = str
         .replace(/\s/g, '-')
         .replace(/[0-9]/g, '')
-        .replace(/[^a-zA-Z]g/g, '')
+        .replace(/[^a-zA-Z-]/g, '')
         .toLowerCase();
 
       return `@${namespace}/`;
@@ -271,7 +266,7 @@ class CreateReactMicroService extends Command {
     const srcGitIgnore = path.join(cwd, '.git-ignore');
 
     if (file.existsSync(srcGitIgnore)) {
-      file.renameSync(srcGitIgnore, path.join(cwd, '.gitignore'))
+      file.renameSync(srcGitIgnore, path.join(cwd, '.gitignore'));
     }
 
     await Command.exec('git', ['init'], opts);
