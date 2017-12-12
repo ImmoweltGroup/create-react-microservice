@@ -30,7 +30,6 @@ else
   #
   cat packages/create-react-microservice-scaffold/src/.gitignore > packages/create-react-microservice-scaffold/src/.npmignore
   mv packages/create-react-microservice-scaffold/src/.gitignore packages/create-react-microservice-scaffold/src/.git-ignore
-  ls -lah packages/create-react-microservice-scaffold/src/
 
   echo "Releasing $VERSION ..."
   npx lerna publish --skip-git --yes --exact --repo-version=$VERSION
