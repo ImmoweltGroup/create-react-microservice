@@ -23,9 +23,7 @@ describe('getCommentForId()', () => {
     expect(typeof selectors.getCommentForId).toBe('function');
   });
 
-  it(`should return the value of the "${
-    moduleId
-  }.commentsById" key which matches the propagated prop id.`, () => {
+  it(`should return the value of the "${moduleId}.commentsById" key which matches the propagated prop id.`, () => {
     const state = {
       [moduleId]: {
         commentsById: {

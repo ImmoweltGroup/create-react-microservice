@@ -33,7 +33,9 @@ class Command {
     const latestPublishedVersion = await npm.latestVersion(name);
 
     if (latestPublishedVersion !== version && version !== '0.0.0-development') {
-      throw new Error(`Oudated version of "${name}" found. Please update your global installation by executing "yarn global upgrade ${name}@${latestPublishedVersion}".`);
+      throw new Error(
+        `Oudated version of "${name}" found. Please update your global installation by executing "yarn global upgrade ${name}@${latestPublishedVersion}".`
+      );
     }
   }
 

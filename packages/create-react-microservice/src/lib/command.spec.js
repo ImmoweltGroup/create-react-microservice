@@ -15,7 +15,11 @@ describe('new Command().validateInstallation()', () => {
   let instance;
 
   beforeEach(() => {
-    instance = new Command({input: [], flags: {}, pkg: {name: 'foo-name', version: '1.0.0'}});
+    instance = new Command({
+      input: [],
+      flags: {},
+      pkg: {name: 'foo-name', version: '1.0.0'}
+    });
   });
 
   afterEach(() => {

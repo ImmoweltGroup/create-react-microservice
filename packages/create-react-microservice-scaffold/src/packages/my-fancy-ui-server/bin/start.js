@@ -21,9 +21,9 @@ const createServerApp = require('./../');
     //
     http.createServer(app).listen(MY_FANCY_UI_PORT, () => {
       logger.success(
-        `Node Web server(pid: ${process.pid}) is up and running on http://${
-          MY_FANCY_UI_HOST
-        }:${MY_FANCY_UI_PORT}.`
+        `Node Web server(pid: ${
+          process.pid
+        }) is up and running on http://${MY_FANCY_UI_HOST}:${MY_FANCY_UI_PORT}.`
       );
     });
   } catch (err) {
