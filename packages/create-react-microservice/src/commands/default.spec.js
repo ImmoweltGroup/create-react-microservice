@@ -497,11 +497,9 @@ describe('new Command().safelyCreateNpmScopeArg()', () => {
       '`',
       '´'
     ];
-    specialChars.forEach(character => {
-      expect(instance.safelyCreateNpmScopeArg(`${character}foo-bar`)).toBe(
-        '@foo-bar/'
-      );
-    });
+    expect(
+      instance.safelyCreateNpmScopeArg(`${specialChars.join('')}foo-bar`)
+    ).toBe('@foo-bar/');
   });
 });
 
