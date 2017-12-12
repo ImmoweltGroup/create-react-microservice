@@ -462,6 +462,45 @@ describe('new Command().safelyCreateNpmScopeArg()', () => {
       '@foo-bar-baz/'
     );
   });
+  it('should remove all special characters', async () => {
+    const specialChars = [
+      '~',
+      '!',
+      '@',
+      '#',
+      '$',
+      '%',
+      '^',
+      '&',
+      '*',
+      '(',
+      ')',
+      '_',
+      '|',
+      '+',
+      '=',
+      '?',
+      ';',
+      ':',
+      ',',
+      '.',
+      '<',
+      '>',
+      '{',
+      '}',
+      '[',
+      ']',
+      '\\',
+      '/',
+      "'",
+      '"',
+      '`',
+      '´'
+    ];
+    expect(
+      instance.safelyCreateNpmScopeArg(`${specialChars.join('')}foo-bar`)
+    ).toBe('@foo-bar/');
+  });
 });
 
 describe('new Command().printStartInstructions()', () => {
