@@ -85,7 +85,7 @@
     "flow-typed": "2.2.3",
     "lint-staged": "6.0.0",
     "prettier": "1.9.2",
-    "pwmetrics": "3.1.2",
+    "pwmetrics": "3.1.4",
     "testcafe": "0.18.5",
     "testcafe-react-selectors": "1.0.2"
   }
