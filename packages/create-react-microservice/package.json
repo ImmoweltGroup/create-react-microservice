@@ -34,7 +34,7 @@
   "devDependencies": {
     "@immowelt/babel-preset-immowelt-node": "1.1.0",
     "@immowelt/eslint-config-immowelt-react": "2.0.2",
-    "@immowelt/jest-preset-node": "1.0.0",
+    "@immowelt/jest-preset-node": "1.0.1",
     "babel-cli": "6.26.0",
     "eslint": "4.13.1",
     "flow-bin": "0.61.0",
