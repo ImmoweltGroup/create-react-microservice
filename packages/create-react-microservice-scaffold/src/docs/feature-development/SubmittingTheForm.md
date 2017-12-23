@@ -57,7 +57,7 @@ Again create unit tests in the same way you did before for the `setCommentFormPr
 
 <a id="creating-the-reset-form-actionHandler"></a>
 ## Creating the reset-form `actionHandler`
-Afterwards let's write our reset from state `actionHandler`, again head into the `packages/my-fancy-ui/src/containers/CommentForm/index.js` file and paste in the actionHandler for the `RESET_COMMENT_FORM` `actionType`.
+Afterwards let's write our reset from state `actionHandler`, again head into the `packages/my-fancy-ui/src/store/modules/comments/index.js` file and paste in the actionHandler for the `RESET_COMMENT_FORM` `actionType`.
 
 ```js
 const ACTION_HANDLERS = {
@@ -108,7 +108,7 @@ class CommentForm extends Component<PropsType> {
       </form>
     );
   }
-  
+
   handleFormSubmit = (e) => {
     e.preventDefault();
 
