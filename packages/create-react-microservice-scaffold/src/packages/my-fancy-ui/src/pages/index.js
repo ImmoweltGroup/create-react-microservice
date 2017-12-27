@@ -34,11 +34,13 @@ class IndexPage extends Component<PropsType> {
 
   render() {
     const {errors, query, initialState, reduxSagaContext} = this.props;
-    const {name = 'mate'} = query;
+    const {name = 'mate', locale = 'en-US'} = query;
     const {store} = Store.createStore({
       reduxSagaContext,
       initialState
     });
+
+    i18n.locale(locale);
 
     errors.forEach(err => {
       logger.error('Server-Side-Error:', err.message, err.stack);
