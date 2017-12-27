@@ -46,7 +46,7 @@
     "webpack-visualizer-plugin": "0.1.11"
   },
   "devDependencies": {
-    "@immowelt/eslint-config-immowelt-react": "2.0.2",
+    "@immowelt/eslint-config-immowelt-react": "2.0.3",
     "@immowelt/jest-preset-node": "1.0.1",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "eslint": "4.13.1",
