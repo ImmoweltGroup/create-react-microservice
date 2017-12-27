@@ -8087,9 +8087,9 @@ redux-actions@2.2.1:
     lodash-es "^4.17.4"
     reduce-reducers "^0.1.0"
 
-redux-lumbergh@1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/redux-lumbergh/-/redux-lumbergh-1.0.5.tgz#548004f63ff16bf8aa31216c3e86440ce09094fe"
+redux-lumbergh@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/redux-lumbergh/-/redux-lumbergh-1.0.6.tgz#f759345d90d7a6e6a8ac7ab5cc6aa6802f26cfbc"
 
 redux-saga-test-plan@3.3.1:
   version "3.3.1"
