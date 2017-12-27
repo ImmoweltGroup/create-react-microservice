@@ -44,14 +44,22 @@
     "flow-bin": "0.61.0",
     "flow-typed": "2.2.3",
     "invalidate-module": "1.0.0",
-    "jest": "21.2.1",
+    "jest": "22.0.4",
     "nodemon": "1.14.3",
     "npm-run-all": "4.1.2",
     "rimraf": "2.6.2"
   },
   "jest": {
     "preset": "@immowelt/jest-preset-node",
-    "transformIgnorePatterns": ["node_modules/(?!@immowelt|@company-scope)"]
+    "transformIgnorePatterns": ["node_modules/(?!@immowelt|@company-scope)"],
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    }
   },
   "repository": {
     "type": "git",

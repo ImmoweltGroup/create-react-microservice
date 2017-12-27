@@ -22,7 +22,7 @@ exports[`<CommentsList/> should render correctly. 1`] = `
       className="mdl-cell mdl-cell--6-col mdl-typography--text-right"
     >
       <Button
-        onClick={[Function]}
+        onClick={[MockFunction]}
       >
         ↺ 
         Load comments
