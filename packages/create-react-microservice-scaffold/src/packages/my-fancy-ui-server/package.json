@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@immowelt/babel-preset-immowelt-node": "1.1.0",
-    "@immowelt/hypernova-express": "1.0.2",
+    "@immowelt/hypernova-express": "1.0.3",
     "@company-scope/my-fancy-ui-config": "0.0.0-development",
     "babel-cli": "6.26.0",
     "body-parser": "1.18.2",

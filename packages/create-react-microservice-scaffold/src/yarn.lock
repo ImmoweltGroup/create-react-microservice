@@ -55,7 +55,7 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@immowelt/babel-preset-immowelt-node@1.1.0", "@immowelt/babel-preset-immowelt-node@^1.1.0":
+"@immowelt/babel-preset-immowelt-node@1.1.0", "@immowelt/babel-preset-immowelt-node@^1.0.1", "@immowelt/babel-preset-immowelt-node@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@immowelt/babel-preset-immowelt-node/-/babel-preset-immowelt-node-1.1.0.tgz#e9774e4db697f5b69f58ec6c6640c550ea084cb0"
   dependencies:
@@ -73,16 +73,6 @@
     babel-plugin-flow-react-proptypes "^9.1.1"
     babel-preset-flow "^6.23.0"
     babel-preset-react-app "^3.0.1"
-    babel-runtime "6.26.0"
-
-"@immowelt/babel-preset-immowelt@^1.0.2":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@immowelt/babel-preset-immowelt/-/babel-preset-immowelt-1.0.4.tgz#86b1b63dd505b312d9283c784866b3325d77f648"
-  dependencies:
-    babel-plugin-transform-class-properties "^6.24.1"
-    babel-plugin-transform-flow-strip-types "^6.22.0"
-    babel-plugin-transform-object-rest-spread "^6.26.0"
-    babel-preset-react "^6.24.1"
     babel-runtime "6.26.0"
 
 "@immowelt/eslint-config-immowelt-react@2.0.3":
@@ -103,11 +93,11 @@
     eslint-plugin-react "^7.3.0"
     eslint-plugin-standard "^3.0.1"
 
-"@immowelt/hypernova-express@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@immowelt/hypernova-express/-/hypernova-express-1.0.2.tgz#17adc00112f0530b55ae2fc6bda15ddaebc1307b"
+"@immowelt/hypernova-express@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@immowelt/hypernova-express/-/hypernova-express-1.0.3.tgz#d95607879a31d41e1a101ca9efad593f18ed319f"
   dependencies:
-    "@immowelt/babel-preset-immowelt" "^1.0.2"
+    "@immowelt/babel-preset-immowelt-node" "^1.0.1"
     babel-cli "^6.26.0"
     flow-copy-source "^1.2.1"
     pify "^3.0.0"
