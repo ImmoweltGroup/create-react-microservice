@@ -41,11 +41,11 @@
     "@immowelt/jest-preset-node": "1.0.1",
     "create-config": "1.0.4",
     "eslint": "4.15.0",
-    "flow-bin": "0.62.0",
+    "flow-bin": "0.63.1",
     "flow-typed": "2.2.3",
     "invalidate-module": "1.0.0",
     "jest": "22.0.4",
-    "nodemon": "1.14.7",
+    "nodemon": "1.14.9",
     "npm-run-all": "4.1.2",
     "rimraf": "2.6.2"
   },
