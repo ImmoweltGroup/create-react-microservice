@@ -8243,9 +8243,9 @@ redux-lumbergh@1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/redux-lumbergh/-/redux-lumbergh-1.0.6.tgz#f759345d90d7a6e6a8ac7ab5cc6aa6802f26cfbc"
 
-redux-saga-test-plan@3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/redux-saga-test-plan/-/redux-saga-test-plan-3.4.0.tgz#7d7bba7da099028e6f857dd0728dbcd84ff1674f"
+redux-saga-test-plan@3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/redux-saga-test-plan/-/redux-saga-test-plan-3.4.1.tgz#008ee1adbdbad7d7ec3b669121ae7914ce6cc06f"
   dependencies:
     core-js "^2.4.1"
     fsm-iterator "^1.1.0"
