@@ -37,7 +37,7 @@
     "react": "16.2.0",
     "react-dev-utils": "4.2.1",
     "react-dom": "16.2.0",
-    "react-redux": "5.0.6",
+    "react-redux": "5.0.7",
     "recompose": "0.26.0",
     "redux": "3.7.2",
     "redux-actions": "2.2.1",
