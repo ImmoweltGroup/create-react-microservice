@@ -22,7 +22,7 @@
     "@immowelt/babel-preset-immowelt-react": "1.2.2"
   },
   "devDependencies": {
-    "@immowelt/eslint-config-immowelt-react": "2.0.3",
+    "@immowelt/eslint-config-immowelt-react": "2.0.4",
     "@immowelt/jest-preset-react": "1.1.1",
     "classcat": "3.0.1",
     "empty": "0.10.1",
