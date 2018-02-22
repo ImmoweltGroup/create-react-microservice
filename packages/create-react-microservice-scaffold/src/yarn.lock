@@ -3138,9 +3138,9 @@ ecdsa-sig-formatter@1.0.9:
     base64url "^2.0.0"
     safe-buffer "^5.0.1"
 
-editorconfig-checker@1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/editorconfig-checker/-/editorconfig-checker-1.1.5.tgz#0e9172fe63978fa4fe38b8eafde01fe9ae0ed4fa"
+editorconfig-checker@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/editorconfig-checker/-/editorconfig-checker-1.2.0.tgz#ab7f8dd848b407f65bd7612bf898699e831d5cfc"
   dependencies:
     glob "^7.1.2"
     glob-fs "^0.1.7"
