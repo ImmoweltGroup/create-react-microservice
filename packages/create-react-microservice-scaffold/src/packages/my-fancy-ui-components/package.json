@@ -33,7 +33,7 @@
     "flow-bin": "0.65.0",
     "flow-typed": "2.3.0",
     "jest": "22.0.4",
-    "prop-types": "15.6.0",
+    "prop-types": "15.6.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-test-renderer": "16.2.0"
