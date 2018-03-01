@@ -1896,6 +1896,10 @@ caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
 
+cast-array@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/cast-array/-/cast-array-1.0.0.tgz#11a744e403bed53b926f98138d1b303dca9987d0"
+
 center-align@^0.1.1:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/center-align/-/center-align-0.1.3.tgz#aa0d32629b6ee972200411cbd4461c907bc2b7ad"
@@ -3351,7 +3355,7 @@ error-ex@^1.2.0, error-ex@^1.3.1:
   dependencies:
     is-arrayish "^0.2.1"
 
-error-stack-parser@^1.3.3:
+error-stack-parser@^1.3.3, error-stack-parser@^1.3.6:
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/error-stack-parser/-/error-stack-parser-1.3.6.tgz#e0e73b93e417138d1cd7c0b746b1a4a14854c292"
   dependencies:
@@ -6992,6 +6996,10 @@ nanoid@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-0.2.2.tgz#e2ebc6ad3db5e0454fd8124d30ca39b06555fe56"
 
+nanoid@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-1.0.2.tgz#15d2b5e76b6dbfb15cac1000cb457d4bfc845bdb"
+
 nanomatch@^1.2.5:
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.6.tgz#f27233e97c34a8706b7e781a4bc611c957a81625"
@@ -7815,6 +7823,10 @@ pluralize@^7.0.0:
 pn@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.0.0.tgz#1cf5a30b0d806cd18f88fc41a6b5d4ad615b3ba9"
+
+pngjs@^3.3.1:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/pngjs/-/pngjs-3.3.2.tgz#097c3c2a75feb223eadddea6bc9f0050cf830bc3"
 
 posix-character-classes@^0.1.0:
   version "0.1.1"
@@ -8896,10 +8908,6 @@ shellwords@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
 
-shortid@^2.2.4:
-  version "2.2.8"
-  resolved "https://registry.yarnpkg.com/shortid/-/shortid-2.2.8.tgz#033b117d6a2e975804f6f0969dbe7d3d0b355131"
-
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
@@ -9155,10 +9163,6 @@ ssri@^5.0.0:
   resolved "https://registry.yarnpkg.com/ssri/-/ssri-5.0.0.tgz#13c19390b606c821f2a10d02b351c1729b94d8cf"
   dependencies:
     safe-buffer "^5.1.0"
-
-stack-chain@^1.3.6:
-  version "1.3.7"
-  resolved "https://registry.yarnpkg.com/stack-chain/-/stack-chain-1.3.7.tgz#d192c9ff4ea6a22c94c4dd459171e3f00cea1285"
 
 stack-trace@0.0.9:
   version "0.0.9"
@@ -9513,9 +9517,9 @@ test-exclude@^4.1.1:
     read-pkg-up "^1.0.1"
     require-main-filename "^1.0.1"
 
-testcafe-browser-tools@1.4.6:
-  version "1.4.6"
-  resolved "https://registry.yarnpkg.com/testcafe-browser-tools/-/testcafe-browser-tools-1.4.6.tgz#58c8ede77beeeecfb844b8cdcc22e61b23e34982"
+testcafe-browser-tools@1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/testcafe-browser-tools/-/testcafe-browser-tools-1.5.1.tgz#8439a85300bbd73fdd540244aa1ce35a0d3e9632"
   dependencies:
     array-find "^1.0.0"
     babel-runtime "^5.6.15"
@@ -9529,12 +9533,13 @@ testcafe-browser-tools@1.4.6:
     read-file-relative "^1.2.0"
     which-promise "^1.0.0"
 
-testcafe-hammerhead@12.1.6:
-  version "12.1.6"
-  resolved "https://registry.yarnpkg.com/testcafe-hammerhead/-/testcafe-hammerhead-12.1.6.tgz#1a2bece9af57db3413e83f8be32d6a8b191da4a7"
+testcafe-hammerhead@13.1.1:
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/testcafe-hammerhead/-/testcafe-hammerhead-13.1.1.tgz#a29b07d0e5178c7c547c32c1f6b964c407a52d50"
   dependencies:
     bowser "1.6.0"
     brotli "^1.3.1"
+    cast-array "1.0.0"
     crypto-md5 "^1.0.0"
     css "2.2.1"
     dedent "0.4.0"
@@ -9543,21 +9548,21 @@ testcafe-hammerhead@12.1.6:
     lru-cache "2.6.3"
     mime "~1.4.1"
     mustache "^2.1.1"
+    nanoid "^0.2.2"
     node-version "1.1.0"
     os-family "^1.0.0"
     parse5 "^1.5.0"
     pify "^2.3.0"
     pinkie "1.0.0"
     read-file-relative "^1.2.0"
-    shortid "^2.2.4"
     tough-cookie "2.3.3"
     tunnel-agent "0.6.0"
     webauth "^1.1.0"
     yakaa "1.0.1"
 
-testcafe-legacy-api@3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/testcafe-legacy-api/-/testcafe-legacy-api-3.1.2.tgz#af858ae31030d8c94056a6fd580e64be00a51e81"
+testcafe-legacy-api@3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/testcafe-legacy-api/-/testcafe-legacy-api-3.1.4.tgz#6b2635c94c336ae500946edd64adcb934cc27d3e"
   dependencies:
     async "0.2.6"
     babel-runtime "^5.8.34"
@@ -9596,9 +9601,9 @@ testcafe-reporter-xunit@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/testcafe-reporter-xunit/-/testcafe-reporter-xunit-2.1.0.tgz#e6d66c572ce15af266706af0fd610b2a841dd443"
 
-testcafe@0.18.6:
-  version "0.18.6"
-  resolved "https://registry.yarnpkg.com/testcafe/-/testcafe-0.18.6.tgz#7dfd3467e5010c741ebf5e383cd5f82ad39fc5f2"
+testcafe@0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/testcafe/-/testcafe-0.19.0.tgz#ea31f49e49b24938e84509f8214cb3ae9cdda7f1"
   dependencies:
     async-exit-hook "^1.1.2"
     babel-core "^6.22.1"
@@ -9620,6 +9625,7 @@ testcafe@0.18.6:
     dedent "^0.4.0"
     elegant-spinner "^1.0.1"
     endpoint-utils "^1.0.2"
+    error-stack-parser "^1.3.6"
     globby "^3.0.1"
     indent-string "^1.2.2"
     is-ci "^1.0.10"
@@ -9631,12 +9637,13 @@ testcafe@0.18.6:
     moment "^2.10.3"
     moment-duration-format "^1.3.0"
     mustache "^2.1.2"
-    nanoid "^0.2.2"
+    nanoid "^1.0.1"
     node-version "^1.0.0"
     os-family "^1.0.0"
     parse5 "^1.5.0"
     pify "^2.3.0"
     pinkie "^2.0.4"
+    pngjs "^3.3.1"
     promisify-event "^1.0.0"
     ps-node "^0.1.6"
     qrcode-terminal "^0.10.0"
@@ -9645,11 +9652,10 @@ testcafe@0.18.6:
     resolve-cwd "^1.0.0"
     sanitize-filename "^1.6.0"
     source-map-support "^0.4.0"
-    stack-chain "^1.3.6"
     strip-bom "^2.0.0"
-    testcafe-browser-tools "1.4.6"
-    testcafe-hammerhead "12.1.6"
-    testcafe-legacy-api "3.1.2"
+    testcafe-browser-tools "1.5.1"
+    testcafe-hammerhead "13.1.1"
+    testcafe-legacy-api "3.1.4"
     testcafe-reporter-json "^2.1.0"
     testcafe-reporter-list "^2.1.0"
     testcafe-reporter-minimal "^2.1.0"
