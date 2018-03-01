@@ -5073,9 +5073,9 @@ hypernova-react@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/hypernova-react/-/hypernova-react-2.1.0.tgz#e52437f6687b8ff8ffb655628afed9d774007fec"
 
-hypernova@2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/hypernova/-/hypernova-2.2.2.tgz#a91cedfef16a0062ab7bfd706e384179b743605e"
+hypernova@2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/hypernova/-/hypernova-2.2.3.tgz#bbfc879677d6b78251ea8a5476e01c93da2410cf"
   dependencies:
     airbnb-js-shims "^1.4.0"
     bluebird "^3.5.1"
