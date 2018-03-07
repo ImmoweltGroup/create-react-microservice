@@ -40,7 +40,7 @@
     "react-redux": "5.0.7",
     "recompose": "0.26.0",
     "redux": "3.7.2",
-    "redux-actions": "2.2.1",
+    "redux-actions": "2.3.0",
     "redux-lumbergh": "1.0.6",
     "redux-saga": "0.16.0",
     "reselect": "3.0.1",
