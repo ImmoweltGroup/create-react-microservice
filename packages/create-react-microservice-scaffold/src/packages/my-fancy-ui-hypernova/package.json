@@ -42,7 +42,7 @@
     "create-config": "1.0.4",
     "eslint": "4.18.2",
     "flow-bin": "0.65.0",
-    "flow-typed": "2.3.0",
+    "flow-typed": "2.4.0",
     "invalidate-module": "1.0.0",
     "jest": "22.0.4",
     "nodemon": "1.17.1",
