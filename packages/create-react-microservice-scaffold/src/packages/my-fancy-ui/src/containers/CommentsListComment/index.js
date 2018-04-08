@@ -1,6 +1,5 @@
 // @flow
 
-import type {Connector} from 'react-redux';
 import type {StateType} from './../../store/types.js';
 import type {
   CommentIdType,
@@ -44,7 +43,7 @@ const mapStateToProps = (
 ): StatePropsType => ({
   comment: commentsSelectors.getCommentForId(state, {id: ownProps.commentId})
 });
-const withState: Connector<OwnPropsType, PropsType> = connect(mapStateToProps);
+const withState = connect(mapStateToProps);
 const Container = withState(CommentsListComment);
 
 export {CommentsListComment, mapStateToProps, Container as default};
