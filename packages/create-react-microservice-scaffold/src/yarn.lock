@@ -6407,9 +6407,9 @@ left-pad@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/left-pad/-/left-pad-1.2.0.tgz#d30a73c6b8201d8f7d8e7956ba9616087a68e0ee"
 
-lerna@2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/lerna/-/lerna-2.10.0.tgz#60155d1ddddde218473ac705ff62eea62e29aeef"
+lerna@2.10.1:
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/lerna/-/lerna-2.10.1.tgz#3b0ffe6b80d3312e8efdc7003a50d47d90ebdf03"
   dependencies:
     async "^1.5.0"
     chalk "^2.1.0"
@@ -6439,7 +6439,6 @@ lerna@2.10.0:
     path-exists "^3.0.0"
     read-cmd-shim "^1.0.1"
     read-pkg "^3.0.0"
-    resolve-from "^4.0.0"
     rimraf "^2.6.1"
     safe-buffer "^5.1.1"
     semver "^5.4.1"
@@ -8911,10 +8910,6 @@ resolve-from@^1.0.0:
 resolve-from@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-2.0.0.tgz#9480ab20e94ffa1d9e80a804c7ea147611966b57"
-
-resolve-from@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
 
 resolve-url@^0.2.1, resolve-url@~0.2.1:
   version "0.2.1"
