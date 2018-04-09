@@ -10571,9 +10571,9 @@ webidl-conversions@^4.0.1, webidl-conversions@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
 
-webpack-livereload-plugin@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/webpack-livereload-plugin/-/webpack-livereload-plugin-1.2.0.tgz#df62996139360c166f52ba86cf9624f174a922e0"
+webpack-livereload-plugin@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/webpack-livereload-plugin/-/webpack-livereload-plugin-2.1.1.tgz#d2cb90d5d839b5c04259f7eaf02581ceac67a107"
   dependencies:
     tiny-lr "^1.1.1"
 
