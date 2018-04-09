@@ -28,15 +28,15 @@
     "empty": "0.10.1",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
-    "enzyme-to-json": "3.3.1",
+    "enzyme-to-json": "3.3.3",
     "eslint": "4.19.1",
     "flow-bin": "0.69.0",
     "flow-typed": "2.4.0",
     "jest": "22.0.4",
     "prop-types": "15.6.1",
     "react": "16.3.1",
-    "react-dom": "16.2.0",
-    "react-test-renderer": "16.2.0"
+    "react-dom": "16.3.1",
+    "react-test-renderer": "16.3.1"
   },
   "peerDependencies": {
     "classcat": "^3.0.0",
