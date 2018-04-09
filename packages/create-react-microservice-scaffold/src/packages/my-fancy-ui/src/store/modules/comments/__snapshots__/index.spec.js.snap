@@ -3,13 +3,17 @@
 exports[`reducer() reducer()[actionTypes.SET_COMMENTS] should transform and set the api response into the "byId" state structure 1`] = `
 Object {
   "commentsById": Object {
-    "bar": Object {
-      "id": "bar",
-      "name": "Bar",
-    },
-    "foo": Object {
-      "id": "foo",
+    "1": Object {
+      "body": "fooBody",
+      "email": "fooEmail",
+      "id": 1,
       "name": "Foo",
+    },
+    "2": Object {
+      "body": "barBody",
+      "email": "barEmail",
+      "id": 2,
+      "name": "Bar",
     },
   },
 }
