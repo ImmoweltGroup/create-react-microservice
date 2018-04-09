@@ -46,7 +46,7 @@
     "reselect": "3.0.1",
     "serialize-error": "2.1.0",
     "webpack": "3.11.0",
-    "whatwg-fetch": "2.0.3"
+    "whatwg-fetch": "2.0.4"
   },
   "devDependencies": {
     "@immowelt/eslint-config-immowelt-react": "2.0.4",
