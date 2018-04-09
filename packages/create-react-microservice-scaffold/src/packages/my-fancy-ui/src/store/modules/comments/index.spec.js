@@ -44,8 +44,8 @@ describe('reducer()', () => {
     };
     // $FlowFixMe: suppressing this error since it is a test case
     const action = actions.setComments([
-      {id: 'foo', name: 'Foo'},
-      {id: 'bar', name: 'Bar'}
+      {id: 1, name: 'Foo', body: 'fooBody', email: 'fooEmail'},
+      {id: 2, name: 'Bar', body: 'barBody', email: 'barEmail'}
     ]);
     const result = reducer(initialState, action);
 
