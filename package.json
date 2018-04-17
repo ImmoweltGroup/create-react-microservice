@@ -27,7 +27,7 @@
     "husky": "0.14.3",
     "lerna": "2.10.2",
     "lint-staged": "6.1.1",
-    "prettier": "1.12.0",
+    "prettier": "1.12.1",
     "rimraf": "2.6.2",
     "semantic-release": "8.2.3"
   },
