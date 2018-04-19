@@ -10674,9 +10674,9 @@ webpack-livereload-plugin@2.1.1:
   dependencies:
     tiny-lr "^1.1.1"
 
-webpack-manifest-plugin@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/webpack-manifest-plugin/-/webpack-manifest-plugin-2.0.0.tgz#691a0209e12083c375f6f22732ebc0e660437529"
+webpack-manifest-plugin@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/webpack-manifest-plugin/-/webpack-manifest-plugin-2.0.1.tgz#9ef26040eb2980bfcdd74a3ef88b6562c559469f"
   dependencies:
     fs-extra "^0.30.0"
     lodash ">=3.5 <5"
