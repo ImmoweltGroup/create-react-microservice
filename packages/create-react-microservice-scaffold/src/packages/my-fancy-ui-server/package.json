@@ -39,7 +39,7 @@
     "express-status-monitor": "1.0.1",
     "flow-copy-source": "1.3.0",
     "helmet": "3.12.0",
-    "hypernova": "2.2.5",
+    "hypernova": "2.2.6",
     "hypernova-client": "1.1.0",
     "log-fancy": "1.3.2",
     "morgan": "1.9.0",
