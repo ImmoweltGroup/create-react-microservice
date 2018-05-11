@@ -45,7 +45,7 @@
     "redux-saga": "0.16.0",
     "reselect": "3.0.1",
     "serialize-error": "2.1.0",
-    "webpack": "3.11.0",
+    "webpack": "3.12.0",
     "whatwg-fetch": "2.0.4"
   },
   "devDependencies": {
