@@ -53,7 +53,7 @@
     "@immowelt/jest-preset-react": "1.1.1",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
-    "enzyme-to-json": "3.3.3",
+    "enzyme-to-json": "3.3.4",
     "eslint": "4.19.1",
     "flow-bin": "0.69.0",
     "flow-typed": "2.4.0",
