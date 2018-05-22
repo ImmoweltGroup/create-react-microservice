@@ -9960,9 +9960,9 @@ testcafe-browser-tools@1.5.1:
     read-file-relative "^1.2.0"
     which-promise "^1.0.0"
 
-testcafe-hammerhead@13.4.4:
-  version "13.4.4"
-  resolved "https://registry.yarnpkg.com/testcafe-hammerhead/-/testcafe-hammerhead-13.4.4.tgz#2cc81eaab346674e39c6df9b31fd58edc4318514"
+testcafe-hammerhead@13.5.0:
+  version "13.5.0"
+  resolved "https://registry.yarnpkg.com/testcafe-hammerhead/-/testcafe-hammerhead-13.5.0.tgz#aadc6b224522f079585e5d4de910fc505b708095"
   dependencies:
     bowser "1.6.0"
     brotli "^1.3.1"
@@ -10027,9 +10027,9 @@ testcafe-reporter-xunit@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/testcafe-reporter-xunit/-/testcafe-reporter-xunit-2.1.0.tgz#e6d66c572ce15af266706af0fd610b2a841dd443"
 
-testcafe@0.20.0:
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/testcafe/-/testcafe-0.20.0.tgz#feead0c56435fcd7daa7754656c5b182a697e4c3"
+testcafe@0.20.1:
+  version "0.20.1"
+  resolved "https://registry.yarnpkg.com/testcafe/-/testcafe-0.20.1.tgz#579ee1361e990f8317644a5ad16801ab294477f2"
   dependencies:
     async-exit-hook "^1.1.2"
     babel-core "^6.22.1"
@@ -10081,7 +10081,7 @@ testcafe@0.20.0:
     source-map-support "^0.5.5"
     strip-bom "^2.0.0"
     testcafe-browser-tools "1.5.1"
-    testcafe-hammerhead "13.4.4"
+    testcafe-hammerhead "13.5.0"
     testcafe-legacy-api "3.1.7"
     testcafe-reporter-json "^2.1.0"
     testcafe-reporter-list "^2.1.0"
