@@ -9936,9 +9936,9 @@ testcafe-legacy-api@3.1.7:
     pinkie "^2.0.1"
     strip-bom "^2.0.0"
 
-testcafe-react-selectors@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/testcafe-react-selectors/-/testcafe-react-selectors-2.0.1.tgz#fd4cc6b0303e7b09239c16e593e64be779521a52"
+testcafe-react-selectors@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/testcafe-react-selectors/-/testcafe-react-selectors-2.1.0.tgz#529dcdcceb427f86dc56b6fceff68905abc63b9f"
 
 testcafe-reporter-json@^2.1.0:
   version "2.1.0"
