@@ -34,7 +34,7 @@
     "flow-typed": "2.4.0",
     "jest": "22.4.4",
     "prop-types": "15.6.1",
-    "react": "16.4.0",
+    "react": "16.4.1",
     "react-dom": "16.4.0",
     "react-test-renderer": "16.4.0"
   },
