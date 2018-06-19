@@ -2879,7 +2879,7 @@ dateformat@^1.0.11, dateformat@^1.0.12:
     get-stdin "^4.0.1"
     meow "^3.3.0"
 
-debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.6, debug@^2.6.8, debug@^2.6.9, debug@~2.6.4, debug@~2.6.6, debug@~2.6.9:
+debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.6, debug@^2.6.8, debug@~2.6.4, debug@~2.6.6, debug@~2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
@@ -3922,11 +3922,11 @@ export-files@^2.0.1:
   dependencies:
     lazy-cache "^1.0.3"
 
-express-status-monitor@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/express-status-monitor/-/express-status-monitor-1.0.1.tgz#311288347b7aabfeaec0a01547e55c77652bb298"
+express-status-monitor@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/express-status-monitor/-/express-status-monitor-1.1.0.tgz#7da2c03b3b8f7d2de3ad0d18aa3f13cf5a3e0343"
   dependencies:
-    debug "^2.6.9"
+    debug "^2.6.8"
     on-headers "^1.0.1"
     pidusage "^1.1.6"
     socket.io "^2.0.3"
