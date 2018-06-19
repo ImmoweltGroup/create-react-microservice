@@ -2669,6 +2669,14 @@ cosmiconfig@^4.0.0:
     parse-json "^4.0.0"
     require-from-string "^2.0.1"
 
+cosmiconfig@^5.0.5:
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-5.0.5.tgz#a809e3c2306891ce17ab70359dc8bdf661fe2cd0"
+  dependencies:
+    is-directory "^0.3.1"
+    js-yaml "^3.9.0"
+    parse-json "^4.0.0"
+
 create-any-cli@1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/create-any-cli/-/create-any-cli-1.3.1.tgz#ffd1ded2fa84efa25b5664264746b423707b6ed9"
@@ -2980,7 +2988,7 @@ defined@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/defined/-/defined-1.0.0.tgz#c98d9bcef75674188e110969151199e39b1fa693"
 
-del@^2.0.2, del@^2.2.2:
+del@^2.0.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/del/-/del-2.2.2.tgz#c12c981d067846c84bcaf862cff930d907ffd1a8"
   dependencies:
@@ -4176,7 +4184,7 @@ find-cache-dir@^1.0.0:
     make-dir "^1.0.0"
     pkg-dir "^2.0.0"
 
-find-config-up@1.1.0, find-config-up@^1.1.0:
+find-config-up@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/find-config-up/-/find-config-up-1.1.0.tgz#4df7a674425ba7f55653a9026bd44e04b2eb7087"
   dependencies:
@@ -4242,18 +4250,18 @@ flow-copy-source@^1.2.1:
     kefir "^3.7.3"
     yargs "^8.0.2"
 
-flow-mono-cli@1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/flow-mono-cli/-/flow-mono-cli-1.3.1.tgz#13526b285a2ea98f646945f3e41de5f096f1115b"
+flow-mono-cli@1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/flow-mono-cli/-/flow-mono-cli-1.3.4.tgz#ebd80a565fc9238e0e4b4b60ee645a40d25dd340"
   dependencies:
     commander "2.15.1"
+    cosmiconfig "^5.0.5"
     execa "0.10.0"
-    find-config-up "1.1.0"
     find-up "2.1.0"
     glob "7.1.2"
-    inquirer "5.1.0"
+    inquirer "5.2.0"
+    lodash.merge "^4.6.1"
     log-fancy "1.3.2"
-    make-symlinks "1.1.0"
     micromatch "3.1.10"
     yargs "11.0.0"
 
@@ -5341,9 +5349,9 @@ inquirer@3.3.0, inquirer@^3.0.6, inquirer@^3.2.2, inquirer@^3.3.0:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-inquirer@5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-5.1.0.tgz#19da508931892328abbbdd4c477f1efc65abfd67"
+inquirer@5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-5.2.0.tgz#db350c2b73daca77ff1243962e9f22f099685726"
   dependencies:
     ansi-escapes "^3.0.0"
     chalk "^2.0.0"
@@ -6704,6 +6712,10 @@ lodash.isstring@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
 
+lodash.merge@^4.6.1:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
+
 lodash.noop@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/lodash.noop/-/lodash.noop-3.0.1.tgz#38188f4d650a3a474258439b96ec45b32617133c"
@@ -6847,15 +6859,6 @@ make-dir@^1.0.0:
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-1.1.0.tgz#19b4369fe48c116f53c2af95ad102c0e39e85d51"
   dependencies:
     pify "^3.0.0"
-
-make-symlinks@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/make-symlinks/-/make-symlinks-1.1.0.tgz#c6a05b0c60048a6c4dfe92b85b12f83a480b55c8"
-  dependencies:
-    del "^2.2.2"
-    globby "^6.1.0"
-    pify "^2.3.0"
-    pinkie-promise "^2.0.1"
 
 makeerror@1.0.x:
   version "1.0.11"
@@ -8044,7 +8047,7 @@ pinkie-promise@^1.0.0:
   dependencies:
     pinkie "^1.0.0"
 
-pinkie-promise@^2.0.0, pinkie-promise@^2.0.1:
+pinkie-promise@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pinkie-promise/-/pinkie-promise-2.0.1.tgz#2135d6dfa7a358c069ac9b178776288228450ffa"
   dependencies:
