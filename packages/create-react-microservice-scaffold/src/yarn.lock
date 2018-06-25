@@ -352,6 +352,12 @@ ansi-align@^2.0.0:
   dependencies:
     string-width "^2.0.0"
 
+ansi-cyan@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ansi-cyan/-/ansi-cyan-0.1.1.tgz#538ae528af8982f28ae30d86f2f17456d2609873"
+  dependencies:
+    ansi-wrap "0.1.0"
+
 ansi-escapes@^1.0.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-1.4.0.tgz#d3a8a83b319aa67793662b13e761c7911422306e"
@@ -363,6 +369,12 @@ ansi-escapes@^2.0.0:
 ansi-escapes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-3.0.0.tgz#ec3e8b4e9f8064fc02c3ac9b65f1c275bda8ef92"
+
+ansi-red@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ansi-red/-/ansi-red-0.1.1.tgz#8c638f9d1080800a353c9c28c8a81ca4705d946c"
+  dependencies:
+    ansi-wrap "0.1.0"
 
 ansi-regex@^2.0.0:
   version "2.1.1"
@@ -469,6 +481,10 @@ arr-diff@^4.0.0:
 arr-flatten@^1.0.1, arr-flatten@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/arr-flatten/-/arr-flatten-1.1.0.tgz#36048bbff4e7b47e136644316c99669ea5ae91f1"
+
+arr-union@^2.0.1:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/arr-union/-/arr-union-2.1.0.tgz#20f9eab5ec70f5c7d215b1077b1c39161d292c7d"
 
 arr-union@^3.1.0:
   version "3.1.0"
@@ -1284,6 +1300,12 @@ babel-plugin-transform-regenerator@6.26.0, babel-plugin-transform-regenerator@^6
   dependencies:
     regenerator-transform "^0.10.0"
 
+babel-plugin-transform-runtime@6.15.0:
+  version "6.15.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-runtime/-/babel-plugin-transform-runtime-6.15.0.tgz#3d75b4d949ad81af157570273846fb59aeb0d57c"
+  dependencies:
+    babel-runtime "^6.9.0"
+
 babel-plugin-transform-runtime@6.23.0, babel-plugin-transform-runtime@^6.22.0:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-runtime/-/babel-plugin-transform-runtime-6.23.0.tgz#88490d446502ea9b8e7efb0fe09ec4d99479b1ee"
@@ -1426,7 +1448,7 @@ babel-register@^6.26.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@6.26.0, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
+babel-runtime@6.26.0, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0, babel-runtime@^6.9.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
@@ -2738,6 +2760,13 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+cross-spawn@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-4.0.0.tgz#8254774ab4786b8c5b3cf4dfba66ce563932c252"
+  dependencies:
+    lru-cache "^4.0.1"
+    which "^1.2.9"
+
 cross-spawn@5.1.0, cross-spawn@^5.0.1, cross-spawn@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
@@ -3974,6 +4003,12 @@ express@4.16.3, express@^4.16.3:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
+extend-shallow@^1.1.2:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/extend-shallow/-/extend-shallow-1.1.4.tgz#19d6bf94dfc09d76ba711f39b872d21ff4dd9071"
+  dependencies:
+    kind-of "^1.1.0"
+
 extend-shallow@^2.0.0, extend-shallow@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/extend-shallow/-/extend-shallow-2.0.1.tgz#51af7d614ad9a9f610ea1bafbb989d6b1c56890f"
@@ -4858,6 +4893,23 @@ gtoken@^1.2.1:
     jws "^3.0.0"
     mime "^1.4.1"
     request "^2.72.0"
+
+gulp-data@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/gulp-data/-/gulp-data-1.3.1.tgz#3304d5d1203d554d3385e42de78ee9204f61c8a2"
+  dependencies:
+    plugin-error "^0.1.2"
+    through2 "^2.0.0"
+    util-extend "^1.0.1"
+
+gulp-run-command@0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/gulp-run-command/-/gulp-run-command-0.0.9.tgz#cf3fe1ca7ead50a883f4ba4004caa34ca63a63cc"
+  dependencies:
+    babel-plugin-transform-runtime "6.15.0"
+    cross-spawn "4.0.0"
+    spawn-args "0.2.0"
+    timeout-as-promise "^1.0.0"
 
 gzip-size@3.0.0:
   version "3.0.0"
@@ -7192,9 +7244,9 @@ modify-values@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/modify-values/-/modify-values-1.0.0.tgz#e2b6cdeb9ce19f99317a53722f3dbf5df5eaaab2"
 
-moment-duration-format@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/moment-duration-format/-/moment-duration-format-1.3.0.tgz#541771b5f87a049cc65540475d3ad966737d6908"
+moment-duration-format@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/moment-duration-format/-/moment-duration-format-2.2.2.tgz#b957612de26016c9ad9eb6087c054573e5127779"
 
 moment@^2.10.3, moment@^2.14.1, moment@^2.6.0:
   version "2.19.3"
@@ -8083,6 +8135,16 @@ plow-js@2.1.0:
   optionalDependencies:
     immutable "^3.7.6"
 
+plugin-error@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/plugin-error/-/plugin-error-0.1.2.tgz#3b9bb3335ccf00f425e07437e19276967da47ace"
+  dependencies:
+    ansi-cyan "^0.1.1"
+    ansi-red "^0.1.1"
+    arr-diff "^1.0.1"
+    arr-union "^2.0.1"
+    extend-shallow "^1.1.2"
+
 pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
@@ -8963,6 +9025,10 @@ resolve-from@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-3.0.0.tgz#b22c7af7d9d6881bc8b6e653335eebcb0a188748"
 
+resolve-from@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
+
 resolve-url@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
@@ -9432,6 +9498,10 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
 
+spawn-args@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/spawn-args/-/spawn-args-0.2.0.tgz#fb7d0bd1d70fd4316bd9e3dec389e65f9d6361bb"
+
 spdx-correct@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/spdx-correct/-/spdx-correct-1.0.2.tgz#4b3073d933ff51f3912f03ac5519498a4150db40"
@@ -9895,14 +9965,15 @@ testcafe-browser-tools@1.6.3:
     read-file-relative "^1.2.0"
     which-promise "^1.0.0"
 
-testcafe-hammerhead@13.5.1:
-  version "13.5.1"
-  resolved "https://registry.yarnpkg.com/testcafe-hammerhead/-/testcafe-hammerhead-13.5.1.tgz#5e907df0cbe12b123ec7e1729a8b7cda95794ce5"
+testcafe-hammerhead@14.1.0:
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/testcafe-hammerhead/-/testcafe-hammerhead-14.1.0.tgz#a07ba1777219d3b8219ecd24da0b54813266c2b8"
   dependencies:
     bowser "1.6.0"
     brotli "^1.3.1"
     crypto-md5 "^1.0.0"
     css "2.2.3"
+    gulp-run-command "0.0.9"
     iconv-lite "0.4.11"
     lodash "4.17.10"
     lru-cache "2.6.3"
@@ -9962,9 +10033,9 @@ testcafe-reporter-xunit@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/testcafe-reporter-xunit/-/testcafe-reporter-xunit-2.1.0.tgz#e6d66c572ce15af266706af0fd610b2a841dd443"
 
-testcafe@0.20.2:
-  version "0.20.2"
-  resolved "https://registry.yarnpkg.com/testcafe/-/testcafe-0.20.2.tgz#7214a03a5975157b282ce25d0df2feb1459e3454"
+testcafe@0.20.4:
+  version "0.20.4"
+  resolved "https://registry.yarnpkg.com/testcafe/-/testcafe-0.20.4.tgz#fa4d7583fbdbbccb42a633df0f6e5f063d624ebb"
   dependencies:
     async-exit-hook "^1.1.2"
     babel-core "^6.22.1"
@@ -9989,6 +10060,7 @@ testcafe@0.20.2:
     error-stack-parser "^1.3.6"
     globby "^3.0.1"
     graceful-fs "^4.1.11"
+    gulp-data "^1.3.1"
     indent-string "^1.2.2"
     is-ci "^1.0.10"
     is-glob "^2.0.1"
@@ -9997,7 +10069,7 @@ testcafe@0.20.2:
     map-reverse "^1.0.1"
     mkdirp "^0.5.1"
     moment "^2.10.3"
-    moment-duration-format "^1.3.0"
+    moment-duration-format "^2.2.2"
     mustache "^2.1.2"
     nanoid "^1.0.1"
     node-version "^1.0.0"
@@ -10012,11 +10084,12 @@ testcafe@0.20.2:
     read-file-relative "^1.2.0"
     replicator "^1.0.0"
     resolve-cwd "^1.0.0"
+    resolve-from "^4.0.0"
     sanitize-filename "^1.6.0"
     source-map-support "^0.5.5"
     strip-bom "^2.0.0"
     testcafe-browser-tools "1.6.3"
-    testcafe-hammerhead "13.5.1"
+    testcafe-hammerhead "14.1.0"
     testcafe-legacy-api "3.1.7"
     testcafe-reporter-json "^2.1.0"
     testcafe-reporter-list "^2.1.0"
@@ -10059,6 +10132,10 @@ time-limit-promise@^1.0.2:
 timed-out@4.0.1, timed-out@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
+
+timeout-as-promise@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/timeout-as-promise/-/timeout-as-promise-1.0.0.tgz#7367e811fc992acfcdcdaabf2e50dfaf8b21576f"
 
 timers-browserify@^2.0.4:
   version "2.0.4"
@@ -10488,6 +10565,10 @@ utf8-byte-length@^1.0.1:
 util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
+
+util-extend@^1.0.1:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/util-extend/-/util-extend-1.0.3.tgz#a7c216d267545169637b3b6edc6ca9119e2ff93f"
 
 util-inspect@^0.1.8:
   version "0.1.8"
