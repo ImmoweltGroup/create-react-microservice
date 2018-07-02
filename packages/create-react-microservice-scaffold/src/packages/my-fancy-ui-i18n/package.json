@@ -21,7 +21,7 @@
   "dependencies": {
     "@immowelt/babel-preset-immowelt-node": "1.1.0",
     "@immowelt/babel-preset-immowelt-react": "1.2.2",
-    "node-polyglot": "2.2.2"
+    "node-polyglot": "2.3.0"
   },
   "devDependencies": {
     "@immowelt/eslint-config-immowelt-react": "2.0.4",
