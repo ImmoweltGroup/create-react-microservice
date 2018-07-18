@@ -93,7 +93,7 @@
     "lint-staged": "6.1.1",
     "prettier": "1.13.7",
     "pwmetrics": "3.2.1",
-    "testcafe": "0.20.4",
+    "testcafe": "0.20.5",
     "testcafe-react-selectors": "2.1.0"
   }
 }
