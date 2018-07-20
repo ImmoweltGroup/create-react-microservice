@@ -3990,9 +3990,9 @@ export-files@^2.0.1:
   dependencies:
     lazy-cache "^1.0.3"
 
-express-status-monitor@1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/express-status-monitor/-/express-status-monitor-1.1.4.tgz#0d4bc3df8560ed6231389ae484430a08bef886b0"
+express-status-monitor@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/express-status-monitor/-/express-status-monitor-1.1.5.tgz#0128efcce856b18d0dbd2812e0361244403dbe6d"
   dependencies:
     debug "^2.6.8"
     on-headers "^1.0.1"
