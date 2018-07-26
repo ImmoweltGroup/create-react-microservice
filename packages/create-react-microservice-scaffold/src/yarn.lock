@@ -5669,10 +5669,6 @@ is-fullwidth-code-point@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz#a3b30a5c4f199183167aaab93beefae3ddfb654f"
 
-is-function@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/is-function/-/is-function-1.0.1.tgz#12cfb98b65b57dd3d193a3121f5f6e2f437602b5"
-
 is-generator-fn@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-generator-fn/-/is-generator-fn-1.0.0.tgz#969d49e1bb3329f6bb7f09089be26578b2ddd46a"
@@ -8844,14 +8840,11 @@ reduce-reducers@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/reduce-reducers/-/reduce-reducers-0.1.2.tgz#fa1b4718bc5292a71ddd1e5d839c9bea9770f14b"
 
-redux-actions@2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/redux-actions/-/redux-actions-2.5.1.tgz#25678a34f0558f5edb3eb75b02844188c57f328d"
+redux-actions@2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/redux-actions/-/redux-actions-2.6.1.tgz#42c06e94739fbe6db35db3605abb105bdb3724d8"
   dependencies:
     invariant "^2.2.1"
-    is-function "^1.0.1"
-    is-plain-object "^2.0.4"
-    is-symbol "^1.0.1"
     lodash.camelcase "^4.3.0"
     lodash.curry "^4.1.1"
     reduce-reducers "^0.1.0"
