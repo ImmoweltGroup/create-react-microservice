@@ -24,7 +24,7 @@
   "devDependencies": {
     "@immowelt/eslint-config-immowelt-react": "2.0.4",
     "@immowelt/jest-preset-react": "1.1.1",
-    "classcat": "3.1.2",
+    "classcat": "3.2.1",
     "empty": "0.10.1",
     "enzyme": "3.4.4",
     "enzyme-adapter-react-16": "1.2.0",
