@@ -8465,9 +8465,9 @@ punycode@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.0.tgz#5f863edc89b96db09074bad7947bf09056ca4e7d"
 
-pwmetrics@3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/pwmetrics/-/pwmetrics-3.2.1.tgz#42c63d93209552c6d8e24c166d37192f07d14d9b"
+pwmetrics@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/pwmetrics/-/pwmetrics-3.3.0.tgz#78de6be08761304a97891508364d90e33f1e3e0d"
   dependencies:
     "@gribnoysup/wunderbar" "^2.2.0"
     "@types/node" "^6.0.45"
