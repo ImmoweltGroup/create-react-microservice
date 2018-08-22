@@ -35,7 +35,7 @@
     "plow-js": "2.1.0",
     "prop-types": "15.6.2",
     "react": "16.4.2",
-    "react-dev-utils": "5.0.1",
+    "react-dev-utils": "5.0.2",
     "react-dom": "16.4.2",
     "react-redux": "5.0.7",
     "recompose": "0.28.2",
