@@ -57,7 +57,7 @@
     "eslint": "5.5.0",
     "flow-bin": "0.69.0",
     "flow-typed": "2.4.0",
-    "jest": "23.5.0",
+    "jest": "23.6.0",
     "jest-react-redux": "1.0.3",
     "react-test-renderer": "16.5.0",
     "redux-saga-test-plan": "3.7.0"
