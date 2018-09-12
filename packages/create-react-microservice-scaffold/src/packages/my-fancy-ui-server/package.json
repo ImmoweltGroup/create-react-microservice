@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@immowelt/eslint-config-immowelt-react": "2.1.1",
-    "@immowelt/jest-preset-node": "1.1.0",
+    "@immowelt/jest-preset-node": "1.1.1",
     "create-config": "1.0.4",
     "eslint": "5.5.0",
     "flow-bin": "0.69.0",
