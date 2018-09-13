@@ -6275,9 +6275,9 @@ jest-mock@^23.2.0:
   version "23.2.0"
   resolved "https://registry.yarnpkg.com/jest-mock/-/jest-mock-23.2.0.tgz#ad1c60f29e8719d47c26e1138098b6d18b261134"
 
-jest-react-redux@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/jest-react-redux/-/jest-react-redux-1.0.3.tgz#ab4c56091f9a051634950e0b3f1617438cbbd60e"
+jest-react-redux@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/jest-react-redux/-/jest-react-redux-1.0.4.tgz#6dda4d69b8a19242756e9e3d359e9a1d2b555333"
 
 jest-regex-util@^23.3.0:
   version "23.3.0"
