@@ -18,7 +18,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "@immowelt/babel-preset-immowelt-node": "1.1.0",
+    "@immowelt/babel-preset-immowelt-node": "1.1.1",
     "@immowelt/babel-preset-immowelt-react": "1.2.4"
   },
   "devDependencies": {
