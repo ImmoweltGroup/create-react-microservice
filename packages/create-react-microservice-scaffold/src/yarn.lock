@@ -104,7 +104,18 @@
     pad "^2.0.3"
     randomcolor "^0.5.3"
 
-"@immowelt/babel-preset-immowelt-node@1.1.0", "@immowelt/babel-preset-immowelt-node@^1.0.1", "@immowelt/babel-preset-immowelt-node@^1.1.0":
+"@immowelt/babel-preset-immowelt-node@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@immowelt/babel-preset-immowelt-node/-/babel-preset-immowelt-node-1.1.1.tgz#1b447fb59f3f66dc522a453735175bc0715f12cb"
+  dependencies:
+    babel-plugin-dynamic-import-webpack "1.0.2"
+    babel-plugin-transform-class-properties "6.24.1"
+    babel-plugin-transform-object-rest-spread "6.26.0"
+    babel-preset-flow "6.23.0"
+    babel-preset-react "6.24.1"
+    babel-runtime "6.26.0"
+
+"@immowelt/babel-preset-immowelt-node@^1.0.1", "@immowelt/babel-preset-immowelt-node@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@immowelt/babel-preset-immowelt-node/-/babel-preset-immowelt-node-1.1.0.tgz#e9774e4db697f5b69f58ec6c6640c550ea084cb0"
   dependencies:
@@ -971,7 +982,7 @@ babel-plugin-dynamic-import-node@1.1.0:
     babel-template "^6.26.0"
     babel-types "^6.26.0"
 
-babel-plugin-dynamic-import-webpack@^1.0.1:
+babel-plugin-dynamic-import-webpack@1.0.2, babel-plugin-dynamic-import-webpack@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-webpack/-/babel-plugin-dynamic-import-webpack-1.0.2.tgz#cb83435833e073f1600c0188a95edacfdc07c256"
   dependencies:
