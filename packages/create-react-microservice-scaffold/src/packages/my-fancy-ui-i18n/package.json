@@ -20,7 +20,7 @@
   "keywords": [],
   "dependencies": {
     "@immowelt/babel-preset-immowelt-node": "1.1.0",
-    "@immowelt/babel-preset-immowelt-react": "1.2.2",
+    "@immowelt/babel-preset-immowelt-react": "1.2.4",
     "node-polyglot": "2.3.0"
   },
   "devDependencies": {

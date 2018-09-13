@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@immowelt/babel-preset-immowelt-node": "1.1.0",
-    "@immowelt/babel-preset-immowelt-react": "1.2.2",
+    "@immowelt/babel-preset-immowelt-react": "1.2.4",
     "@company-scope/my-fancy-ui-components": "0.0.0-development",
     "@company-scope/my-fancy-ui-i18n": "0.0.0-development",
     "@company-scope/my-fancy-ui-logger": "0.0.0-development",
