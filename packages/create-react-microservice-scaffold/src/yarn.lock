@@ -4071,13 +4071,14 @@ export-files@^2.0.1:
   dependencies:
     lazy-cache "^1.0.3"
 
-express-status-monitor@1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/express-status-monitor/-/express-status-monitor-1.1.5.tgz#0128efcce856b18d0dbd2812e0361244403dbe6d"
+express-status-monitor@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/express-status-monitor/-/express-status-monitor-1.2.0.tgz#46d8954d4e22d2fd74ab083e147ff54dbfd6f511"
   dependencies:
     debug "^2.6.8"
     on-headers "^1.0.1"
     pidusage "^1.1.6"
+    request-promise-native "^1.0.5"
     socket.io "^2.0.3"
 
 express@4.16.3, express@^4.16.3:
@@ -9228,7 +9229,7 @@ request-promise-core@1.1.1:
   dependencies:
     lodash "^4.13.1"
 
-request-promise-native@^1.0.3:
+request-promise-native@^1.0.3, request-promise-native@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/request-promise-native/-/request-promise-native-1.0.5.tgz#5281770f68e0c9719e5163fd3fab482215f4fda5"
   dependencies:
