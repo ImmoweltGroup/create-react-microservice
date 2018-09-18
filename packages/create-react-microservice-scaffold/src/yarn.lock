@@ -690,6 +690,12 @@ async@^2.1.2, async@^2.1.4, async@^2.4.1:
   dependencies:
     lodash "^4.14.0"
 
+async@^2.5.0:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.6.1.tgz#b245a23ca71930044ec53fa46aa00a3e87c6a610"
+  dependencies:
+    lodash "^4.17.10"
+
 async@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/async/-/async-1.0.0.tgz#f8fc04ca3a13784ade9e1641af98578cfbd647a9"
@@ -2382,6 +2388,10 @@ commander@2.12.x, commander@^2.11.0, commander@^2.5.0, commander@^2.8.1, command
   version "2.12.2"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.12.2.tgz#0f5946c427ed9ec0d91a46bb9def53e54650e555"
 
+commander@~2.17.1:
+  version "2.17.1"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
+
 commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
@@ -4071,11 +4081,12 @@ export-files@^2.0.1:
   dependencies:
     lazy-cache "^1.0.3"
 
-express-status-monitor@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/express-status-monitor/-/express-status-monitor-1.2.0.tgz#46d8954d4e22d2fd74ab083e147ff54dbfd6f511"
+express-status-monitor@1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/express-status-monitor/-/express-status-monitor-1.2.3.tgz#033fa7e2dd41af432cf27e4453c5e2db2fd0b33d"
   dependencies:
     debug "^2.6.8"
+    handlebars "~4.0.12"
     on-headers "^1.0.1"
     pidusage "^1.1.6"
     request-promise-native "^1.0.5"
@@ -5080,6 +5091,16 @@ handlebars@^4.0.2, handlebars@^4.0.3:
     source-map "^0.4.4"
   optionalDependencies:
     uglify-js "^2.6"
+
+handlebars@~4.0.12:
+  version "4.0.12"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.12.tgz#2c15c8a96d46da5e266700518ba8cb8d919d5bc5"
+  dependencies:
+    async "^2.5.0"
+    optimist "^0.6.1"
+    source-map "^0.6.1"
+  optionalDependencies:
+    uglify-js "^3.1.4"
 
 har-schema@^1.0.5:
   version "1.0.5"
@@ -10741,6 +10762,13 @@ uglify-js@^2.6, uglify-js@^2.8.29:
     yargs "~3.10.0"
   optionalDependencies:
     uglify-to-browserify "~1.0.0"
+
+uglify-js@^3.1.4:
+  version "3.4.9"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.4.9.tgz#af02f180c1207d76432e473ed24a28f4a782bae3"
+  dependencies:
+    commander "~2.17.1"
+    source-map "~0.6.1"
 
 uglify-to-browserify@~1.0.0:
   version "1.0.2"
