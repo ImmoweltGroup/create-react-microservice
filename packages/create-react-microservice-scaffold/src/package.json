@@ -91,7 +91,7 @@
     "flow-mono-cli": "1.4.0",
     "flow-typed": "2.4.0",
     "lint-staged": "6.1.1",
-    "prettier": "1.14.2",
+    "prettier": "1.14.3",
     "pwmetrics": "3.3.0",
     "testcafe": "0.22.0",
     "testcafe-react-selectors": "2.1.0"
