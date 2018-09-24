@@ -4437,9 +4437,9 @@ flow-copy-source@^1.2.1:
     kefir "^3.7.3"
     yargs "^8.0.2"
 
-flow-mono-cli@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/flow-mono-cli/-/flow-mono-cli-1.4.0.tgz#49df6c5e102809a3ffacc1aa123587ef800114d7"
+flow-mono-cli@1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/flow-mono-cli/-/flow-mono-cli-1.4.2.tgz#6046938f8125e8eb35fd3ed2a19ab069c601c89e"
   dependencies:
     cosmiconfig "5.0.6"
     debug-logger "0.4.1"
@@ -4449,6 +4449,7 @@ flow-mono-cli@1.4.0:
     inquirer "6.2.0"
     lodash.merge "4.6.1"
     micromatch "3.1.10"
+    ora "^3.0.0"
     yargs "12.0.2"
 
 flow-typed@2.4.0:
@@ -8042,7 +8043,7 @@ optionator@^0.8.1, optionator@^0.8.2:
     type-check "~0.3.2"
     wordwrap "~1.0.0"
 
-ora@3.0.0:
+ora@3.0.0, ora@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/ora/-/ora-3.0.0.tgz#8179e3525b9aafd99242d63cc206fd64732741d0"
   dependencies:
