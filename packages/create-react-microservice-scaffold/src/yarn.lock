@@ -9104,9 +9104,9 @@ redux-saga-test-plan@3.7.0:
     object-assign "^4.1.0"
     util-inspect "^0.1.8"
 
-redux-saga@0.16.0:
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/redux-saga/-/redux-saga-0.16.0.tgz#0a231db0a1489301dd980f6f2f88d8ced418f724"
+redux-saga@0.16.1:
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/redux-saga/-/redux-saga-0.16.1.tgz#aa43d2ac029dab57f7f522b143f7db179a9e1324"
 
 redux@4.0.0:
   version "4.0.0"
