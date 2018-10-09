@@ -9601,9 +9601,9 @@ send@0.16.2:
     range-parser "~1.2.0"
     statuses "~1.4.0"
 
-serialize-error@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/serialize-error/-/serialize-error-2.1.0.tgz#50b679d5635cdf84667bdc8e59af4e5b81d5f60a"
+serialize-error@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/serialize-error/-/serialize-error-3.0.0.tgz#80100282b09be33c611536f50033481cb9cc87cf"
 
 serialize-javascript@^1.4.0:
   version "1.4.0"
