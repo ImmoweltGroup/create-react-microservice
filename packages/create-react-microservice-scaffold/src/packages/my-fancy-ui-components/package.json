@@ -36,7 +36,7 @@
     "prop-types": "15.6.2",
     "react": "16.5.2",
     "react-dom": "16.5.2",
-    "react-test-renderer": "16.5.2"
+    "react-test-renderer": "16.6.0"
   },
   "peerDependencies": {
     "classcat": "^3.0.0",
