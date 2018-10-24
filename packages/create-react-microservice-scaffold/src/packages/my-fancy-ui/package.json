@@ -59,7 +59,7 @@
     "flow-typed": "2.4.0",
     "jest": "23.6.0",
     "jest-react-redux": "1.0.4",
-    "react-test-renderer": "16.5.2",
+    "react-test-renderer": "16.6.0",
     "redux-saga-test-plan": "3.7.0"
   },
   "jest": {
