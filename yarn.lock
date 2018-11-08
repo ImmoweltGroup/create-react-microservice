@@ -2569,9 +2569,9 @@ flow-copy-source@1.3.0:
     kefir "^3.7.3"
     yargs "^11.0.0"
 
-flow-mono-cli@1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/flow-mono-cli/-/flow-mono-cli-1.4.2.tgz#6046938f8125e8eb35fd3ed2a19ab069c601c89e"
+flow-mono-cli@1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/flow-mono-cli/-/flow-mono-cli-1.4.3.tgz#72947ccf83bb652ee2252dae23859a08f8117b1b"
   dependencies:
     cosmiconfig "5.0.6"
     debug-logger "0.4.1"
