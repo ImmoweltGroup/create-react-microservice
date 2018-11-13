@@ -40,7 +40,7 @@
     "flow-copy-source": "1.3.0",
     "helmet": "3.14.0",
     "hypernova": "2.3.0",
-    "hypernova-client": "1.1.0",
+    "hypernova-client": "1.1.1",
     "log-fancy": "1.3.2",
     "morgan": "1.9.1",
     "pify": "3.0.0"
