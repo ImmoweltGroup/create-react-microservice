@@ -33,7 +33,7 @@
     "@company-scope/my-fancy-ui-config": "0.0.0-development",
     "babel-cli": "6.26.0",
     "flow-copy-source": "1.3.0",
-    "hypernova": "2.3.0",
+    "hypernova": "2.4.0",
     "log-fancy": "1.3.2"
   },
   "devDependencies": {
