@@ -56,7 +56,7 @@
     "nodemon": "1.18.9",
     "open-browser-webpack-plugin": "0.0.5",
     "rimraf": "2.6.2",
-    "webpack-livereload-plugin": "2.1.1"
+    "webpack-livereload-plugin": "2.2.0"
   },
   "jest": {
     "preset": "@immowelt/jest-preset-node",
