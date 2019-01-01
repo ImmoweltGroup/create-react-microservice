@@ -26,7 +26,7 @@
     "@company-scope/my-fancy-ui-components": "0.0.0-development",
     "@company-scope/my-fancy-ui-i18n": "0.0.0-development",
     "@company-scope/my-fancy-ui-logger": "0.0.0-development",
-    "classcat": "3.2.4",
+    "classcat": "3.2.5",
     "empty": "0.10.1",
     "hypernova-react": "2.1.0",
     "isomorphic-fetch": "2.2.1",

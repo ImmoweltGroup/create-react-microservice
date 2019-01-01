@@ -2216,9 +2216,9 @@ class-utils@^0.3.5:
     lazy-cache "^2.0.2"
     static-extend "^0.1.1"
 
-classcat@3.2.4:
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/classcat/-/classcat-3.2.4.tgz#0fa6262d345376805c52b212a3eced8026ade3e6"
+classcat@3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/classcat/-/classcat-3.2.5.tgz#bf4271dee0c93fdf132bc127f5d0432d35245888"
 
 clean-css@4.1.x:
   version "4.1.9"
