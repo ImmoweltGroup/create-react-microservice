@@ -1605,7 +1605,7 @@ bluebird@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
 
-bluebird@^3.5.2:
+bluebird@^3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.3.tgz#7d01c6f9616c9a51ab0f8c549a79dfe6ec33efa7"
 
@@ -5465,17 +5465,17 @@ hypernova-react@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/hypernova-react/-/hypernova-react-2.1.0.tgz#e52437f6687b8ff8ffb655628afed9d774007fec"
 
-hypernova@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/hypernova/-/hypernova-2.4.0.tgz#401b6b95ed171c20d6fb96ad3b95d57729d01672"
+hypernova@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/hypernova/-/hypernova-2.5.0.tgz#b446717b003155da95d5c71185eae89c10de11fe"
   dependencies:
     airbnb-js-shims "^2 || ^3"
-    bluebird "^3.5.2"
+    bluebird "^3.5.3"
     body-parser "^1.18.3"
     express "^4.16.4"
     glob "^7.1.3"
     has "^1.0.3"
-    lru-cache "^4.1.3"
+    lru-cache "^4.1.5"
     object.assign "^4.1.0"
     winston "^2.4.4"
 
@@ -7153,9 +7153,9 @@ lru-cache@^4.0.1, lru-cache@^4.1.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-lru-cache@^4.1.3:
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.3.tgz#a1175cf3496dfc8436c156c334b4955992bce69c"
+lru-cache@^4.1.5:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.5.tgz#8bbe50ea85bed59bc9e33dcab8235ee9bcf443cd"
   dependencies:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
