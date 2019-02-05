@@ -27,7 +27,7 @@
     "classcat": "3.2.5",
     "empty": "0.10.1",
     "enzyme": "3.8.0",
-    "enzyme-adapter-react-16": "1.8.0",
+    "enzyme-adapter-react-16": "1.9.0",
     "enzyme-to-json": "3.3.5",
     "eslint": "5.13.0",
     "flow-bin": "0.69.0",
