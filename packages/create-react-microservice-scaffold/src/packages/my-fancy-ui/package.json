@@ -33,7 +33,7 @@
     "lodash": "4.17.11",
     "node-polyglot": "2.3.0",
     "plow-js": "2.1.0",
-    "prop-types": "15.6.2",
+    "prop-types": "15.7.0",
     "react": "16.8.1",
     "react-dev-utils": "5.0.3",
     "react-dom": "16.8.1",
