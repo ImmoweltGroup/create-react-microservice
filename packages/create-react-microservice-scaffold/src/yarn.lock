@@ -8999,6 +8999,10 @@ react-is@^16.8.1:
   version "16.8.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.1.tgz#a80141e246eb894824fb4f2901c0c50ef31d4cdb"
 
+react-is@^16.8.2:
+  version "16.8.2"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.2.tgz#09891d324cad1cb0c1f2d91f70a71a4bee34df0f"
+
 react-lifecycles-compat@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.2.tgz#7279047275bd727a912e25f734c0559527e84eff"
@@ -9014,14 +9018,14 @@ react-redux@5.0.7:
     loose-envify "^1.1.0"
     prop-types "^15.6.0"
 
-react-test-renderer@16.8.1:
-  version "16.8.1"
-  resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.8.1.tgz#72845ad9269be526126e97853311982f781767be"
+react-test-renderer@16.8.2:
+  version "16.8.2"
+  resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.8.2.tgz#3ce0bf12aa211116612fda01a886d6163c9c459b"
   dependencies:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    react-is "^16.8.1"
-    scheduler "^0.13.1"
+    react-is "^16.8.2"
+    scheduler "^0.13.2"
 
 react-test-renderer@^16.0.0-0:
   version "16.2.0"
