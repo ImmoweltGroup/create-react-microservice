@@ -57,7 +57,7 @@
     "nodemon": "1.18.9",
     "npm-run-all": "4.1.5",
     "rimraf": "2.6.3",
-    "supertest": "3.4.2"
+    "supertest": "4.0.2"
   },
   "jest": {
     "preset": "@immowelt/jest-preset-node",
