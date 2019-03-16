@@ -51,7 +51,7 @@
     "check-engines": "1.5.0",
     "create-any-cli": "1.3.3",
     "create-react-microservice-scaffold": "0.0.0-development",
-    "execa": "0.11.0",
+    "execa": "1.0.0",
     "find-node-modules": "1.0.4",
     "latest-version": "5.0.0",
     "meow": "5.0.0",
