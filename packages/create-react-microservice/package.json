@@ -38,7 +38,7 @@
     "babel-cli": "6.26.0",
     "eslint": "5.15.3",
     "flow-bin": "0.69.0",
-    "flow-copy-source": "2.0.4",
+    "flow-copy-source": "2.0.6",
     "flow-typed": "2.4.0",
     "jest": "23.6.0",
     "rimraf": "2.6.3"

@@ -2583,10 +2583,10 @@ flow-bin@0.69.0:
   version "0.69.0"
   resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.69.0.tgz#053159a684a6051fcbf0b71a2eb19a9679082da6"
 
-flow-copy-source@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/flow-copy-source/-/flow-copy-source-2.0.4.tgz#e4a566334c672c862aa5ae55fc9c0afe2969788a"
-  integrity sha512-Ls5Y66GKGdhVl02IzWjxnU3O7GX5a1+rxPMqRmzzQyO91z1h6niHiHxPWmPqt1ZMdoAiLejA7CDXBr1CoIQNEA==
+flow-copy-source@2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/flow-copy-source/-/flow-copy-source-2.0.6.tgz#9049401cfb14f8080adfc753791c98117f49a0d1"
+  integrity sha512-RRlMcDNIznV7KUm944joZ84l2/fso/dxAxXAMehDPpEPX59CBUk+3VwT7LvQqxzyiJlZqOZpGP696VOm3QIdEg==
   dependencies:
     chokidar "^3.0.0"
     fs-extra "^7.0.0"
