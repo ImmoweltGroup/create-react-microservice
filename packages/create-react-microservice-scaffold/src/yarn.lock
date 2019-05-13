@@ -4521,13 +4521,13 @@ flow-copy-source@2.0.2:
     kefir "^3.7.3"
     yargs "^12.0.1"
 
-flow-copy-source@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/flow-copy-source/-/flow-copy-source-2.0.4.tgz#e4a566334c672c862aa5ae55fc9c0afe2969788a"
-  integrity sha512-Ls5Y66GKGdhVl02IzWjxnU3O7GX5a1+rxPMqRmzzQyO91z1h6niHiHxPWmPqt1ZMdoAiLejA7CDXBr1CoIQNEA==
+flow-copy-source@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/flow-copy-source/-/flow-copy-source-2.0.5.tgz#ccff765018f7e636d9248b1a2fc2a6f2798df563"
+  integrity sha512-H+pbbwFNw2aS29DnQdrPJ045rCIDfPudX5golmRqYnB/InBnVbDJRhOCN3Wu3jGn3WcDvbXNfAu2vWyGaP45Wg==
   dependencies:
     chokidar "^3.0.0"
-    fs-extra "^7.0.0"
+    fs-extra "^8.0.0"
     glob "^7.0.0"
     kefir "^3.7.3"
     yargs "^13.1.0"
@@ -4707,6 +4707,15 @@ fs-extra@^4.0.1:
 fs-extra@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-5.0.0.tgz#414d0110cdd06705734d055652c5411260c31abd"
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
+fs-extra@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.0.0.tgz#3660bea66719e3a3c46bf7a4b1249fb658db3f0c"
+  integrity sha512-3hU7dzpfqG+A7gloPULls7j9mKDzpCyMOTBvQS0lZfqVfjA6/m0AkLXq0O1vnfP5roXjjL1DuUGKapr8vJWmQw==
   dependencies:
     graceful-fs "^4.1.2"
     jsonfile "^4.0.0"
