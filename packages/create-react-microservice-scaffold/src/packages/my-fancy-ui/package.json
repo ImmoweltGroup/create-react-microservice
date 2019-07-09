@@ -39,7 +39,7 @@
     "react-dom": "16.8.6",
     "react-redux": "5.0.7",
     "recompose": "0.30.0",
-    "redux": "4.0.1",
+    "redux": "4.0.3",
     "redux-actions": "2.6.5",
     "redux-lumbergh": "1.0.7",
     "redux-saga": "0.16.2",
