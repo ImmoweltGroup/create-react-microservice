@@ -55,7 +55,7 @@
     "jest": "23.6.0",
     "nodemon": "1.19.1",
     "open-browser-webpack-plugin": "0.0.5",
-    "rimraf": "2.7.0",
+    "rimraf": "2.7.1",
     "webpack-livereload-plugin": "2.2.0"
   },
   "jest": {
