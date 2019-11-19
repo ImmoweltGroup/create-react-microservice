@@ -37,7 +37,7 @@
     "cors": "2.8.5",
     "express": "4.17.1",
     "express-status-monitor": "1.2.6",
-    "flow-copy-source": "2.0.8",
+    "flow-copy-source": "2.0.9",
     "helmet": "3.21.2",
     "hypernova": "2.5.0",
     "hypernova-client": "1.1.1",
