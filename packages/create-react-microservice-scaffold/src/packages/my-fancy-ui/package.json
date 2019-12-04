@@ -44,7 +44,7 @@
     "redux-lumbergh": "1.0.7",
     "redux-saga": "0.16.2",
     "reselect": "3.0.1",
-    "serialize-error": "3.0.0",
+    "serialize-error": "5.0.0",
     "webpack": "3.12.0",
     "whatwg-fetch": "3.0.0"
   },
