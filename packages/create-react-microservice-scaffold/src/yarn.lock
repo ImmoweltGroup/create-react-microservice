@@ -4534,14 +4534,14 @@ expect@^23.6.0:
     jest-message-util "^23.4.0"
     jest-regex-util "^23.3.0"
 
-express-status-monitor@1.2.7:
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/express-status-monitor/-/express-status-monitor-1.2.7.tgz#c956b63af3932c24b1abfd25d3ae9aad7b533660"
-  integrity sha512-E+DH7xsz7ws0ywPconmZcevFI43IkvUzjN8eDHc+Uy+HLubGeFYk++pavX/HHvbEOXZVR9Ai0K/R7nwn0DpxCw==
+express-status-monitor@1.2.8:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/express-status-monitor/-/express-status-monitor-1.2.8.tgz#4fc525465d726e7c8c5d75c810272a78fe7894db"
+  integrity sha512-ZOb//zbQnGCnbjlxb5SROsZyCYitgW4iGahSlT++cX9i7iolq2/27bT1It5y5/i7kPGAiA/+pTZH57G4bfv/Ng==
   dependencies:
     axios "0.19.0"
     debug "4.1.1"
-    handlebars "4.4.2"
+    handlebars "4.5.3"
     on-headers "1.0.2"
     pidusage "2.0.17"
     request "2.88.0"
@@ -5661,10 +5661,10 @@ gzip-size@3.0.0:
   dependencies:
     duplexer "^0.1.1"
 
-handlebars@4.4.2:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.4.2.tgz#8810a9821a9d6d52cb2f57d326d6ce7c3dfe741d"
-  integrity sha512-cIv17+GhL8pHHnRJzGu2wwcthL5sb8uDKBHvZ2Dtu5s1YNt0ljbzKbamnc+gr69y7bzwQiBdr5+hOpRd5pnOdg==
+handlebars@4.5.3:
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.5.3.tgz#5cf75bd8714f7605713511a56be7c349becb0482"
+  integrity sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==
   dependencies:
     neo-async "^2.6.0"
     optimist "^0.6.1"
