@@ -23,7 +23,7 @@
     "@immowelt/styleguide-javascript": "1.0.11",
     "@inkdpixels/commit-analyzer": "1.0.1",
     "@inkdpixels/release-notes-generator": "1.0.1",
-    "flow-mono-cli": "1.5.2",
+    "flow-mono-cli": "1.5.3",
     "husky": "0.14.3",
     "lerna": "2.11.0",
     "lint-staged": "6.1.1",
