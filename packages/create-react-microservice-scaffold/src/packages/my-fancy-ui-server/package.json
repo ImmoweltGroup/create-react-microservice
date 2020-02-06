@@ -51,7 +51,7 @@
     "create-config": "1.0.4",
     "eslint": "5.16.0",
     "flow-bin": "0.118.0",
-    "flow-typed": "2.4.0",
+    "flow-typed": "2.6.2",
     "jest": "23.6.0",
     "mock-fs": "4.10.4",
     "nodemon": "1.19.4",
