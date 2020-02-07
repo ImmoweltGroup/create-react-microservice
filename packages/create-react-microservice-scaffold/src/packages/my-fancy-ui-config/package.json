@@ -28,7 +28,7 @@
     "@immowelt/babel-preset-immowelt-node": "1.1.1",
     "babel-cli": "6.26.0",
     "babel-loader": "7.1.5",
-    "copy-webpack-plugin": "4.5.4",
+    "copy-webpack-plugin": "5.1.1",
     "create-config": "1.0.4",
     "envalid": "4.2.2",
     "extract-text-webpack-plugin": "3.0.2",
