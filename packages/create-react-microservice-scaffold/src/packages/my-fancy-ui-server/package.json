@@ -36,7 +36,7 @@
     "compression": "1.7.4",
     "cors": "2.8.5",
     "express": "4.17.1",
-    "express-status-monitor": "1.2.9",
+    "express-status-monitor": "1.2.10",
     "flow-copy-source": "2.0.9",
     "helmet": "3.22.0",
     "hypernova": "2.5.0",

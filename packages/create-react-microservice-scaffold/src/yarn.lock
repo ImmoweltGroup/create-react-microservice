@@ -4703,10 +4703,10 @@ expect@^23.6.0:
     jest-message-util "^23.4.0"
     jest-regex-util "^23.3.0"
 
-express-status-monitor@1.2.9:
-  version "1.2.9"
-  resolved "https://registry.yarnpkg.com/express-status-monitor/-/express-status-monitor-1.2.9.tgz#9890cd1381576cd2efcb96e85dd1ceddb820c547"
-  integrity sha512-cr9A18SITxqgT+GhFc0c3weP4Ya7PlvWgHQQL13rtztycBtpauhMWacTdKsklSlAZi5iLBPxNHlTcS/Dzfy0fw==
+express-status-monitor@1.2.10:
+  version "1.2.10"
+  resolved "https://registry.yarnpkg.com/express-status-monitor/-/express-status-monitor-1.2.10.tgz#545104fd359f1820aa06087020848e241b38c4e2"
+  integrity sha512-CwUSnYIV5e0UltXJh8Rsp9cgjkxhzBnWxopuT1Fy2x1D395bIf0R9FthczLt4YyAcPOOUhtyCS4NvB5r+npMpg==
   dependencies:
     axios "0.19.2"
     debug "4.1.1"
