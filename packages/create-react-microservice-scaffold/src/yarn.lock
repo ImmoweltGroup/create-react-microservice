@@ -4545,6 +4545,13 @@ event-emitter@~0.3.5:
     d "1"
     es5-ext "~0.10.14"
 
+event-loop-stats@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/event-loop-stats/-/event-loop-stats-1.2.0.tgz#20ef06af562f13d84f00bf0f1bac2c433315e709"
+  integrity sha512-h/leAlXqoEf+D9w1dnFG0srR5vfIq59rLm9PHzcl3/GwFppd+UR46UMuLdp/mvJvuA+MjSd/dNShmuM2/dPFFw==
+  dependencies:
+    nan "^2.14.0"
+
 events@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/events/-/events-1.1.1.tgz#9ebdb7635ad099c70dcc4c2a1f5004288e8bd924"
@@ -4703,13 +4710,14 @@ expect@^23.6.0:
     jest-message-util "^23.4.0"
     jest-regex-util "^23.3.0"
 
-express-status-monitor@1.2.11:
-  version "1.2.11"
-  resolved "https://registry.yarnpkg.com/express-status-monitor/-/express-status-monitor-1.2.11.tgz#cb8507bb08978cd7bf7bb84a0bc4b3acc78b20a5"
-  integrity sha512-D5v/O/VW3TtDUhJNmWboRSDKJ0Sx1+LztBAUeN3GjhBvgGQBIV8rMC2zHlDV3KxJKk2QTfcPSYFfLWSmG0QKAw==
+express-status-monitor@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/express-status-monitor/-/express-status-monitor-1.3.0.tgz#a9ac285410a60d28d60b356c73f735587924c362"
+  integrity sha512-or8cmri9R7o5iAKLtbZOcaS5jskw7AMSvTZbRH8uCa4bZHPgCO7471A/BLHLkDNc2boeV81QyYJTA5ZMUMkg9g==
   dependencies:
     axios "0.19.2"
     debug "4.1.1"
+    event-loop-stats "1.2.0"
     handlebars "^4.7.6"
     on-headers "1.0.2"
     pidusage "2.0.18"
@@ -8625,6 +8633,11 @@ mute-stream@0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
+
+nan@^2.14.0:
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
+  integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
 
 nan@^2.3.0:
   version "2.8.0"
