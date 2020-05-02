@@ -54,7 +54,7 @@
     "execa": "1.0.0",
     "find-node-modules": "1.0.4",
     "latest-version": "5.1.0",
-    "meow": "5.0.0",
+    "meow": "6.1.1",
     "node-emoji": "1.10.0",
     "ora": "3.4.0",
     "per-env": "1.0.2",
