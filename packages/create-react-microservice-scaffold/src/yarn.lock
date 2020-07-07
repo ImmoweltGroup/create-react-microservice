@@ -188,9 +188,10 @@
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@immowelt/jest-preset-node/-/jest-preset-node-1.1.1.tgz#5db7f2ead1cb8d67459420960b1f87deb9ae59ef"
 
-"@immowelt/jest-preset-react@2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@immowelt/jest-preset-react/-/jest-preset-react-2.0.4.tgz#13b1c694c14a8a04eefb3cc53e6143434959d9cc"
+"@immowelt/jest-preset-react@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@immowelt/jest-preset-react/-/jest-preset-react-3.1.0.tgz#18e8e6b6479fb3215528254478d6fabebf8e76cb"
+  integrity sha512-Fd0jA3hjmBGtT5oYC0KBbKrbU5xNAOGREA/qbERFZpfrF63gSIxLnMKjfe7IHAlCcpc6jhCLspCNWMY4Axo9ag==
   dependencies:
     identity-obj-proxy "3.0.0"
 
