@@ -198,7 +198,6 @@ class CreateReactMicroService extends Command {
     if (str && str.length) {
       const namespace = str
         .replace(/\s/g, '-')
-        .replace(/[0-9]/g, '')
         .replace(/[^a-zA-Z-]/g, '')
         .toLowerCase();
 
