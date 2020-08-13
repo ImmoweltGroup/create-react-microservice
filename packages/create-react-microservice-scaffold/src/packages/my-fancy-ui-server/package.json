@@ -43,7 +43,7 @@
     "hypernova-client": "1.1.1",
     "log-fancy": "1.3.2",
     "morgan": "1.10.0",
-    "pify": "4.0.1"
+    "pify": "5.0.0"
   },
   "devDependencies": {
     "@immowelt/eslint-config-immowelt-react": "2.1.1",
