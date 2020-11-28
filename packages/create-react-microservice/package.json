@@ -40,7 +40,7 @@
     "flow-bin": "0.131.0",
     "flow-copy-source": "2.0.9",
     "flow-typed": "2.6.2",
-    "jest": "23.6.0",
+    "jest": "26.6.3",
     "rimraf": "2.7.1"
   },
   "jest": {
