@@ -29,7 +29,7 @@
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.3",
     "enzyme-to-json": "3.5.0",
-    "eslint": "5.16.0",
+    "eslint": "7.28.0",
     "flow-bin": "0.131.0",
     "flow-typed": "2.6.2",
     "jest": "23.6.0",
