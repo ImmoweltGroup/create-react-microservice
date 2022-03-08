@@ -52,7 +52,7 @@
     "eslint": "5.16.0",
     "flow-bin": "0.173.0",
     "flow-typed": "2.6.2",
-    "jest": "23.6.0",
+    "jest": "27.5.1",
     "nodemon": "1.19.4",
     "open-browser-webpack-plugin": "0.0.5",
     "rimraf": "2.7.1",
