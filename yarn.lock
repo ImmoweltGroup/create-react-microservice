@@ -2825,10 +2825,10 @@ flatted@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.0.tgz#55122b6536ea496b4b44893ee2608141d10d9916"
 
-flow-bin@0.176.1:
-  version "0.176.1"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.176.1.tgz#16a99d5efe63109df663bee9423103bcfe38a5ba"
-  integrity sha512-NgGY28iMxAPB98Q6OS40DVgUdRqqwIp7CYPJQlKgGEKIrGe6FayABdqbi2in5ztHp7IISCewsLpD8gR++1FYwg==
+flow-bin@0.176.2:
+  version "0.176.2"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.176.2.tgz#b257da3ebd131b368c95c72e010dc823bfa159e8"
+  integrity sha512-gX3YJvv40oRY7A/ytEsWLDMHTfIkmy6ir1D4e5fklVsj3958iTg90cO8XwDdspnxQSgEUP1HW1e6wlX1OlQ5+Q==
 
 flow-copy-source@2.0.9:
   version "2.0.9"
