@@ -12752,9 +12752,12 @@ send@0.17.2:
     range-parser "~1.2.1"
     statuses "~1.5.0"
 
-serialize-error@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/serialize-error/-/serialize-error-3.0.0.tgz#80100282b09be33c611536f50033481cb9cc87cf"
+serialize-error@10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/serialize-error/-/serialize-error-10.0.0.tgz#3d1407e98b73b14dd0e249f887c28abcda69d10f"
+  integrity sha512-voTcmggyz8Ou35k7lXcC8Tn02lzj8h3pa3HtRdo1PLGj5wB7Byobf4vLakMkQohB6Zz6nMG5IUbVBSgSACrurg==
+  dependencies:
+    type-fest "^2.12.2"
 
 serialize-javascript@^1.4.0:
   version "1.4.0"
@@ -14177,6 +14180,11 @@ type-fest@^0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
+
+type-fest@^2.12.2:
+  version "2.12.2"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.12.2.tgz#80a53614e6b9b475eb9077472fb7498dc7aa51d0"
+  integrity sha512-qt6ylCGpLjZ7AaODxbpyBZSs9fCI9SkL3Z9q2oxMBQhs/uyY+VD8jHA8ULCGmWQJlBgqvO3EJeAngOHD8zQCrQ==
 
 type-is@~1.6.16:
   version "1.6.16"
