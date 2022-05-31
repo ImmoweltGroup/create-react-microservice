@@ -90,7 +90,7 @@
     "flow-bin": "0.179.0",
     "flow-mono-cli": "1.5.3",
     "flow-typed": "2.6.2",
-    "lint-staged": "6.1.1",
+    "lint-staged": "12.5.0",
     "prettier": "1.19.1",
     "pwmetrics": "3.3.0",
     "testcafe": "1.18.6",
