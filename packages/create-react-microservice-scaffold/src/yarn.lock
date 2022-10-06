@@ -6327,10 +6327,10 @@ flatted@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.0.tgz#55122b6536ea496b4b44893ee2608141d10d9916"
 
-flow-bin@0.188.1:
-  version "0.188.1"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.188.1.tgz#1043ec955eec8cd402ec9fb4c49054bf14368c06"
-  integrity sha512-tQehbFoeXKz/MZqEClBB2ezuT1HHKoBlv6t8mAoUdFk1PaFhqcEmjx+1Bn0xygykrqHy0FY6C3z+AGleOnFbdQ==
+flow-bin@0.188.2:
+  version "0.188.2"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.188.2.tgz#ddea41323fc50a1997334b0b496af2e27a25a91d"
+  integrity sha512-zvm1bEEj4n3wdsXm+EA49e/CiZ966kLFJpHbheYdr73P/qMzKk25zeoPTRauNHSsKILK0mL+2QadKii/nf+fkw==
 
 flow-copy-source@2.0.2:
   version "2.0.2"
