@@ -50,7 +50,7 @@
     "@immowelt/jest-preset-node": "1.1.1",
     "case-sensitive-paths-webpack-plugin": "2.4.0",
     "eslint": "5.16.0",
-    "flow-bin": "0.190.1",
+    "flow-bin": "0.191.0",
     "flow-typed": "2.6.2",
     "jest": "23.6.0",
     "nodemon": "1.19.4",
