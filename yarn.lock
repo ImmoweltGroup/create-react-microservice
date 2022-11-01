@@ -1312,9 +1312,10 @@ charenc@~0.0.1:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
 
-check-engines@1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/check-engines/-/check-engines-1.5.0.tgz#2f74ea949df09c510f877ac519a8b91c1c7b17a4"
+check-engines@1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/check-engines/-/check-engines-1.6.0.tgz#b1551925dff1592aa5930708cbd7a10cab1391b1"
+  integrity sha512-ZnpTC/GW4f7lmqbI5tIzHdH3t3tMkqBtKfgR4FoJgpTlWuh4GYONgeBOu78TpnjAB19YCG25ncBYky/X9OzmRA==
   dependencies:
     cross-spawn "^5.0.1"
     semver ">=4.3.6"

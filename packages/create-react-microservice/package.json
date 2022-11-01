@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "chalk": "2.4.2",
-    "check-engines": "1.5.0",
+    "check-engines": "1.6.0",
     "create-any-cli": "1.3.3",
     "create-react-microservice-scaffold": "0.0.0-development",
     "execa": "1.0.0",
