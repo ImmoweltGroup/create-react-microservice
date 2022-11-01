@@ -78,7 +78,7 @@
   "workspaces": ["packages/*"],
   "dependencies": {
     "better-npm-run": "0.1.1",
-    "check-engines": "1.5.0",
+    "check-engines": "1.6.0",
     "lerna": "2.11.0",
     "per-env": "1.0.2",
     "rimraf": "2.7.1"
