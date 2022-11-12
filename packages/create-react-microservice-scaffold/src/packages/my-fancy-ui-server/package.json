@@ -50,7 +50,7 @@
     "@immowelt/jest-preset-node": "1.1.1",
     "create-config": "1.0.4",
     "eslint": "5.16.0",
-    "flow-bin": "0.192.0",
+    "flow-bin": "0.193.0",
     "flow-typed": "2.6.2",
     "jest": "23.6.0",
     "mock-fs": "4.14.0",
