@@ -87,7 +87,7 @@
     "@immowelt/styleguide-javascript": "1.0.11",
     "create-any-cli": "1.3.3",
     "editorconfig-checker": "1.4.0",
-    "flow-bin": "0.196.3",
+    "flow-bin": "0.197.0",
     "flow-mono-cli": "1.5.3",
     "flow-typed": "2.6.2",
     "lint-staged": "6.1.1",
