@@ -46,7 +46,7 @@
     "pify": "4.0.1"
   },
   "devDependencies": {
-    "@immowelt/eslint-config-immowelt-react": "2.1.1",
+    "@immowelt/eslint-config-immowelt-react": "4.0.0",
     "@immowelt/jest-preset-node": "1.1.1",
     "create-config": "1.0.4",
     "eslint": "5.16.0",
