@@ -11582,9 +11582,10 @@ pkg-up@^3.1.0:
   dependencies:
     find-up "^3.0.0"
 
-plow-js@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/plow-js/-/plow-js-2.2.0.tgz#f1d1fc111d3a055f589facfb26804686f71f6947"
+plow-js@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/plow-js/-/plow-js-3.0.0.tgz#8068d21bb698150afc3428b5f7154105a2474d2f"
+  integrity sha512-in222krkkAB6e3bYiRNj6Reh47UrGpjW+SJ1IamRkeFxsb6z2wGhDQ+SFiIhUMZWZ/LHRllz/lm1wUhwvM9Z/g==
   optionalDependencies:
     immutable "^3.7.6"
 
