@@ -29,7 +29,7 @@
     "babel-cli": "6.26.0",
     "babel-loader": "7.1.5",
     "copy-webpack-plugin": "4.6.0",
-    "create-config": "1.0.4",
+    "create-config": "2.0.2",
     "envalid": "4.2.2",
     "extract-text-webpack-plugin": "3.0.2",
     "flow-copy-source": "2.0.9",
