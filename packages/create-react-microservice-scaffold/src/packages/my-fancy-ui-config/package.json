@@ -51,7 +51,7 @@
     "case-sensitive-paths-webpack-plugin": "2.4.0",
     "eslint": "5.16.0",
     "flow-bin": "0.201.0",
-    "flow-typed": "2.6.2",
+    "flow-typed": "3.8.0",
     "jest": "23.6.0",
     "nodemon": "1.19.4",
     "open-browser-webpack-plugin": "0.0.5",

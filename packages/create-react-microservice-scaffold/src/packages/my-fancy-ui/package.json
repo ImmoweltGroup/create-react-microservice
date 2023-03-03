@@ -56,7 +56,7 @@
     "enzyme-to-json": "3.6.2",
     "eslint": "5.16.0",
     "flow-bin": "0.201.0",
-    "flow-typed": "2.6.2",
+    "flow-typed": "3.8.0",
     "jest": "23.6.0",
     "jest-react-redux": "1.0.4",
     "react-test-renderer": "16.14.0",

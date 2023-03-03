@@ -89,7 +89,7 @@
     "editorconfig-checker": "1.4.0",
     "flow-bin": "0.201.0",
     "flow-mono-cli": "1.5.3",
-    "flow-typed": "2.6.2",
+    "flow-typed": "3.8.0",
     "lint-staged": "6.1.1",
     "prettier": "1.19.1",
     "pwmetrics": "3.3.0",
