@@ -81,7 +81,7 @@
     "check-engines": "1.6.0",
     "lerna": "2.11.0",
     "per-env": "1.0.2",
-    "rimraf": "2.7.1"
+    "rimraf": "4.4.1"
   },
   "devDependencies": {
     "@immowelt/styleguide-javascript": "1.0.11",

@@ -41,7 +41,7 @@
     "flow-copy-source": "2.0.9",
     "flow-typed": "2.6.2",
     "jest": "23.6.0",
-    "rimraf": "2.7.1"
+    "rimraf": "4.4.1"
   },
   "jest": {
     "preset": "@immowelt/jest-preset-node"
