@@ -56,7 +56,7 @@
     "latest-version": "5.1.0",
     "meow": "5.0.0",
     "node-emoji": "1.11.0",
-    "ora": "3.4.0",
+    "ora": "6.3.1",
     "per-env": "1.0.2",
     "trim-character": "2.0.1"
   },
