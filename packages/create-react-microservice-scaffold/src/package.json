@@ -94,6 +94,6 @@
     "prettier": "1.19.1",
     "pwmetrics": "3.3.0",
     "testcafe": "1.20.1",
-    "testcafe-react-selectors": "2.1.0"
+    "testcafe-react-selectors": "5.0.3"
   }
 }
