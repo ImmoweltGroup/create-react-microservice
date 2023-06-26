@@ -1992,10 +1992,6 @@ async-limiter@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
 
-async@0.2.6:
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/async/-/async-0.2.6.tgz#ad3f373d9249ae324881565582bc90e152abbd68"
-
 async@3.2.3:
   version "3.2.3"
   resolved "https://registry.yarnpkg.com/async/-/async-3.2.3.tgz#ac53dafd3f4720ee9e8a160628f18ea91df196c9"
@@ -5002,16 +4998,10 @@ ecdsa-sig-formatter@1.0.9:
     base64url "^2.0.0"
     safe-buffer "^5.0.1"
 
-editorconfig-checker@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/editorconfig-checker/-/editorconfig-checker-1.4.0.tgz#86bff7dad6f4b194243a9a9a5af322bc251a59c2"
-  dependencies:
-    glob "^7.1.2"
-    iniparser "^1.0.5"
-    is-valid-glob "^1.0.0"
-    minimatch "^3.0.4"
-    minimist "^1.2.0"
-    node-find-files "^0.0.4"
+editorconfig-checker@5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/editorconfig-checker/-/editorconfig-checker-5.1.1.tgz#97b314647068b68bf1210f3d6b597c1fc9b20ded"
+  integrity sha512-IBE7K48+6jLlhfmJ0TOTjogvO9Asw+4B8CoKn71KtZ8Qrvc7/WgrMyJxQRSdq6VGdh+D65/6JuQuHioMs2O1sw==
 
 ee-first@1.1.1:
   version "1.1.1"
@@ -7886,10 +7876,6 @@ ini@^1.3.2, ini@^1.3.4, ini@~1.3.0:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
 
-iniparser@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/iniparser/-/iniparser-1.0.5.tgz#836d6befe6dfbfcee0bccf1cf9f2acc7027f783d"
-
 inquirer@3.3.0, inquirer@^3.2.2, inquirer@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-3.3.0.tgz#9dd2f2ad765dcab1ff0443b491442a20ba227dc9"
@@ -8558,10 +8544,6 @@ is-typedarray@~1.0.0:
 is-utf8@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
-
-is-valid-glob@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/is-valid-glob/-/is-valid-glob-1.0.0.tgz#29bf3eff701be2d4d315dbacc39bc39fe8f601aa"
 
 is-weakref@^1.0.1:
   version "1.0.1"
@@ -10500,12 +10482,6 @@ node-fetch@^2.6.1:
   integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
   dependencies:
     whatwg-url "^5.0.0"
-
-node-find-files@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/node-find-files/-/node-find-files-0.0.4.tgz#e4b62c7f83a992627260d56f072115c618a87059"
-  dependencies:
-    async "0.2.6"
 
 node-forge@^0.7.1:
   version "0.7.1"
