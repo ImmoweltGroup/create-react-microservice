@@ -32,7 +32,7 @@
     "isomorphic-fetch": "2.2.1",
     "lodash": "4.17.21",
     "node-polyglot": "2.5.0",
-    "plow-js": "2.2.0",
+    "plow-js": "3.0.0",
     "prop-types": "15.8.1",
     "react": "16.14.0",
     "react-dev-utils": "5.0.3",
