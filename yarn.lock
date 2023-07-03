@@ -138,9 +138,10 @@
     eslint-plugin-react "7.11.1"
     eslint-plugin-standard "4.0.0"
 
-"@immowelt/jest-preset-node@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@immowelt/jest-preset-node/-/jest-preset-node-1.1.1.tgz#5db7f2ead1cb8d67459420960b1f87deb9ae59ef"
+"@immowelt/jest-preset-node@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@immowelt/jest-preset-node/-/jest-preset-node-2.1.0.tgz#39e26f2f8462e29dd6ccdb24031247d8420f7a1d"
+  integrity sha512-e4P/i0/ecB/MKQXZaOx+cs+r9If6q6E928nvZmvVcIC8EG1v4DCvMiLrSjDFCt9rIDPPgPgCnQ+P7EtOyuZWNA==
 
 "@immowelt/styleguide-javascript@1.0.11":
   version "1.0.11"
