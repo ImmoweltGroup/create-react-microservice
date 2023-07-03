@@ -24,7 +24,7 @@
     "node-polyglot": "2.5.0"
   },
   "devDependencies": {
-    "@immowelt/eslint-config-immowelt-react": "2.1.1",
+    "@immowelt/eslint-config-immowelt-react": "4.0.0",
     "@immowelt/jest-preset-node": "1.1.1",
     "eslint": "5.16.0",
     "flow-bin": "0.201.0",
