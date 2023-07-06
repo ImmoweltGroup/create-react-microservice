@@ -32,7 +32,7 @@
     "eslint": "5.16.0",
     "flow-bin": "0.201.0",
     "flow-typed": "2.6.2",
-    "jest": "23.6.0",
+    "jest": "29.6.1",
     "prop-types": "15.8.1",
     "react": "16.14.0",
     "react-dom": "16.14.0",
