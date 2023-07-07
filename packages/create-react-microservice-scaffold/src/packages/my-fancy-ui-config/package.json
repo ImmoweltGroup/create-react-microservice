@@ -27,7 +27,7 @@
   "dependencies": {
     "@immowelt/babel-preset-immowelt-node": "1.1.1",
     "babel-cli": "6.26.0",
-    "babel-loader": "7.1.5",
+    "babel-loader": "9.1.3",
     "copy-webpack-plugin": "4.6.0",
     "create-config": "1.0.4",
     "envalid": "4.2.2",
